@@ -1,0 +1,58 @@
+{
+	"name": "database",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 601891853083346,
+					"parameters": {
+						"interval-seconds": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 127770424311963,
+					"parameters": {
+						"instance-variable": "current_x",
+						"value": "player.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 702373341473559,
+					"parameters": {
+						"instance-variable": "current_y",
+						"value": "player.y"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 248481828939177,
+					"parameters": {
+						"instance-variable": "current_z",
+						"value": "player.ZElevation"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 947667853233202,
+					"parameters": {
+						"instance-variable": "current_zone",
+						"value": "LayoutName"
+					}
+				}
+			],
+			"sid": 979000224224168
+		}
+	],
+	"sid": 603332030011226
+}

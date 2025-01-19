@@ -1,0 +1,3050 @@
+{
+	"name": "e_player",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "MOVE_INPUT_FORWARD",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 707210068796137
+		},
+		{
+			"eventType": "variable",
+			"name": "MOVE_INPUT_BACKWARD",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 967829114623605
+		},
+		{
+			"eventType": "variable",
+			"name": "MOVE_INPUT_TURN_LEFT",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 142725299743172
+		},
+		{
+			"eventType": "variable",
+			"name": "MOVE_INPUT_TURN_RIGHT",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 624400171307605
+		},
+		{
+			"eventType": "variable",
+			"name": "MOVE_INPUT_STRAFE_LEFT",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 709581326935268
+		},
+		{
+			"eventType": "variable",
+			"name": "MOVE_INPUT_STRAFE_RIGHT",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 156700793204454
+		},
+		{
+			"eventType": "variable",
+			"name": "MOVE_INPUT_COMPOSITE_FWD_BWD",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 736731590071451
+		},
+		{
+			"eventType": "variable",
+			"name": "MOVE_INPUT_COMPOSITE_LEFT_RIGHT",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 665688200964698
+		},
+		{
+			"eventType": "variable",
+			"name": "CONTROLS_VISIBLE",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 820824395572316
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "General Setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-loaded",
+							"objectClass": "playerModel",
+							"sid": 237020902439932
+						}
+					],
+					"actions": [
+						{
+							"id": "play-animation",
+							"objectClass": "playerModel",
+							"sid": 103368252927234,
+							"parameters": {
+								"animation": "\"idle\"",
+								"loop": true
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "playerModel",
+							"sid": 145766758586232,
+							"parameters": {
+								"instance-variable": "currentAnimationPlaying",
+								"value": "\"idle\""
+							}
+						}
+					],
+					"sid": 607025252382017
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 504131843435821
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "playerModel",
+							"sid": 937497163528515,
+							"parameters": {
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "playerModel",
+							"sid": 539878226304278,
+							"parameters": {
+								"z": "player.ZElevation"
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "player",
+							"sid": 660900338872840,
+							"parameters": {
+								"child": "playerModel",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-z-elevation": true,
+								"transform-visibility": false,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "player",
+							"sid": 770413180659096,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"idle\""
+							}
+						},
+						{
+							"id": "SetCollisionGroups",
+							"objectClass": "player",
+							"sid": 468267629994379,
+							"behaviorType": "Rapier3DPhysics",
+							"parameters": {
+								"membership": "\"0x0100\"",
+								"filter": "\"0xFFFF\""
+							}
+						}
+					],
+					"sid": 139219214333812
+				}
+			],
+			"sid": 898158667230950
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CharacterController",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 463452027848946
+						}
+					],
+					"actions": [
+						{
+							"id": "CreateCharacterController",
+							"objectClass": "player",
+							"sid": 966793451395509,
+							"behaviorType": "Rapier3DPhysics",
+							"parameters": {
+								"tag": "\"box\"",
+								"offset": "1",
+								"upX": "0",
+								"upY": "0",
+								"upZ": "1",
+								"maxSlopeClimbAngle": "60",
+								"minSlopeSlideAngle": "70",
+								"applyImpulsesToDynamicBodies": true,
+								"enableAutostep": true,
+								"autostepMinWidth": "20",
+								"autostepMaxHeight": "20",
+								"enableSnapToGround": true,
+								"snapToGroundMaxDistance": "1"
+							}
+						}
+					],
+					"sid": 773299826250688
+				}
+			],
+			"sid": 902480849733863
+		},
+		{
+			"eventType": "variable",
+			"name": "TEMP_LOCAL_FRAME_ANGLE",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 462536752129780
+		},
+		{
+			"eventType": "variable",
+			"name": "TEMP_LOCAL_FORWARD_SPEED",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 522060041150103
+		},
+		{
+			"eventType": "variable",
+			"name": "TEMP_LOCAL_SIDE_SPEED",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 629857153044598
+		},
+		{
+			"eventType": "variable",
+			"name": "TEMP_LOCAL_FORWARD_SPEED_NEW",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 141489617550285
+		},
+		{
+			"eventType": "variable",
+			"name": "TEMP_LOCAL_SIDE_SPEED_NEW",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 933793318250760
+		},
+		{
+			"eventType": "variable",
+			"name": "TEMP_LOCAL_MAG_SPEED_NEW",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 348936491950686
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "Controls :: Simple Movement 1",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 149161075615110
+								}
+							],
+							"actions": [],
+							"sid": 341441224055418,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 302728918519821,
+											"parameters": {
+												"key": 87
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 642441444078959,
+											"parameters": {
+												"object": "mobileForward"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "accelerate-toward-angle",
+											"objectClass": "player_OLD",
+											"sid": 743128433847343,
+											"behaviorType": "Custom",
+											"parameters": {
+												"acceleration": "1000",
+												"angle": "Self.Angle"
+											}
+										},
+										{
+											"id": "set-speed",
+											"objectClass": "player_OLD",
+											"sid": 936949489656367,
+											"behaviorType": "Custom",
+											"parameters": {
+												"which": "overall",
+												"speed": "min(Self.Custom.Speed,Self.maxSpeed)"
+											}
+										}
+									],
+									"sid": 317908396147011,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "player_OLD",
+													"sid": 961170539656980,
+													"parameters": {
+														"instance-variable": "grounded"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "player_OLD",
+													"sid": 894478971745975,
+													"parameters": {
+														"instance-variable": "state",
+														"value": "\"sprint\""
+													}
+												}
+											],
+											"sid": 955144502255060,
+											"disabled": true
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 462663792400266
+										}
+									],
+									"actions": [
+										{
+											"id": "set-speed",
+											"objectClass": "player_OLD",
+											"sid": 435565455896259,
+											"behaviorType": "Custom",
+											"parameters": {
+												"which": "overall",
+												"speed": "max(0,Self.Custom.Speed-1000*dt)"
+											}
+										}
+									],
+									"sid": 406775165179204,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 920010947288112,
+											"parameters": {
+												"key": 65
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 592911706538065,
+											"parameters": {
+												"object": "mobileLeft"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "player_OLD",
+											"sid": 812286808015759,
+											"parameters": {
+												"angle": "Self.Angle-125*dt"
+											}
+										}
+									],
+									"sid": 919854334243028,
+									"disabled": true,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 749110496534963,
+											"parameters": {
+												"key": 68
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 914436364703643,
+											"parameters": {
+												"object": "mobileRight"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "player_OLD",
+											"sid": 532135193055769,
+											"parameters": {
+												"angle": "Self.Angle+125*dt"
+											}
+										}
+									],
+									"sid": 270869631326336,
+									"disabled": true,
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 924954882456444
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Controls :: RPG",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Controls :: Toggle Visibility",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 363698433559610,
+											"parameters": {
+												"key": 67
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "toggle-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 536846369814379,
+											"parameters": {
+												"variable": "CONTROLS_VISIBLE"
+											}
+										}
+									],
+									"sid": 566562423244587
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 606207647426881,
+											"parameters": {
+												"variable": "CONTROLS_VISIBLE"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 692188481270302,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 721037677239687,
+													"parameters": {
+														"object": "controls"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "controls",
+													"sid": 426650875240403,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 538913514318109
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 610271809900604
+										}
+									],
+									"actions": [],
+									"sid": 650747324584400,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 454171094792789,
+													"parameters": {
+														"object": "controls"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "controls",
+													"sid": 271201376018272,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 857107614287670
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "controlsToggleBackground",
+													"sid": 207485899042921,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "controlsKeyboardC",
+													"sid": 626365455460444,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 503090779146025
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 258853948006206,
+											"parameters": {
+												"key": 67
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardC",
+											"sid": 117298499997226,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 333190733547103
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 379069439271724
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardC",
+											"sid": 218286971923403,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 834899034354674
+								}
+							],
+							"sid": 977124463083831
+						},
+						{
+							"eventType": "comment",
+							"text": "When using arrow keys or WASD, move the player object relative to the camera X rotation, i.e. the ground direction of movement. Note the left/right controls actually do a strafe, moving at 90 degrees relative to the camera X rotation. Also the Custom Movement behavior is used to push the player back out of any solids after attempting movement in each direction, ensuring they cannot pass through any solid."
+						},
+						{
+							"eventType": "variable",
+							"name": "TEMP_MOVE_ANGLE",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 234049249040083
+						},
+						{
+							"eventType": "variable",
+							"name": "INPUT_SENSITIVITY",
+							"type": "number",
+							"initialValue": "0.05",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 226931426869517
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 315755631426770
+								}
+							],
+							"actions": [],
+							"sid": 268702424049364,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 433153807215382,
+											"parameters": {
+												"key": 38
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 973797813534014,
+											"parameters": {
+												"key": 87
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 650368501116492,
+											"parameters": {
+												"variable": "MOVE_INPUT_FORWARD",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardW",
+											"sid": 423025045507716,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 638717836018929,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 489511352521815
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 801496695147320,
+											"parameters": {
+												"variable": "MOVE_INPUT_FORWARD",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardW",
+											"sid": 799852362331209,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 893320790308962
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 845672352394794,
+											"parameters": {
+												"key": 40
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 651643860446920,
+											"parameters": {
+												"key": 83
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 991839207115284,
+											"parameters": {
+												"variable": "MOVE_INPUT_BACKWARD",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardS",
+											"sid": 749247543847370,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 663298259774838,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 581109226383691
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 866619240634789,
+											"parameters": {
+												"variable": "MOVE_INPUT_BACKWARD",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardS",
+											"sid": 931350816924762,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 663907150922673
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 419286863356931,
+											"parameters": {
+												"key": 37
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 178896717460524,
+											"parameters": {
+												"key": 65
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardA",
+											"sid": 732701779596574,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 746988369999708,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 553538798346270
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardA",
+											"sid": 757433573141425,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 874652058255502
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 858496956422508,
+											"parameters": {
+												"key": 39
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 280522143205000,
+											"parameters": {
+												"key": 68
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardD",
+											"sid": 137581594540867,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 724157874409700,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 951610532194957
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardD",
+											"sid": 598651006535533,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 930430208779428
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 212509634910446,
+											"parameters": {
+												"key": 81
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardQ",
+											"sid": 536781399336358,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 257256542505571,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 705818224592306
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardQ",
+											"sid": 993247843498967,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 653644556857536
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 103062293441879,
+											"parameters": {
+												"key": 69
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardE",
+											"sid": 815635211785273,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 296237564747659,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 468671075553931
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "controlsKeyboardE",
+											"sid": 600474896623689,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"BetterOutline\""
+											}
+										}
+									],
+									"sid": 553800438475536
+								},
+								{
+									"eventType": "comment",
+									"text": "IN FIRST PERSON, TREAT TURN LEFT AND RIGHT THE SAME AS STRAFING"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "playerCam",
+											"sid": 303933820742911,
+											"parameters": {
+												"instance-variable": "firstPerson"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 583802963376858,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 969114154332149,
+													"parameters": {
+														"key": 37
+													}
+												},
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 857447596814205,
+													"parameters": {
+														"key": 65
+													}
+												},
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 527217178929810,
+													"parameters": {
+														"key": 81
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 217644806744130,
+													"parameters": {
+														"variable": "MOVE_INPUT_STRAFE_LEFT",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 716944625350062,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 687758058736297
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 769995436661795,
+													"parameters": {
+														"variable": "MOVE_INPUT_STRAFE_LEFT",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 368952123499007
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 324936793412984,
+													"parameters": {
+														"key": 39
+													}
+												},
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 998552553282445,
+													"parameters": {
+														"key": 68
+													}
+												},
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 873915336191092,
+													"parameters": {
+														"key": 69
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 788058923026600,
+													"parameters": {
+														"variable": "MOVE_INPUT_STRAFE_RIGHT",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 891141980291194,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 653209299679454
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 711690834913761,
+													"parameters": {
+														"variable": "MOVE_INPUT_STRAFE_RIGHT",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 103052742983553
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 966296834141780
+										}
+									],
+									"actions": [],
+									"sid": 966575135533947,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "IN THIRD PERSON, IF USING MOUSE TO ROTATE CAMERA BUT NOT PLAYER (LEFT CLICK), ALSO TREAT TURN LEFT AND RIGHT THE SASME AS STRAFING"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "playerCam",
+													"sid": 938229893720757,
+													"parameters": {
+														"instance-variable": "thirdPersonRotatePlayerWithCamera"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle",
+													"objectClass": "player_OLD",
+													"sid": 178800299000461,
+													"disabled": true,
+													"parameters": {
+														"angle": "CAMERA_AZIMUTHAL_ANGLE-180"
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "player",
+													"sid": 267266983648271,
+													"parameters": {
+														"angle": "CAMERA_AZIMUTHAL_ANGLE-180"
+													}
+												}
+											],
+											"sid": 981355403010349,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 446735432879630,
+															"parameters": {
+																"key": 37
+															}
+														},
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 180928089389409,
+															"parameters": {
+																"key": 65
+															}
+														},
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 727013207076504,
+															"parameters": {
+																"key": 81
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 546884541469021,
+															"parameters": {
+																"variable": "MOVE_INPUT_STRAFE_LEFT",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 360938559496086,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 239118534252531
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 132457107784760,
+															"parameters": {
+																"variable": "MOVE_INPUT_STRAFE_LEFT",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 540921849136801
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 589257210827548,
+															"parameters": {
+																"key": 39
+															}
+														},
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 318143497653823,
+															"parameters": {
+																"key": 68
+															}
+														},
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 986688415436299,
+															"parameters": {
+																"key": 69
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 513141355707475,
+															"parameters": {
+																"variable": "MOVE_INPUT_STRAFE_RIGHT",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 873982992511336,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 676761736943185
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 140526179789130,
+															"parameters": {
+																"variable": "MOVE_INPUT_STRAFE_RIGHT",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 532128008886425
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 981259263453493
+												}
+											],
+											"actions": [],
+											"sid": 425015499764072,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 545543808649758,
+															"parameters": {
+																"key": 37
+															}
+														},
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 860854960798595,
+															"parameters": {
+																"key": 65
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 124650478384153,
+															"parameters": {
+																"variable": "MOVE_INPUT_TURN_LEFT",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 980626992229318,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 283748888333207
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 207101270519424,
+															"parameters": {
+																"variable": "MOVE_INPUT_TURN_LEFT",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 857442779985288
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 269327401572884,
+															"parameters": {
+																"key": 39
+															}
+														},
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 882643783674595,
+															"parameters": {
+																"key": 68
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 328459034788352,
+															"parameters": {
+																"variable": "MOVE_INPUT_TURN_RIGHT",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 740656337003955,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 876768901859313
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 889105652476227,
+															"parameters": {
+																"variable": "MOVE_INPUT_TURN_RIGHT",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 848436945803931
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 308202282028165,
+															"parameters": {
+																"key": 81
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 715184774405333,
+															"parameters": {
+																"variable": "MOVE_INPUT_STRAFE_LEFT",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 302631162781057,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 961322555470857
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 903445963120851,
+															"parameters": {
+																"variable": "MOVE_INPUT_STRAFE_LEFT",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 344068827867396
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 157418980478736,
+															"parameters": {
+																"key": 69
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 806895860531216,
+															"parameters": {
+																"variable": "MOVE_INPUT_STRAFE_RIGHT",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 530720700476229,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 662411249930927
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 946191435243386,
+															"parameters": {
+																"variable": "MOVE_INPUT_STRAFE_RIGHT",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 477364138104120
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "RESOLVE INPUTS AND UPDATE CUSTOM MOVEMENT"
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 975377724503586,
+											"parameters": {
+												"variable": "TEMP_LOCAL_FRAME_ANGLE",
+												"value": "player.Angle"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 446051970786393,
+											"parameters": {
+												"variable": "MOVE_INPUT_COMPOSITE_FWD_BWD",
+												"value": "MOVE_INPUT_FORWARD-MOVE_INPUT_BACKWARD"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 765810226125232,
+											"parameters": {
+												"variable": "MOVE_INPUT_COMPOSITE_LEFT_RIGHT",
+												"value": "MOVE_INPUT_STRAFE_RIGHT-MOVE_INPUT_STRAFE_LEFT"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 922114899973037,
+											"parameters": {
+												"variable": "TEMP_LOCAL_FORWARD_SPEED",
+												"value": "player.vX*cos(TEMP_LOCAL_FRAME_ANGLE)+player.vY*sin(TEMP_LOCAL_FRAME_ANGLE)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 515084706911347,
+											"parameters": {
+												"variable": "TEMP_LOCAL_SIDE_SPEED",
+												"value": "-player.vX*sin(TEMP_LOCAL_FRAME_ANGLE)+player.vY*cos(TEMP_LOCAL_FRAME_ANGLE)"
+											}
+										}
+									],
+									"sid": 399415127818363
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 962330127320882,
+											"parameters": {
+												"first-value": "abs(MOVE_INPUT_COMPOSITE_FWD_BWD)",
+												"comparison": 4,
+												"second-value": "INPUT_SENSITIVITY"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 133513820583333,
+											"parameters": {
+												"variable": "TEMP_LOCAL_FORWARD_SPEED_NEW",
+												"value": "TEMP_LOCAL_FORWARD_SPEED + MOVE_INPUT_COMPOSITE_FWD_BWD*player.acceleration*dt"
+											}
+										}
+									],
+									"sid": 932993829011286
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 227818758460599
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 178551120863622,
+											"parameters": {
+												"variable": "TEMP_LOCAL_FORWARD_SPEED_NEW",
+												"value": "TEMP_LOCAL_FORWARD_SPEED - player.deceleration*sign(TEMP_LOCAL_FORWARD_SPEED)*dt"
+											}
+										}
+									],
+									"sid": 619083010853568
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 510761121877823,
+											"parameters": {
+												"first-value": "abs(MOVE_INPUT_COMPOSITE_FWD_BWD)",
+												"comparison": 3,
+												"second-value": "INPUT_SENSITIVITY"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 567687814368536,
+											"parameters": {
+												"first-value": "sign(TEMP_LOCAL_FORWARD_SPEED_NEW)",
+												"comparison": 1,
+												"second-value": "sign(TEMP_LOCAL_FORWARD_SPEED)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 362478998120943,
+											"parameters": {
+												"variable": "TEMP_LOCAL_FORWARD_SPEED_NEW",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 159363753963322
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 136765954558892,
+											"parameters": {
+												"first-value": "abs(MOVE_INPUT_COMPOSITE_LEFT_RIGHT)",
+												"comparison": 4,
+												"second-value": "INPUT_SENSITIVITY"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 523700894398626,
+											"parameters": {
+												"variable": "TEMP_LOCAL_SIDE_SPEED_NEW",
+												"value": "TEMP_LOCAL_SIDE_SPEED+ MOVE_INPUT_COMPOSITE_LEFT_RIGHT*player.acceleration*dt"
+											}
+										}
+									],
+									"sid": 603379971041777
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 244888072680349
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 985793824487964,
+											"parameters": {
+												"variable": "TEMP_LOCAL_SIDE_SPEED_NEW",
+												"value": "TEMP_LOCAL_SIDE_SPEED-player.deceleration*sign(TEMP_LOCAL_SIDE_SPEED)*dt"
+											}
+										}
+									],
+									"sid": 842371118775471
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 166534515298887,
+											"parameters": {
+												"first-value": "abs(MOVE_INPUT_COMPOSITE_LEFT_RIGHT)",
+												"comparison": 3,
+												"second-value": "INPUT_SENSITIVITY"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 700666879545712,
+											"parameters": {
+												"first-value": "sign(TEMP_LOCAL_SIDE_SPEED_NEW)",
+												"comparison": 1,
+												"second-value": "sign(TEMP_LOCAL_SIDE_SPEED)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 395231584334585,
+											"parameters": {
+												"variable": "TEMP_LOCAL_SIDE_SPEED_NEW",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 343476543768717
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 495633190861075,
+											"parameters": {
+												"variable": "TEMP_LOCAL_MAG_SPEED_NEW",
+												"value": "sqrt((TEMP_LOCAL_FORWARD_SPEED_NEW^2)+(TEMP_LOCAL_SIDE_SPEED_NEW)^2)"
+											}
+										}
+									],
+									"sid": 154127785749484
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 615061792334792,
+											"parameters": {
+												"first-value": "TEMP_LOCAL_MAG_SPEED_NEW",
+												"comparison": 4,
+												"second-value": "player.maxSpeed"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 531631012188178,
+											"parameters": {
+												"variable": "TEMP_LOCAL_FORWARD_SPEED_NEW",
+												"value": "(TEMP_LOCAL_FORWARD_SPEED_NEW/TEMP_LOCAL_MAG_SPEED_NEW)*player.maxSpeed"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 670170034580463,
+											"parameters": {
+												"variable": "TEMP_LOCAL_SIDE_SPEED_NEW",
+												"value": "(TEMP_LOCAL_SIDE_SPEED_NEW/TEMP_LOCAL_MAG_SPEED_NEW)*player.maxSpeed"
+											}
+										}
+									],
+									"sid": 503489296164281
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "player",
+											"sid": 237703442804694,
+											"parameters": {
+												"instance-variable": "vX",
+												"value": "TEMP_LOCAL_FORWARD_SPEED_NEW*cos(TEMP_LOCAL_FRAME_ANGLE)-TEMP_LOCAL_SIDE_SPEED_NEW*sin(TEMP_LOCAL_FRAME_ANGLE)"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "player",
+											"sid": 986988702665406,
+											"parameters": {
+												"instance-variable": "vY",
+												"value": "TEMP_LOCAL_FORWARD_SPEED_NEW*sin(TEMP_LOCAL_FRAME_ANGLE)+TEMP_LOCAL_SIDE_SPEED_NEW*cos(TEMP_LOCAL_FRAME_ANGLE)"
+											}
+										}
+									],
+									"sid": 536411504583674,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 774635366863163,
+													"parameters": {
+														"first-value": "sqrt(player.vX^2 + player.vY^2)",
+														"comparison": 4,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 194763217619777,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [],
+											"sid": 828776625485885
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "playerCam",
+											"sid": 855298447964044,
+											"parameters": {
+												"instance-variable": "thirdPersonRotatePlayerWithCamera"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 373372434043686,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 928609585151339,
+													"parameters": {
+														"first-value": "MOVE_INPUT_TURN_LEFT",
+														"comparison": 4,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-counter-clockwise",
+													"objectClass": "player_OLD",
+													"sid": 211368201757158,
+													"disabled": true,
+													"parameters": {
+														"degrees": "120*dt"
+													}
+												},
+												{
+													"id": "rotate-counter-clockwise",
+													"objectClass": "player",
+													"sid": 253736481896737,
+													"parameters": {
+														"degrees": "120*dt"
+													}
+												}
+											],
+											"sid": 793071943894779
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 780552274867844,
+													"parameters": {
+														"first-value": "MOVE_INPUT_TURN_RIGHT",
+														"comparison": 4,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-clockwise",
+													"objectClass": "player_OLD",
+													"sid": 510725091414296,
+													"disabled": true,
+													"parameters": {
+														"degrees": "120*dt"
+													}
+												},
+												{
+													"id": "rotate-clockwise",
+													"objectClass": "player",
+													"sid": 242353918194182,
+													"parameters": {
+														"degrees": "120*dt"
+													}
+												}
+											],
+											"sid": 266164762715761
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 317302711531182,
+											"parameters": {
+												"variable": "MOVE_INPUT_FORWARD",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 173306915834704,
+											"parameters": {
+												"variable": "MOVE_INPUT_BACKWARD",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 397124191672619,
+											"parameters": {
+												"variable": "MOVE_INPUT_STRAFE_LEFT",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 774423938028033,
+											"parameters": {
+												"variable": "MOVE_INPUT_STRAFE_RIGHT",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 460286354771602,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "player",
+													"sid": 711481370325120,
+													"parameters": {
+														"instance-variable": "onGround",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "player",
+													"sid": 450641370645204,
+													"parameters": {
+														"instance-variable": "state",
+														"value": "\"walk\""
+													}
+												}
+											],
+											"sid": 861368365295549
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 991456924832897
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "player",
+											"sid": 606991395233868,
+											"parameters": {
+												"instance-variable": "onGround",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "player",
+											"sid": 943747877099252,
+											"disabled": true,
+											"parameters": {
+												"instance-variable": "state",
+												"value": "\"idle\""
+											}
+										}
+									],
+									"sid": 450587315682387
+								}
+							]
+						}
+					],
+					"sid": 557940666351003
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Controls :: Jump",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 577318210076940,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 738905201670553,
+									"parameters": {
+										"object": "mobileJump"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "jump",
+									"sid": 386320621454980
+								}
+							],
+							"sid": 933802987873403,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 309234439154390,
+									"parameters": {
+										"key": 32
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "controlsKeyboardSpace",
+									"sid": 557309786258705,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"BetterOutline\""
+									}
+								}
+							],
+							"sid": 753661403155455,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 822500508672304
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "controlsKeyboardSpace",
+									"sid": 155554071307675,
+									"parameters": {
+										"mode": "disable",
+										"effect": "\"BetterOutline\""
+									}
+								}
+							],
+							"sid": 743233219629788
+						}
+					],
+					"sid": 511237900986230
+				}
+			],
+			"sid": 759320221725239
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Non Input State Changes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 551068303068384,
+							"parameters": {
+								"first-value": "sqrt(player.vX^2+player.vY^2)",
+								"comparison": 2,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 214769922537046,
+							"parameters": {
+								"instance-variable": "jumping"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "player",
+							"sid": 729668496797217,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"idle\""
+							}
+						}
+					],
+					"sid": 948850111809728
+				}
+			],
+			"sid": 154123890447502
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "Apply Impulse",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "player",
+							"sid": 705142409290980,
+							"parameters": {
+								"object": "colliders"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 683665757459834,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-z-elevation",
+									"objectClass": "colliders",
+									"sid": 931359860824215,
+									"parameters": {
+										"which": "z-elevation",
+										"comparison": 4,
+										"z-elevation": "player.ZElevation-(colliders.ZHeight/2)"
+									}
+								},
+								{
+									"id": "compare-z-elevation",
+									"objectClass": "colliders",
+									"sid": 582354923492714,
+									"parameters": {
+										"which": "z-elevation",
+										"comparison": 2,
+										"z-elevation": "player.ZElevation+(colliders.ZHeight/2)"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 181994543921632,
+							"disabled": true
+						}
+					]
+				}
+			],
+			"sid": 897650213829399
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Gravity and Character Translation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 532316957032808
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "applyGravity",
+							"sid": 207474322478239
+						},
+						{
+							"id": "TranslateCharacterController",
+							"objectClass": "player",
+							"sid": 414652690268262,
+							"behaviorType": "Rapier3DPhysics",
+							"parameters": {
+								"tag": "\"box\"",
+								"x": "player.vX*dt",
+								"y": "player.vY*dt",
+								"z": "player.vZ*dt"
+							}
+						}
+					],
+					"sid": 673952120077673
+				}
+			],
+			"sid": 264216160057528
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "3D Model",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "PLAYER_MODEL_ANGLE_DIFF",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 156298903857053
+				},
+				{
+					"eventType": "variable",
+					"name": "PLAYER_MODEL_ANGLE_DIFF_MAX",
+					"type": "number",
+					"initialValue": "45",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 296427946667906
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 288602469307347
+						}
+					],
+					"actions": [],
+					"sid": 568897361713825,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "playerCam",
+									"sid": 550923067340202,
+									"parameters": {
+										"instance-variable": "thirdPersonRotatePlayerWithCamera"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 753453698888457,
+									"parameters": {
+										"variable": "PLAYER_MODEL_ANGLE_DIFF",
+										"value": "(playerModel.ZAngle-(player.Angle-90))%360"
+									}
+								}
+							],
+							"sid": 964296991753026,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 588316923834316,
+											"parameters": {
+												"first-value": "PLAYER_MODEL_ANGLE_DIFF",
+												"comparison": 4,
+												"second-value": "180"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 442747990154343,
+											"parameters": {
+												"variable": "PLAYER_MODEL_ANGLE_DIFF",
+												"value": "PLAYER_MODEL_ANGLE_DIFF-360"
+											}
+										}
+									],
+									"sid": 383772128936972
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 421435946018403,
+											"parameters": {
+												"first-value": "PLAYER_MODEL_ANGLE_DIFF",
+												"comparison": 2,
+												"second-value": "180"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 674999350180427,
+											"parameters": {
+												"variable": "PLAYER_MODEL_ANGLE_DIFF",
+												"value": "PLAYER_MODEL_ANGLE_DIFF+360"
+											}
+										}
+									],
+									"sid": 565570045994335
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 355413656173659,
+											"parameters": {
+												"first-value": "abs(PLAYER_MODEL_ANGLE_DIFF-360)",
+												"comparison": 4,
+												"second-value": "PLAYER_MODEL_ANGLE_DIFF_MAX"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 534810089576740,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 363472588040906,
+													"parameters": {
+														"first-value": "PLAYER_MODEL_ANGLE_DIFF-360",
+														"comparison": 4,
+														"second-value": "PLAYER_MODEL_ANGLE_DIFF_MAX"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-rotation",
+													"objectClass": "playerModel",
+													"sid": 264256767999879,
+													"parameters": {
+														"x": "-90",
+														"y": "0",
+														"z": "player.Angle-90+PLAYER_MODEL_ANGLE_DIFF_MAX+360",
+														"rotation-order": "zxy"
+													}
+												}
+											],
+											"sid": 282854598118239
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 285820219021987,
+													"parameters": {
+														"first-value": "PLAYER_MODEL_ANGLE_DIFF-360",
+														"comparison": 2,
+														"second-value": "-PLAYER_MODEL_ANGLE_DIFF_MAX"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-rotation",
+													"objectClass": "playerModel",
+													"sid": 590197176775016,
+													"parameters": {
+														"x": "-90",
+														"y": "0",
+														"z": "player.Angle-90-PLAYER_MODEL_ANGLE_DIFF_MAX+360",
+														"rotation-order": "zxy"
+													}
+												}
+											],
+											"sid": 843719430283414
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 597748494123898
+										}
+									],
+									"actions": [
+										{
+											"id": "set-rotation",
+											"objectClass": "playerModel",
+											"sid": 525010387043610,
+											"parameters": {
+												"x": "-90",
+												"y": "0",
+												"z": "anglelerp(Self.ZAngle,player.Angle-90,10*dt)",
+												"rotation-order": "zxy"
+											}
+										}
+									],
+									"sid": 799656015753793
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 267645623828932
+								}
+							],
+							"actions": [
+								{
+									"id": "set-rotation",
+									"objectClass": "playerModel",
+									"sid": 971668431673235,
+									"parameters": {
+										"x": "-90",
+										"y": "0",
+										"z": "anglelerp(Self.ZAngle,player.Angle-90,10*dt)",
+										"rotation-order": "zxy"
+									}
+								}
+							],
+							"sid": 272107980242046
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 935106792869391,
+									"parameters": {
+										"first-value": "player.state",
+										"comparison": 1,
+										"second-value": "PlayerModel.currentAnimationPlaying"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 838435458225295,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "player",
+											"sid": 136471292767909,
+											"parameters": {
+												"instance-variable": "state",
+												"comparison": 0,
+												"value": "\"walk\""
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "player",
+											"sid": 311659370177660,
+											"parameters": {
+												"instance-variable": "state",
+												"comparison": 0,
+												"value": "\"idle\""
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "player",
+											"sid": 879781741583476,
+											"parameters": {
+												"instance-variable": "state",
+												"comparison": 0,
+												"value": "\"jump\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play-animation",
+											"objectClass": "playerModel",
+											"sid": 794044677650298,
+											"parameters": {
+												"animation": "player.state",
+												"loop": true
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "playerModel",
+											"sid": 115562383721604,
+											"parameters": {
+												"instance-variable": "currentAnimationPlaying",
+												"value": "player.state"
+											}
+										}
+									],
+									"sid": 674448770743206,
+									"isOrBlock": true
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 100354926989855
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Support Functions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "jump",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 415673381129831,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "player",
+									"sid": 471941942695301,
+									"parameters": {
+										"instance-variable": "onGround",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "player",
+									"sid": 818071979537932,
+									"parameters": {
+										"instance-variable": "jumping"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "player",
+									"sid": 159372012012812,
+									"parameters": {
+										"instance-variable": "vZ",
+										"value": "Self.jumpForce"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "player",
+									"sid": 624813080699105,
+									"parameters": {
+										"instance-variable": "onGround",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "player",
+									"sid": 408036722635037,
+									"parameters": {
+										"instance-variable": "jumping",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "player",
+									"sid": 588803328994302,
+									"parameters": {
+										"instance-variable": "state",
+										"value": "\"jump\""
+									}
+								}
+							],
+							"sid": 444968692580871
+						}
+					]
+				},
+				{
+					"functionName": "applyGravity",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "onGroundCheck",
+							"sid": 656639667891429
+						}
+					],
+					"sid": 662329689533430,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "player",
+									"sid": 344517987474670,
+									"parameters": {
+										"instance-variable": "onGround",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "player",
+									"sid": 716232979200410,
+									"parameters": {
+										"instance-variable": "vZ",
+										"value": "Self.vZ+Self.gravityForce*dt*(Self.jumping ? Self.jumpCurve : 1)"
+									}
+								}
+							],
+							"sid": 815086169225866
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 395700307876746
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "player",
+									"sid": 333971444578343,
+									"parameters": {
+										"instance-variable": "falling"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "player",
+									"sid": 571033102167984,
+									"parameters": {
+										"instance-variable": "jumping",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 120743238428413
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "player",
+									"sid": 677525563768055,
+									"parameters": {
+										"instance-variable": "vZ",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "player",
+									"sid": 460458034184835,
+									"parameters": {
+										"instance-variable": "falling",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 880186533455940
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 122486029110233
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "player",
+									"sid": 617415266939534,
+									"parameters": {
+										"instance-variable": "falling",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 743964582284386
+						}
+					]
+				},
+				{
+					"functionName": "onGroundCheck",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "Raycast",
+							"objectClass": "player",
+							"sid": 925937351221966,
+							"behaviorType": "Rapier3DPhysics",
+							"parameters": {
+								"tag": "\"ground\"",
+								"fromX": "Self.X",
+								"fromY": "Self.Y",
+								"fromZ": "Self.ZElevation",
+								"toX": "Self.X",
+								"toY": "Self.Y",
+								"toZ": "Self.ZElevation-5",
+								"collisionFilterGroup": "\"0x00FF\"",
+								"collisionFilterMask": "\"0xFFFF\"",
+								"skipBackfaces": true,
+								"mode": "closest"
+							}
+						}
+					],
+					"sid": 402108365608691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "OnRaycastResult",
+							"objectClass": "player",
+							"sid": 520984606032507,
+							"behaviorType": "Rapier3DPhysics",
+							"parameters": {
+								"tag": "\"ground\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "parse",
+							"objectClass": "RayResult",
+							"sid": 795667634907557,
+							"parameters": {
+								"data": "player.Rapier3DPhysics.RaycastResultAsJSON"
+							}
+						}
+					],
+					"sid": 403611216196311,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 770609341646324,
+									"parameters": {
+										"first-value": "RayResult.Get(\"hasHit\")",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "player",
+									"sid": 509343337449546,
+									"parameters": {
+										"instance-variable": "vZ",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "player",
+									"sid": 268244071715938,
+									"parameters": {
+										"instance-variable": "onGround",
+										"value": "RayResult.Get(\"hasHit\")"
+									}
+								}
+							],
+							"sid": 938115491955613
+						}
+					]
+				}
+			],
+			"sid": 357492494252103
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Triggers",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 178582696768964
+		}
+	],
+	"sid": 120561276741472
+}

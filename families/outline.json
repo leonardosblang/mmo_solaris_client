@@ -1,0 +1,14 @@
+{
+	"name": "outline",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 252798879318279,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"playerModel",
+		"miniDungeonChestModel",
+		"miniDungeonBarrelModel",
+		"otherPlayer"
+	]
+}

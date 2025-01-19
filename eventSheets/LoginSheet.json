@@ -1,0 +1,92 @@
+{
+	"name": "LoginSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "LoggedInUser",
+			"type": "string",
+			"initialValue": "test_value",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 520068828223431
+		},
+		{
+			"eventType": "variable",
+			"name": "GlobalUserName",
+			"type": "string",
+			"initialValue": "test_value",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 881916796954582
+		},
+		{
+			"eventType": "variable",
+			"name": "CurrentZone",
+			"type": "string",
+			"initialValue": "login",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 813519250053291
+		},
+		{
+			"eventType": "variable",
+			"name": "DBX",
+			"type": "number",
+			"initialValue": "3336",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 781642238719086
+		},
+		{
+			"eventType": "variable",
+			"name": "DBY",
+			"type": "number",
+			"initialValue": "1132",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 578236158362317
+		},
+		{
+			"eventType": "variable",
+			"name": "DBZ",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 828508411048230
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "LoginButton",
+					"sid": 535794859983915
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 232081894217270,
+					"parameters": {
+						"variable": "GlobalUserName",
+						"value": "UsernameInput.Text"
+					}
+				},
+				{
+					"type": "script",
+					"script": "SendLogin(runtime);"
+				}
+			],
+			"sid": 460897268512811
+		}
+	],
+	"sid": 532323289883129
+}

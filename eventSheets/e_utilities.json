@@ -1,0 +1,558 @@
+{
+	"name": "e_utilities",
+	"events": [
+		{
+			"functionName": "shortestAngleDifference",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "angle1",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 121574974153063
+				},
+				{
+					"name": "angle2",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 228962644512500
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 557670295185233,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "diff",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 235430827036879
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 907701425840131,
+							"parameters": {
+								"variable": "diff",
+								"value": "(angle2-angle1+180)%360-180"
+							}
+						}
+					],
+					"sid": 327014989574691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 668876771196354,
+							"parameters": {
+								"first-value": "diff",
+								"comparison": 3,
+								"second-value": "180"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 833483644449003,
+							"parameters": {
+								"variable": "diff",
+								"value": "diff+360"
+							}
+						}
+					],
+					"sid": 668019061535532
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 627244445660340,
+							"parameters": {
+								"value": "diff"
+							}
+						}
+					],
+					"sid": 519581279099903
+				}
+			]
+		},
+		{
+			"functionName": "rotateTowardsAngle",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "currentAngle",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 127639039824088
+				},
+				{
+					"name": "targetAngle",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 109154606426138
+				},
+				{
+					"name": "stepSize",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 284998735840053
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 613512746401159,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "diff",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 300605776889980
+				},
+				{
+					"eventType": "variable",
+					"name": "step",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 426859074531384
+				},
+				{
+					"eventType": "variable",
+					"name": "newAngle",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 543871943752683
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 413803936914845,
+							"parameters": {
+								"variable": "currentAngle",
+								"value": "currentAngle%360"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 312558774208774,
+							"parameters": {
+								"variable": "targetAngle",
+								"value": "targetAngle%360"
+							}
+						}
+					],
+					"sid": 506267800124049
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 631548517786202,
+							"parameters": {
+								"first-value": "currentAngle",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 760099391236805,
+							"parameters": {
+								"variable": "currentAngle",
+								"value": "currentAngle+360"
+							}
+						}
+					],
+					"sid": 515135183621572
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 192083777651255,
+							"parameters": {
+								"first-value": "targetAngle",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 796675089068732,
+							"parameters": {
+								"variable": "targetAngle",
+								"value": "targetAngle+360"
+							}
+						}
+					],
+					"sid": 266355244066631
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 428250672278319,
+							"parameters": {
+								"variable": "diff",
+								"value": "(targetAngle-currentAngle)"
+							}
+						}
+					],
+					"sid": 543107639269746
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 247469604941036,
+							"parameters": {
+								"first-value": "diff",
+								"comparison": 4,
+								"second-value": "180"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 721816548647200,
+							"parameters": {
+								"variable": "diff",
+								"value": "diff-360"
+							}
+						}
+					],
+					"sid": 581700506003322
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 551601604404362,
+							"parameters": {
+								"first-value": "diff",
+								"comparison": 2,
+								"second-value": "-180"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 216247046521890,
+							"parameters": {
+								"variable": "diff",
+								"value": "diff+360"
+							}
+						}
+					],
+					"sid": 386186702564663
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 542251830426940,
+							"parameters": {
+								"variable": "step",
+								"value": "min(abs(diff),stepSize)*sign(diff)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 210695316418603,
+							"parameters": {
+								"variable": "newAngle",
+								"value": "currentAngle+step"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 788281670079428,
+							"parameters": {
+								"variable": "newAngle",
+								"value": "newAngle%360"
+							}
+						}
+					],
+					"sid": 328043883193727
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 229379871649349,
+							"parameters": {
+								"first-value": "newAngle",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 696990687476164,
+							"parameters": {
+								"variable": "newAngle",
+								"value": "newAngle+360"
+							}
+						}
+					],
+					"sid": 919750261489063
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 410405041893688,
+							"parameters": {
+								"value": "newAngle"
+							}
+						}
+					],
+					"sid": 302590403570851
+				}
+			]
+		},
+		{
+			"functionName": "normalizeAngleDegrees",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "angleToNormalize",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 437408598525113
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 335142596949630,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "angleNormalized",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 416162799645320
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 136115608939320,
+							"parameters": {
+								"variable": "angleNormalized",
+								"value": "angleToNormalize%360"
+							}
+						}
+					],
+					"sid": 782852538873126
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 162098471786566,
+							"parameters": {
+								"first-value": "angleNormalized",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 666914775509624,
+							"parameters": {
+								"variable": "angleNormalized",
+								"value": "angleNormalized+360"
+							}
+						}
+					],
+					"sid": 545532039233311
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 350915934607807,
+							"parameters": {
+								"value": "angleNormalized"
+							}
+						}
+					],
+					"sid": 288686635691227
+				}
+			]
+		},
+		{
+			"functionName": "playerCastRay3D",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "fromX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 470207716638055
+				},
+				{
+					"name": "fromY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 119614487093052
+				},
+				{
+					"name": "fromZ",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 250930986836468
+				},
+				{
+					"name": "toX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 880946462801037
+				},
+				{
+					"name": "toY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 398172363207389
+				},
+				{
+					"name": "toZ",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 792928441328024
+				},
+				{
+					"name": "filterGroup",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 417064597063411
+				},
+				{
+					"name": "filterMask",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 878117696343650
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 727793550071052,
+			"disabled": true
+		}
+	],
+	"sid": 344924075163962
+}

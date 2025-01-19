@@ -1,0 +1,62 @@
+{
+	"name": "models",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 116263008465278,
+	"instanceVariables": [
+		{
+			"name": "default3DAngleX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 645887749259152
+		},
+		{
+			"name": "default3DAngleY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 379030472922007
+		},
+		{
+			"name": "default3DAngleZ",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 579300877969799
+		},
+		{
+			"name": "acceptsLight",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 686902220172074
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"miniDungeonWallNarrowModel",
+		"miniDungeonWallModel",
+		"miniDungeonWallHalfModel",
+		"miniDungeonStairsModelRamp",
+		"miniDungeonStairsModel",
+		"miniDungeonRocksModel",
+		"playerModel",
+		"miniDungeonDirtModel",
+		"miniDungeonBarrelModel",
+		"miniDungeonBannerModel",
+		"miniDungeonGateModel",
+		"miniDungeonWoodStructureModel",
+		"enemyMiniDungeonOrcModel",
+		"miniDungeonChestModel",
+		"miniDungeonCoinModel",
+		"miniDungeonColumnModel",
+		"miniDungeonFloorDetailModel",
+		"miniDungeonFloorModel",
+		"miniDungeonTrapModel",
+		"miniDungeonStonesModel",
+		"miniDungeonWallOpeningModel",
+		"miniDungeonWoodSupportModel",
+		"otherPlayer"
+	]
+}

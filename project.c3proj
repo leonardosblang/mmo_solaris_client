@@ -1,0 +1,892 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 41602,
+	"name": "MMO TEST",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Camera3D",
+			"name": "3D camera",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mikal_3DObject",
+			"name": "3D Object",
+			"author": "Mikal",
+			"bundled": false,
+			"version": "2.74.3"
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Shape3D",
+			"name": "3D shape",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "custom",
+			"name": "Custom",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "mikal_cannon_3d_physics",
+			"name": "Rapier 3D Physics",
+			"author": "Mikal",
+			"bundled": false,
+			"version": "2.24.2"
+		},
+		{
+			"type": "behavior",
+			"id": "mikal_rotate_shape",
+			"name": "Rotate 3D",
+			"author": "mikal",
+			"bundled": false,
+			"version": "1.12.0"
+		},
+		{
+			"type": "effect",
+			"id": "Mikal_FXAA",
+			"name": "FXAA",
+			"author": "Mikal",
+			"bundled": false,
+			"version": "1.0.0.0"
+		},
+		{
+			"type": "effect",
+			"id": "Mikal_SSAO",
+			"name": "SSAO",
+			"author": "Mikal",
+			"bundled": false,
+			"version": "1.6.0"
+		},
+		{
+			"type": "effect",
+			"id": "fogexponential",
+			"name": "Fog (exponential)",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "grayscale",
+			"name": "Grayscale",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "hsladjust",
+			"name": "Adjust HSL",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "BetterOutline",
+			"author": "skymen",
+			"bundled": false,
+			"version": "1.4.0.3"
+		}
+	],
+	"uniqueId": "dbhie3icafy",
+	"objectTypes": {
+		"items": [
+			"enemyMiniDungeonOrcModel",
+			"controlsToggleControls"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"btn_icon_arrow_back",
+							"btn_icon_arrow_go",
+							"btn_icon_arrow_top",
+							"btn_icon_jump"
+						],
+						"subfolders": [],
+						"name": "buttonIcons"
+					},
+					{
+						"items": [
+							"mobileForward",
+							"mobileJump",
+							"mobileLeft",
+							"mobileRight"
+						],
+						"subfolders": [],
+						"name": "buttons"
+					},
+					{
+						"items": [
+							"controlsMouseLeftClick",
+							"controlsMouseRightClick",
+							"controlsMouseWheelUp",
+							"controlsMouseWheelDown",
+							"controlsKeyboardSpace",
+							"controlsKeyboardD",
+							"controlsKeyboardS",
+							"controlsKeyboardW",
+							"controlsKeyboardE",
+							"controlsKeyboardQ",
+							"controlsKeyboardA",
+							"controlsKeyboardC",
+							"controlsToggleBackground"
+						],
+						"subfolders": [],
+						"name": "controls"
+					},
+					{
+						"items": [
+							"background",
+							"bg",
+							"UsernameInput",
+							"LoginButton"
+						],
+						"subfolders": [],
+						"name": "login"
+					}
+				],
+				"name": "userInterface"
+			},
+			{
+				"items": [
+					"groundCheckPoint1",
+					"groundCheckPoint2",
+					"groundCheckPoint3",
+					"groundCheckPoint4",
+					"groundCheckPointCenter",
+					"textGPU",
+					"textFPS",
+					"textCPU",
+					"wallCheckPoint1",
+					"wallCheckPoint2",
+					"wallCheckPoint3"
+				],
+				"subfolders": [],
+				"name": "debug"
+			},
+			{
+				"items": [
+					"raycastResultGround1",
+					"raycastResultGround2",
+					"raycastResultGround3",
+					"raycastResultGround4",
+					"raycastResultGroundCenter",
+					"raycastResultWall1",
+					"raycastResultWall2",
+					"raycastResultWall3",
+					"raycastResultRadialCameraBoxLeft",
+					"raycastResultRadialCameraBoxRight",
+					"raycastResultRadialCameraBoxBottom",
+					"raycastResultRadialCameraBoxTop",
+					"RayResult"
+				],
+				"subfolders": [],
+				"name": "dataStructures"
+			},
+			{
+				"items": [
+					"3DCamera",
+					"Browser",
+					"Keyboard",
+					"Touch",
+					"Mouse"
+				],
+				"subfolders": [],
+				"name": "plugins"
+			},
+			{
+				"items": [
+					"player",
+					"playerModel",
+					"playerNameText",
+					"player_OLD",
+					"otherPlayer"
+				],
+				"subfolders": [],
+				"name": "player"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"miniDungeonBanner",
+							"miniDungeonBarrel",
+							"miniDungeonChest",
+							"miniDungeonCoin",
+							"miniDungeonColumn",
+							"miniDungeonDirt",
+							"miniDungeonFloor",
+							"miniDungeonFloorDetail",
+							"miniDungeonRocks",
+							"miniDungeonStairs",
+							"miniDungeonStairsRamp",
+							"miniDungeonWall",
+							"miniDungeonWallHalf",
+							"miniDungeonWallNarrow",
+							"miniDungeonGate",
+							"miniDungeonStones",
+							"miniDungeonTrap",
+							"miniDungeonWallOpening",
+							"miniDungeonWoodStructure",
+							"miniDungeonWoodSupport",
+							"enemyMiniDungeonOrc"
+						],
+						"subfolders": [],
+						"name": "parentObject"
+					},
+					{
+						"items": [
+							"miniDungeonBannerModel",
+							"miniDungeonBarrelModel",
+							"miniDungeonDirtModel",
+							"miniDungeonRocksModel",
+							"miniDungeonStairsModel",
+							"miniDungeonStairsModelRamp",
+							"miniDungeonWallHalfModel",
+							"miniDungeonWallModel",
+							"miniDungeonWallNarrowModel",
+							"miniDungeonChestModel",
+							"miniDungeonCoinModel",
+							"miniDungeonColumnModel",
+							"miniDungeonFloorDetailModel",
+							"miniDungeonFloorModel",
+							"miniDungeonGateModel",
+							"miniDungeonStonesModel",
+							"miniDungeonTrapModel",
+							"miniDungeonWallOpeningModel",
+							"miniDungeonWoodStructureModel",
+							"miniDungeonWoodSupportModel"
+						],
+						"subfolders": [],
+						"name": "models"
+					},
+					{
+						"items": [
+							"groundCollider",
+							"miniDungeonBannerCollider",
+							"miniDungeonBarrelCollider",
+							"miniDungeonChestCollider",
+							"miniDungeonCoinCollider",
+							"miniDungeonColumnCollider",
+							"miniDungeonDirtCollider",
+							"miniDungeonFloorCollider",
+							"miniDungeonFloorDetailCollider",
+							"miniDungeonGateCollider",
+							"miniDungeonRocksCollider",
+							"miniDungeonStairsCollider1",
+							"miniDungeonStairsCollider2",
+							"miniDungeonStairsCollider3",
+							"miniDungeonStairsCollider4",
+							"miniDungeonStairsCollider5",
+							"miniDungeonStairsCollider6",
+							"miniDungeonStairsRampCollider",
+							"miniDungeonStonesCollider",
+							"miniDungeonTrapCollider",
+							"miniDungeonWallCollider",
+							"miniDungeonWallHalfCollider",
+							"miniDungeonWallNarrowCollider",
+							"miniDungeonWallOpeningCollider1",
+							"miniDungeonWallOpeningCollider2",
+							"miniDungeonWallOpeningCollider3",
+							"miniDungeonWoodStructureCollider1",
+							"miniDungeonWoodStructureCollider2",
+							"miniDungeonWoodSupportCollider1",
+							"miniDungeonWoodSupportCollider2"
+						],
+						"subfolders": [],
+						"name": "colliders"
+					}
+				],
+				"name": "environment3D"
+			},
+			{
+				"items": [
+					"enemyMiniDungeonOrcCollider"
+				],
+				"subfolders": [],
+				"name": "colliders"
+			},
+			{
+				"items": [
+					"TiledBackground"
+				],
+				"subfolders": [],
+				"name": "environment2D"
+			},
+			{
+				"items": [
+					"playerCam"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"textCameraAzimuthalAngle",
+							"textCameraPolarAngle",
+							"textCameraRadialDist",
+							"textTargetAzimuthalAngle",
+							"textTargetRadialDist",
+							"textTargetPolarAngle"
+						],
+						"subfolders": [],
+						"name": "debugCamera"
+					},
+					{
+						"items": [
+							"LOS_Camera_Polar_Results",
+							"LOS_Camera_Polar_ClearPoints_WorstCase",
+							"LOS_Camera_Polar_ClearPoints",
+							"LOS_Camera_Fade_Results"
+						],
+						"subfolders": [],
+						"name": "dataStructures"
+					},
+					{
+						"items": [
+							"vBoxBottom",
+							"vBoxBottomClearPoint",
+							"vBoxLeft",
+							"vBoxRight",
+							"vBoxTop",
+							"vBoxTopClearPoint"
+						],
+						"subfolders": [],
+						"name": "vBox"
+					}
+				],
+				"name": "camera"
+			},
+			{
+				"items": [
+					"3DRayJSON",
+					"3DRay_XYLineDebug"
+				],
+				"subfolders": [],
+				"name": "3DRayNonPhysics"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"objectVerticalText",
+			"colliders",
+			"prefab",
+			"animatedModel",
+			"models",
+			"controls",
+			"vBox",
+			"outline"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"demo_zone",
+			"repoMiniDungeon",
+			"demozone0",
+			"login"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"e_main",
+			"e_camera",
+			"e_3D_Functions",
+			"e_player",
+			"e_utilities",
+			"e_otherplayer",
+			"LoginSheet",
+			"database"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [
+				{
+					"name": "main.js",
+					"type": "application/javascript",
+					"sid": 503594314511626,
+					"script-info": {
+						"purpose": "main"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 711842159802897,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 340332219111909,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 389934337037704,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 419063145297988,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 525725039755033,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 232208140153723,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 957688099530864,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "character-human-foozle.glb",
+					"type": "application/octet-stream",
+					"sid": 408744224653430,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "character-human-foozle2.glb",
+					"type": "application/octet-stream",
+					"sid": 774495199634806,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "character-human.glb",
+					"type": "application/octet-stream",
+					"sid": 640451787668280,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonOrc.glb",
+					"type": "application/octet-stream",
+					"sid": 729379464274835,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonGate.glb",
+					"type": "application/octet-stream",
+					"sid": 978534158605112,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonBanner.glb",
+					"type": "application/octet-stream",
+					"sid": 945727863689029,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonBarrel.glb",
+					"type": "application/octet-stream",
+					"sid": 990980043010988,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonChest.glb",
+					"type": "application/octet-stream",
+					"sid": 110957340664570,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonCoin.glb",
+					"type": "application/octet-stream",
+					"sid": 211976195560595,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonColumn.glb",
+					"type": "application/octet-stream",
+					"sid": 782478084205236,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonDirt.glb",
+					"type": "application/octet-stream",
+					"sid": 268488930313765,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonFloor.glb",
+					"type": "application/octet-stream",
+					"sid": 802100597043207,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonFloorDetail.glb",
+					"type": "application/octet-stream",
+					"sid": 454144194015079,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonRocks.glb",
+					"type": "application/octet-stream",
+					"sid": 512899087430549,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonStairs.glb",
+					"type": "application/octet-stream",
+					"sid": 689223919990352,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonWall.glb",
+					"type": "application/octet-stream",
+					"sid": 120491004548857,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonWallHalf.glb",
+					"type": "application/octet-stream",
+					"sid": 333151235699436,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonWallNarrow.glb",
+					"type": "application/octet-stream",
+					"sid": 856754583785413,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonStones.glb",
+					"type": "application/octet-stream",
+					"sid": 418110159202273,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonTrap.glb",
+					"type": "application/octet-stream",
+					"sid": 230594443149540,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonWallOpening.glb",
+					"type": "application/octet-stream",
+					"sid": 686116567426951,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonWoodStructure.glb",
+					"type": "application/octet-stream",
+					"sid": 358267952682628,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "miniDungeonWoodSupport.glb",
+					"type": "application/octet-stream",
+					"sid": 691794433026542,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "barrelFoozle.glb",
+					"type": "application/octet-stream",
+					"sid": 453280704165288,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "barrelFoozleCenter.glb",
+					"type": "application/octet-stream",
+					"sid": 930901795553556,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "untitled.gltf",
+					"type": "application/octet-stream",
+					"sid": 256628398470349,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "colormap.png",
+							"type": "image/png",
+							"sid": 755731786224190,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Textures"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "3D MMO TEST",
+		"version": "0.1",
+		"author": "Leolang",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "regular",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "no",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"firstLayout": "login"
+}

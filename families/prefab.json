@@ -1,0 +1,31 @@
+{
+	"name": "prefab",
+	"plugin-id": "Sprite",
+	"sid": 491171621869049,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"miniDungeonBarrel",
+		"miniDungeonBanner",
+		"miniDungeonStairs",
+		"miniDungeonWall",
+		"miniDungeonWallHalf",
+		"miniDungeonWallNarrow",
+		"miniDungeonRocks",
+		"miniDungeonDirt",
+		"miniDungeonStairsRamp",
+		"miniDungeonChest",
+		"miniDungeonCoin",
+		"miniDungeonColumn",
+		"miniDungeonFloorDetail",
+		"miniDungeonFloor",
+		"miniDungeonGate",
+		"miniDungeonStones",
+		"miniDungeonTrap",
+		"miniDungeonWallOpening",
+		"miniDungeonWoodStructure",
+		"miniDungeonWoodSupport",
+		"enemyMiniDungeonOrc"
+	]
+}

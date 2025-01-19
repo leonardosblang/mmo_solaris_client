@@ -1,0 +1,891 @@
+{
+	"name": "e_3D_Functions",
+	"events": [
+		{
+			"functionName": "cast3DRay",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "startX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 630769642646284
+				},
+				{
+					"name": "startY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 381500205488211
+				},
+				{
+					"name": "startZ",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 576440359354754
+				},
+				{
+					"name": "endX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 971206684970218
+				},
+				{
+					"name": "endY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 258711104542015
+				},
+				{
+					"name": "endZ",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 285906325830717
+				},
+				{
+					"name": "stepSize",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 908866828599533
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 511257665438835,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "https://www.geeksforgeeks.org/equation-of-a-line-in-3d/"
+				},
+				{
+					"eventType": "variable",
+					"name": "DIST_2D_RAY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 113184379925191
+				},
+				{
+					"eventType": "variable",
+					"name": "DR_L_RAY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 679483043403682
+				},
+				{
+					"eventType": "variable",
+					"name": "DR_M_RAY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 872075278739385
+				},
+				{
+					"eventType": "variable",
+					"name": "DR_N_RAY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 138867100868607
+				},
+				{
+					"eventType": "variable",
+					"name": "DIST_3D_RAY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 830589273574227
+				},
+				{
+					"eventType": "variable",
+					"name": "DIST_2D_HIT",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 554760167688374
+				},
+				{
+					"eventType": "variable",
+					"name": "DIST_3D_HIT",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 990950801077351
+				},
+				{
+					"eventType": "variable",
+					"name": "DIST_STEP",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 995474557449485
+				},
+				{
+					"eventType": "variable",
+					"name": "DIST_STEP_T_RATIO",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 856226891523963
+				},
+				{
+					"eventType": "variable",
+					"name": "STEP_X",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 471390017628843
+				},
+				{
+					"eventType": "variable",
+					"name": "STEP_Y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 504339081811414
+				},
+				{
+					"eventType": "variable",
+					"name": "STEP_Z",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 150172720838816
+				},
+				{
+					"eventType": "variable",
+					"name": "rayComplete",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 134102736250474
+				},
+				{
+					"eventType": "variable",
+					"name": "uniqueHit",
+					"type": "boolean",
+					"initialValue": "true",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 676075903745808
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "3DRayJSON",
+							"sid": 759940377609233,
+							"parameters": {
+								"path": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "delete-key",
+							"objectClass": "3DRayJSON",
+							"sid": 665769351243342,
+							"parameters": {
+								"path": "3DRayJSON.CurrentKey"
+							}
+						}
+					],
+					"sid": 611201626108311
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-value",
+							"objectClass": "3DRayJSON",
+							"sid": 542216609221369,
+							"parameters": {
+								"path": "\"hitCount\"",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 319299333463596
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 482959640100984,
+							"parameters": {
+								"variable": "DIST_2D_RAY",
+								"value": "distance(startX,startY,endX,endY)"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "3DRayJSON",
+							"sid": 599149354760280,
+							"parameters": {
+								"path": "\"distance2D\"",
+								"value": "DIST_2D_RAY"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 809206533286781,
+							"parameters": {
+								"variable": "DR_L_RAY",
+								"value": "endX-startX"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 865875309263345,
+							"parameters": {
+								"variable": "DR_M_RAY",
+								"value": "endY-startY"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 536821491706953,
+							"parameters": {
+								"variable": "DR_N_RAY",
+								"value": "endZ-startZ"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 315173323748022,
+							"parameters": {
+								"variable": "DIST_3D_RAY",
+								"value": "Functions.distance3D(startX,startY,startZ,endX,endY,endZ)"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "3DRayJSON",
+							"sid": 983071306805737,
+							"parameters": {
+								"path": "\"distance3D\"",
+								"value": "DIST_3D_RAY"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 225584330170994,
+							"parameters": {
+								"variable": "rayComplete",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "3DRay_XYLineDebug",
+							"sid": 500879920063365,
+							"parameters": {
+								"x": "startX",
+								"y": "startY"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "3DRay_XYLineDebug",
+							"sid": 613454048616612,
+							"parameters": {
+								"x": "endX",
+								"y": "endY"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "3DRay_XYLineDebug",
+							"sid": 253980749425207,
+							"parameters": {
+								"width": "DIST_2D_RAY"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "3DRay_XYLineDebug",
+							"sid": 757024367348871,
+							"parameters": {
+								"z": "endZ"
+							}
+						}
+					],
+					"sid": 337983417690352
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 385993179021507,
+							"parameters": {
+								"name": "\"step\"",
+								"start-index": "0",
+								"end-index": "int(ceil(DIST_2D_RAY/stepSize))"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 362353363174979,
+							"parameters": {
+								"variable": "DIST_STEP",
+								"value": "min(loopindex(\"step\")*stepSize,DIST_2D_RAY)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 239933964343262,
+							"parameters": {
+								"variable": "DIST_STEP_T_RATIO",
+								"value": "DIST_STEP/DIST_2D_RAY"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 127494068882502,
+							"parameters": {
+								"variable": "STEP_X",
+								"value": "((1-DIST_STEP_T_RATIO)*startX)+(DIST_STEP_T_RATIO*endX)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 781121102619811,
+							"parameters": {
+								"variable": "STEP_Y",
+								"value": "((1-DIST_STEP_T_RATIO)*startY)+(DIST_STEP_T_RATIO*endY)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 605290943386044,
+							"parameters": {
+								"variable": "STEP_Z",
+								"value": "startZ+DR_N_RAY*((STEP_X-startX)/DR_L_RAY)"
+							}
+						}
+					],
+					"sid": 220578932728232,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-overlapping-point",
+									"objectClass": "System",
+									"sid": 176212314167900,
+									"parameters": {
+										"object": "colliders",
+										"x": "STEP_X",
+										"y": "STEP_Y"
+									}
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 485235970753408,
+									"parameters": {
+										"object": "colliders"
+									}
+								},
+								{
+									"id": "is-between-values",
+									"objectClass": "System",
+									"sid": 341036684819004,
+									"parameters": {
+										"value": "STEP_Z",
+										"lower-bound": "colliders.ZElevation",
+										"upper-bound": "colliders.ZElevation+colliders.ZHeight"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 955513193787089,
+									"parameters": {
+										"variable": "uniqueHit",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 271909844126573,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-key",
+											"objectClass": "3DRayJSON",
+											"sid": 980549993413600,
+											"parameters": {
+												"path": "\"hitList\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 545847667839008,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "3DRayJSON",
+													"sid": 328930487479806,
+													"parameters": {
+														"path": "\"hitList\""
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 250026591496005,
+													"parameters": {
+														"first-value": "colliders.UID",
+														"comparison": 0,
+														"second-value": "3DRayJSON.Get(\".UID\")"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 563570076388561,
+													"parameters": {
+														"variable": "uniqueHit",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 545935041762470
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 948191725547811,
+													"parameters": {
+														"variable": "uniqueHit"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-value",
+													"objectClass": "3DRayJSON",
+													"sid": 642684969179058,
+													"parameters": {
+														"path": "\"hitCount\"",
+														"value": "3DRayJSON.Get(\"hitCount\")+1"
+													}
+												},
+												{
+													"id": "set-value",
+													"objectClass": "3DRayJSON",
+													"sid": 883811804773740,
+													"parameters": {
+														"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".UID\"",
+														"value": "colliders.UID"
+													}
+												},
+												{
+													"id": "set-value",
+													"objectClass": "3DRayJSON",
+													"sid": 734885648741454,
+													"parameters": {
+														"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".hitX\"",
+														"value": "STEP_X"
+													}
+												},
+												{
+													"id": "set-value",
+													"objectClass": "3DRayJSON",
+													"sid": 583208325469979,
+													"parameters": {
+														"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".hitY\"",
+														"value": "STEP_Y"
+													}
+												},
+												{
+													"id": "set-value",
+													"objectClass": "3DRayJSON",
+													"sid": 432248447182646,
+													"parameters": {
+														"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".hitZ\"",
+														"value": "STEP_Z"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 581755989373044,
+													"parameters": {
+														"variable": "DIST_2D_HIT",
+														"value": "distance(startX,startY,STEP_X,STEP_Y)"
+													}
+												},
+												{
+													"id": "set-value",
+													"objectClass": "3DRayJSON",
+													"sid": 760382957276767,
+													"parameters": {
+														"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".distance2D\"",
+														"value": "DIST_2D_HIT"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 758304187547171,
+													"parameters": {
+														"variable": "DIST_3D_HIT",
+														"value": "Functions.distance3D(startX,startY,startZ,STEP_X,STEP_Y,STEP_Z)"
+													}
+												},
+												{
+													"id": "set-value",
+													"objectClass": "3DRayJSON",
+													"sid": 265498141718676,
+													"parameters": {
+														"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".distance3D\"",
+														"value": "DIST_3D_HIT"
+													}
+												}
+											],
+											"sid": 156900721125198
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 368331851455284
+										}
+									],
+									"actions": [
+										{
+											"id": "set-value",
+											"objectClass": "3DRayJSON",
+											"sid": 716773941924757,
+											"parameters": {
+												"path": "\"hitCount\"",
+												"value": "3DRayJSON.Get(\"hitCount\")+1"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "3DRayJSON",
+											"sid": 263188572285450,
+											"parameters": {
+												"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".UID\"",
+												"value": "colliders.UID"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "3DRayJSON",
+											"sid": 234095541674804,
+											"parameters": {
+												"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".hitX\"",
+												"value": "STEP_X"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "3DRayJSON",
+											"sid": 949762115588317,
+											"parameters": {
+												"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".hitY\"",
+												"value": "STEP_Y"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "3DRayJSON",
+											"sid": 859389974751722,
+											"parameters": {
+												"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".hitZ\"",
+												"value": "STEP_Z"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 553750831849007,
+											"parameters": {
+												"variable": "DIST_2D_HIT",
+												"value": "distance(startX,startY,STEP_X,STEP_Y)"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "3DRayJSON",
+											"sid": 391847921015417,
+											"parameters": {
+												"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".distance2D\"",
+												"value": "DIST_2D_HIT"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 273270218335078,
+											"parameters": {
+												"variable": "DIST_3D_HIT",
+												"value": "Functions.distance3D(startX,startY,startZ,STEP_X,STEP_Y,STEP_Z)"
+											}
+										},
+										{
+											"id": "set-value",
+											"objectClass": "3DRayJSON",
+											"sid": 123209070484372,
+											"parameters": {
+												"path": "\"hitList.\" & 3DRayJSON.Get(\"hitCount\") & \".distance3D\"",
+												"value": "DIST_3D_HIT"
+											}
+										}
+									],
+									"sid": 421308334829138
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 688108983501558,
+							"parameters": {
+								"value": "3DRayJSON.ToBeautifiedString"
+							}
+						}
+					],
+					"sid": 338886598583868
+				}
+			]
+		},
+		{
+			"functionName": "distance3D",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "startX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 563768331707905
+				},
+				{
+					"name": "startY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 124238098941342
+				},
+				{
+					"name": "startZ",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 353786914525026
+				},
+				{
+					"name": "endX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 477676355804037
+				},
+				{
+					"name": "endY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 479782965652962
+				},
+				{
+					"name": "endZ",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 278234293019383
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 821331281698129,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "https://www.geeksforgeeks.org/equation-of-a-line-in-3d/"
+				},
+				{
+					"eventType": "variable",
+					"name": "DR_L",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 777214032347725
+				},
+				{
+					"eventType": "variable",
+					"name": "DR_M",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 143623830527848
+				},
+				{
+					"eventType": "variable",
+					"name": "DR_N",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 182684454221251
+				},
+				{
+					"eventType": "variable",
+					"name": "DIST_3D",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 867613400712356
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 141978041901458,
+							"parameters": {
+								"variable": "DR_L",
+								"value": "endX-startX"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 131854704408713,
+							"parameters": {
+								"variable": "DR_M",
+								"value": "endY-startY"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 316188508241657,
+							"parameters": {
+								"variable": "DR_N",
+								"value": "endZ-startZ"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 860051802678015,
+							"parameters": {
+								"variable": "DIST_3D",
+								"value": "sqrt(DR_L*DR_L+DR_M*DR_M+DR_N*DR_N)"
+							}
+						},
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 993191553128871,
+							"parameters": {
+								"value": "DIST_3D"
+							}
+						}
+					],
+					"sid": 791747702929501
+				}
+			]
+		}
+	],
+	"sid": 805725797386334
+}

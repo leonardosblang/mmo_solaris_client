@@ -1,0 +1,67 @@
+{
+	"name": "playerCam",
+	"plugin-id": "Sprite",
+	"sid": 379586957015061,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "firstPerson",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 662283947857730
+		},
+		{
+			"name": "thirdPersonRotatePlayerWithCamera",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 912168583434122
+		},
+		{
+			"name": "thirdPersonRotateCameraOnly",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 301618347992828
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 272132262517252
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4213148,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 710849797035434,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

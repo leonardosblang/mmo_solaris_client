@@ -1,0 +1,12 @@
+{
+	"name": "3DCamera",
+	"plugin-id": "Camera3D",
+	"sid": 778202646593030,
+	"singleglobal-inst": {
+		"type": "3DCamera",
+		"properties": {},
+		"uid": 3,
+		"sid": 964643303364650,
+		"tags": ""
+	}
+}

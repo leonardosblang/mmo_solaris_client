@@ -1,0 +1,965 @@
+{
+	"name": "e_main",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 349913105814945
+				}
+			],
+			"actions": [
+				{
+					"id": "Translate",
+					"objectClass": "player",
+					"sid": 120360247919802,
+					"behaviorType": "Rapier3DPhysics",
+					"parameters": {
+						"x": "DBX",
+						"y": "DBY",
+						"z": "DBZ+55"
+					}
+				}
+			],
+			"sid": 144302631491434
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_player"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_camera"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "e_otherplayer"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "database"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "3D Object",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "3D Object :: Setup",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-loaded",
+									"objectClass": "models",
+									"sid": 874807010316815
+								},
+								{
+									"id": "pick-parent",
+									"objectClass": "models",
+									"sid": 427412759252333,
+									"parameters": {
+										"parent": "prefab",
+										"which": "top"
+									}
+								},
+								{
+									"id": "pick-children",
+									"objectClass": "prefab",
+									"sid": 545237289674614,
+									"parameters": {
+										"child": "colliders",
+										"which": "own"
+									}
+								},
+								{
+									"id": "IsImmovable",
+									"objectClass": "colliders",
+									"sid": 211586574068745,
+									"behaviorType": "Rapier3DPhysics",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "enable-quaternion",
+									"objectClass": "models",
+									"sid": 274124862366545,
+									"parameters": {
+										"enable": true
+									}
+								}
+							],
+							"sid": 994752371207379
+						}
+					],
+					"sid": 514585448087801
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-z-elevation",
+							"objectClass": "prefab",
+							"sid": 379746064287188,
+							"parameters": {
+								"which": "z-elevation",
+								"comparison": 2,
+								"z-elevation": "-500"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "prefab",
+							"sid": 582706519008596
+						}
+					],
+					"sid": 775917359428074
+				}
+			],
+			"sid": 560143650311689
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "3D Collision",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "3D Collision :: Setup",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 365454736048829
+								}
+							],
+							"actions": [],
+							"sid": 398281107085490,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 854079727861786,
+											"parameters": {
+												"object": "colliders"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "SetMass",
+											"objectClass": "colliders",
+											"sid": 155566222328755,
+											"behaviorType": "Rapier3DPhysics",
+											"parameters": {
+												"mass": "0.8"
+											}
+										},
+										{
+											"id": "SetLinearDamping",
+											"objectClass": "colliders",
+											"sid": 339796020541442,
+											"behaviorType": "Rapier3DPhysics",
+											"parameters": {
+												"linearDamping": "0.15"
+											}
+										},
+										{
+											"id": "SetAngularDamping",
+											"objectClass": "colliders",
+											"sid": 916747944300549,
+											"behaviorType": "Rapier3DPhysics",
+											"parameters": {
+												"angularDamping": "0.15"
+											}
+										}
+									],
+									"sid": 755884437452407,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 159226961994095,
+													"parameters": {
+														"instance-variable": "impactCameraRadial"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 825778074897419,
+													"parameters": {
+														"instance-variable": "impactMovement"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "IsImmovable",
+													"objectClass": "colliders",
+													"sid": 232392704668498,
+													"behaviorType": "Rapier3DPhysics"
+												}
+											],
+											"actions": [
+												{
+													"id": "SetCollisionGroups",
+													"objectClass": "colliders",
+													"sid": 290871086148949,
+													"behaviorType": "Rapier3DPhysics",
+													"parameters": {
+														"membership": "\"0x0001\"",
+														"filter": "\"0x0FF0\""
+													}
+												}
+											],
+											"sid": 214495374008020
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 715602773064973
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 755743590598484,
+													"parameters": {
+														"instance-variable": "impactCameraRadial"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 723820556973352,
+													"parameters": {
+														"instance-variable": "impactMovement"
+													}
+												},
+												{
+													"id": "IsImmovable",
+													"objectClass": "colliders",
+													"sid": 455672668699162,
+													"behaviorType": "Rapier3DPhysics"
+												}
+											],
+											"actions": [
+												{
+													"id": "SetCollisionGroups",
+													"objectClass": "colliders",
+													"sid": 400401562177406,
+													"behaviorType": "Rapier3DPhysics",
+													"parameters": {
+														"membership": "\"0x0002\"",
+														"filter": "\"0x0FF0\""
+													}
+												}
+											],
+											"sid": 835057415841651
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 125554085736651
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 492909215549523,
+													"parameters": {
+														"instance-variable": "impactCameraRadial"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 303458094945602,
+													"parameters": {
+														"instance-variable": "impactMovement"
+													}
+												},
+												{
+													"id": "IsImmovable",
+													"objectClass": "colliders",
+													"sid": 866198397734295,
+													"behaviorType": "Rapier3DPhysics"
+												}
+											],
+											"actions": [
+												{
+													"id": "SetCollisionGroups",
+													"objectClass": "colliders",
+													"sid": 153086584255077,
+													"behaviorType": "Rapier3DPhysics",
+													"parameters": {
+														"membership": "\"0x0004\"",
+														"filter": "\"0x0FF0\""
+													}
+												}
+											],
+											"sid": 296485603383191
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 812115688110317
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 320221417811749,
+													"parameters": {
+														"instance-variable": "impactCameraRadial"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 139761441546105,
+													"parameters": {
+														"instance-variable": "impactMovement"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "IsImmovable",
+													"objectClass": "colliders",
+													"sid": 768963200705756,
+													"behaviorType": "Rapier3DPhysics"
+												}
+											],
+											"actions": [
+												{
+													"id": "SetCollisionGroups",
+													"objectClass": "colliders",
+													"sid": 537323672920376,
+													"behaviorType": "Rapier3DPhysics",
+													"parameters": {
+														"membership": "\"0x0008\"",
+														"filter": "\"0x0FF0\""
+													}
+												}
+											],
+											"sid": 292341323128255
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 772038126155795
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 207296661049050,
+													"parameters": {
+														"instance-variable": "impactCameraRadial"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 465903342201077,
+													"parameters": {
+														"instance-variable": "impactMovement"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "IsImmovable",
+													"objectClass": "colliders",
+													"sid": 719635690407819,
+													"behaviorType": "Rapier3DPhysics",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "SetCollisionGroups",
+													"objectClass": "colliders",
+													"sid": 243150709381521,
+													"behaviorType": "Rapier3DPhysics",
+													"parameters": {
+														"membership": "\"0x0010\"",
+														"filter": "\"0xFFFF\""
+													}
+												}
+											],
+											"sid": 906280757412312
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 170483090032598
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 324008462605140,
+													"parameters": {
+														"instance-variable": "impactCameraRadial"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 143522441460158,
+													"parameters": {
+														"instance-variable": "impactMovement"
+													}
+												},
+												{
+													"id": "IsImmovable",
+													"objectClass": "colliders",
+													"sid": 128727903977145,
+													"behaviorType": "Rapier3DPhysics",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "SetCollisionGroups",
+													"objectClass": "colliders",
+													"sid": 141533121811049,
+													"behaviorType": "Rapier3DPhysics",
+													"parameters": {
+														"membership": "\"0x0020\"",
+														"filter": "\"0xFFFF\""
+													}
+												}
+											],
+											"sid": 586671547846892
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 686407621610532
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 826369811671645,
+													"parameters": {
+														"instance-variable": "impactCameraRadial"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 951331172449773,
+													"parameters": {
+														"instance-variable": "impactMovement"
+													}
+												},
+												{
+													"id": "IsImmovable",
+													"objectClass": "colliders",
+													"sid": 292110105052738,
+													"behaviorType": "Rapier3DPhysics",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "SetCollisionGroups",
+													"objectClass": "colliders",
+													"sid": 281337242298798,
+													"behaviorType": "Rapier3DPhysics",
+													"parameters": {
+														"membership": "\"0x0040\"",
+														"filter": "\"0xFFFF\""
+													}
+												}
+											],
+											"sid": 661878504855975
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 884749466347741
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 909058516124503,
+													"parameters": {
+														"instance-variable": "impactCameraRadial"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "colliders",
+													"sid": 777009509248586,
+													"parameters": {
+														"instance-variable": "impactMovement"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "IsImmovable",
+													"objectClass": "colliders",
+													"sid": 192717009474977,
+													"behaviorType": "Rapier3DPhysics",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "SetCollisionGroups",
+													"objectClass": "colliders",
+													"sid": 878978587883661,
+													"behaviorType": "Rapier3DPhysics",
+													"parameters": {
+														"membership": "\"0x0080\"",
+														"filter": "\"0xFFFF\""
+													}
+												}
+											],
+											"sid": 165250197633291
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 953143540626218
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "3D Collision :: Update Non Immovable Parents",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "worldX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 982905783574394
+						},
+						{
+							"eventType": "variable",
+							"name": "worldY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 339228114531331
+						},
+						{
+							"eventType": "variable",
+							"name": "worldZ",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 637244515757074
+						},
+						{
+							"eventType": "variable",
+							"name": "rotatedWorldX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 405833708137992
+						},
+						{
+							"eventType": "variable",
+							"name": "rotatedWorldY",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 539880623230723
+						},
+						{
+							"eventType": "variable",
+							"name": "rotatedWorldZ",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 265052076464819
+						},
+						{
+							"eventType": "variable",
+							"name": "tempRotatedWorldPoint",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 439682951239423
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 381313345958102
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 112225267443939,
+									"parameters": {
+										"object": "colliders"
+									}
+								},
+								{
+									"id": "IsImmovable",
+									"objectClass": "colliders",
+									"sid": 561738437749951,
+									"behaviorType": "Rapier3DPhysics",
+									"isInverted": true
+								},
+								{
+									"id": "pick-parent",
+									"objectClass": "colliders",
+									"sid": 278142278074319,
+									"parameters": {
+										"parent": "prefab",
+										"which": "top"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "prefab",
+									"sid": 795124229881527,
+									"parameters": {
+										"x": "colliders.X",
+										"y": "colliders.Y"
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "prefab",
+									"sid": 502234548182396,
+									"parameters": {
+										"angle": "colliders.Angle"
+									}
+								},
+								{
+									"id": "set-z-elevation",
+									"objectClass": "prefab",
+									"sid": 573599241291321,
+									"parameters": {
+										"z": "colliders.ZElevation"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 705663793593800,
+									"parameters": {
+										"variable": "worldX",
+										"value": "colliders.FaceImagePointX(0,1)"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 959006384696910,
+									"parameters": {
+										"variable": "worldY",
+										"value": "colliders.FaceImagePointY(0,1)"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 413790009672395,
+									"parameters": {
+										"variable": "worldZ",
+										"value": "colliders.ZElevation+colliders.ZHeight/2"
+									}
+								}
+							],
+							"sid": 710125137856050,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-children",
+											"objectClass": "prefab",
+											"sid": 955952270944730,
+											"parameters": {
+												"child": "models",
+												"which": "own"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "models",
+											"sid": 888392881832597,
+											"parameters": {
+												"x": "worldX",
+												"y": "worldY"
+											}
+										},
+										{
+											"id": "set-z-elevation-0",
+											"objectClass": "models",
+											"sid": 326741425612987,
+											"parameters": {
+												"z-elevation": "worldZ"
+											}
+										},
+										{
+											"id": "set-quaternion",
+											"objectClass": "models",
+											"sid": 475246933942742,
+											"parameters": {
+												"quaternion": "colliders.Rotate3D.Quaternion",
+												"offset-x": "0",
+												"offset-y": "0",
+												"offset-z": "0"
+											}
+										}
+									],
+									"sid": 283185905273190
+								}
+							]
+						}
+					],
+					"sid": 475388794055572
+				}
+			],
+			"sid": 937369791587746
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Main :: Debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "textFPS",
+							"sid": 803955767555160,
+							"parameters": {
+								"text": "\"FPS: \" & fps"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "textCPU",
+							"sid": 452818995013972,
+							"parameters": {
+								"text": "\"CPU: \" & int(cpuutilisation*1000)/10 & \"%\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "textGPU",
+							"sid": 727006240596229,
+							"parameters": {
+								"text": "\"GPU: \" & int(gpuutilisation*1000)/10 & \"%\""
+							}
+						}
+					],
+					"sid": 269063116013366
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-group-active",
+							"objectClass": "System",
+							"sid": 604476270485005,
+							"parameters": {
+								"group-name": "\"Camera :: 3rd Person Controls :: Text Debug\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "textTargetAzimuthalAngle",
+							"sid": 294764616512017,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textCameraAzimuthalAngle",
+							"sid": 329093042694248,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textTargetRadialDist",
+							"sid": 539603979346896,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textCameraRadialDist",
+							"sid": 290086162076932,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textTargetPolarAngle",
+							"sid": 616221040967250,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textCameraPolarAngle",
+							"sid": 232543678163059,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 822718742524952,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 803006288248707
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "textTargetAzimuthalAngle",
+							"sid": 213200052977986,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textCameraAzimuthalAngle",
+							"sid": 845737477312406,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textTargetRadialDist",
+							"sid": 210418185105517,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textCameraRadialDist",
+							"sid": 959928911684159,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textTargetPolarAngle",
+							"sid": 143156989258499,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "textCameraPolarAngle",
+							"sid": 543899633954756,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 541900049131879,
+					"disabled": true
+				}
+			],
+			"sid": 700224131490087
+		}
+	],
+	"sid": 504472375674832
+}

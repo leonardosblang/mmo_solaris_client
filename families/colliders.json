@@ -1,0 +1,79 @@
+{
+	"name": "colliders",
+	"plugin-id": "Shape3D",
+	"sid": 548071248101763,
+	"instanceVariables": [
+		{
+			"name": "collisionTag",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 512320824590218
+		},
+		{
+			"name": "impactMovement",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 345685616708268
+		},
+		{
+			"name": "impactCameraRadial",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 958584472008523
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 496352160824140
+		},
+		{
+			"behaviorId": "mikal_rotate_shape",
+			"name": "Rotate3D",
+			"sid": 806092084439964
+		},
+		{
+			"behaviorId": "mikal_cannon_3d_physics",
+			"name": "Rapier3DPhysics",
+			"sid": 792055368437205
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"miniDungeonBarrelCollider",
+		"groundCollider",
+		"miniDungeonWallCollider",
+		"miniDungeonWallHalfCollider",
+		"miniDungeonStairsCollider1",
+		"miniDungeonWallNarrowCollider",
+		"miniDungeonRocksCollider",
+		"miniDungeonStairsCollider2",
+		"miniDungeonStairsCollider3",
+		"miniDungeonStairsCollider4",
+		"miniDungeonStairsCollider5",
+		"miniDungeonStairsCollider6",
+		"miniDungeonBannerCollider",
+		"miniDungeonDirtCollider",
+		"miniDungeonStairsRampCollider",
+		"miniDungeonChestCollider",
+		"miniDungeonCoinCollider",
+		"miniDungeonColumnCollider",
+		"miniDungeonFloorDetailCollider",
+		"miniDungeonFloorCollider",
+		"miniDungeonGateCollider",
+		"miniDungeonStonesCollider",
+		"miniDungeonTrapCollider",
+		"miniDungeonWallOpeningCollider1",
+		"miniDungeonWallOpeningCollider2",
+		"miniDungeonWallOpeningCollider3",
+		"miniDungeonWoodStructureCollider1",
+		"miniDungeonWoodStructureCollider2",
+		"miniDungeonWoodSupportCollider2",
+		"miniDungeonWoodSupportCollider1",
+		"enemyMiniDungeonOrcCollider"
+	]
+}

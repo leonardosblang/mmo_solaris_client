@@ -1,0 +1,252 @@
+{
+	"name": "player",
+	"plugin-id": "Shape3D",
+	"sid": 678521242908394,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "onGround",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 930403450140243
+		},
+		{
+			"name": "state",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 402991926937628
+		},
+		{
+			"name": "acceleration",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 534546280577834
+		},
+		{
+			"name": "deceleration",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 904433053846311
+		},
+		{
+			"name": "maxSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 397605820706907
+		},
+		{
+			"name": "vX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 855816931211012
+		},
+		{
+			"name": "vY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 553780339718276
+		},
+		{
+			"name": "vZ",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 832660281371699
+		},
+		{
+			"name": "jumping",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 957988367091134
+		},
+		{
+			"name": "jumpForce",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 582132298556798
+		},
+		{
+			"name": "jumpCurve",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 714902429208640
+		},
+		{
+			"name": "gravityForce",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 928992554139055
+		},
+		{
+			"name": "falling",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 950156046289603
+		},
+		{
+			"name": "current_x",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 943525300923146
+		},
+		{
+			"name": "current_y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 155509030306608
+		},
+		{
+			"name": "current_zone",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 307423781907083
+		},
+		{
+			"name": "current_z",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 150781891393290
+		},
+		{
+			"name": "name",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 621740441464345
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "mikal_cannon_3d_physics",
+			"name": "Rapier3DPhysics",
+			"sid": 815872277323504
+		},
+		{
+			"behaviorId": "mikal_rotate_shape",
+			"name": "Rotate3D",
+			"sid": 753717985698167
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 400666675972088
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2119591,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3930025,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5537098,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2089888,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7076047,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9396748,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 942377393305013,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

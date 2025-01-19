@@ -1,0 +1,14 @@
+{
+	"name": "vBox",
+	"plugin-id": "Shape3D",
+	"sid": 366157462593894,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"vBoxBottom",
+		"vBoxRight",
+		"vBoxTop",
+		"vBoxLeft"
+	]
+}

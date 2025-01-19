@@ -1,0 +1,22 @@
+{
+	"name": "miniDungeonRocksModel",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 878906083335406,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 5132060,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

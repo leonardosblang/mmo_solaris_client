@@ -1,0 +1,34 @@
+{
+	"name": "controls",
+	"plugin-id": "Sprite",
+	"sid": 499644865946630,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 152167919261722
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	],
+	"members": [
+		"controlsKeyboardC",
+		"controlsKeyboardD",
+		"controlsKeyboardE",
+		"controlsKeyboardQ",
+		"controlsKeyboardS",
+		"controlsKeyboardSpace",
+		"controlsKeyboardW",
+		"controlsMouseLeftClick",
+		"controlsMouseRightClick",
+		"controlsMouseWheelDown",
+		"controlsMouseWheelUp",
+		"controlsToggleBackground",
+		"controlsKeyboardA"
+	]
+}

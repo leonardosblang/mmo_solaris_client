@@ -1,0 +1,17 @@
+{
+	"name": "objectVerticalText",
+	"plugin-id": "Text",
+	"sid": 103134510314356,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 999683034761622
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"playerNameText"
+	]
+}

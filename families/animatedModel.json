@@ -1,0 +1,20 @@
+{
+	"name": "animatedModel",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 290175830784135,
+	"instanceVariables": [
+		{
+			"name": "currentAnimationPlaying",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 394014446103416
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"playerModel",
+		"otherPlayer"
+	]
+}

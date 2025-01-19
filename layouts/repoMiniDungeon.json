@@ -1,0 +1,8079 @@
+{
+	"name": "repoMiniDungeon",
+	"layers": [
+		{
+			"name": "objects",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "miniDungeonFloorDetailCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 5,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 36,
+					"sid": 607589315237214,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "floorDetail",
+						"impactMovement": false,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 35,
+						"uid": 36,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 372,
+						"y": 644,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -5
+					}
+				},
+				{
+					"type": "miniDungeonFloorCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 5,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 39,
+					"sid": 653371618317187,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "floorDetail",
+						"impactMovement": false,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 38,
+						"uid": 39,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 540,
+						"y": 650,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": -5
+					}
+				},
+				{
+					"type": "miniDungeonGateCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 75,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 42,
+					"sid": 306581760502461,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonGate",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 41,
+						"uid": 42,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 724,
+						"y": 664,
+						"width": 80,
+						"height": 20,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallHalfModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonWallHalf.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 81,
+					"sid": 843055630602546,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 260,
+						"uid": 81,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 912,
+						"y": 348,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonBarrelCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 48,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 117,
+					"sid": 482941509697053,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "barrel",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": false,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 26,
+						"uid": 117,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 238,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonBarrelModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonBarrel.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 116,
+					"sid": 878313471643768,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 26,
+						"uid": 116,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 350,
+						"y": 304,
+						"width": 51.76267623901367,
+						"height": 51.76267623901367,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonWall.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 24,
+					"sid": 943735294280276,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": false,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 25,
+						"uid": 24,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 504,
+						"y": 344,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairs",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 27,
+					"sid": 911714730798929,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 27,
+						"children": [
+							{
+								"uid": 82,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 262,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 270,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 263,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 264,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 265,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 266,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 708,
+						"y": 118,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonStairs.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 82,
+					"sid": 224307697231415,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 27,
+						"uid": 82,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 708,
+						"y": 352,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWall",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 25,
+					"sid": 642796213276640,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 25,
+						"children": [
+							{
+								"uid": 24,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 261,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 496,
+						"y": 118,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonBarrel",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"sid": 633393942589675,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 26,
+						"children": [
+							{
+								"uid": 116,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 117,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 350,
+						"y": 170,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonBanner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"sid": 439617067336234,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 9,
+						"children": [
+							{
+								"uid": 12,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 267,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 150,
+						"y": 174,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonBannerModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonBanner.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 12,
+					"sid": 926206989794336,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 9,
+						"uid": 12,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 154,
+						"y": 372,
+						"width": 60.00000238418579,
+						"height": 10.000002384185791,
+						"originX": 0.5,
+						"originY": 5.2499991059305415,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallHalf",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 260,
+					"sid": 899904827790154,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 260,
+						"children": [
+							{
+								"uid": 23,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 81,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 908,
+						"y": 118,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 90,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 261,
+					"sid": 456273769008484,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "wall",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 25,
+						"uid": 261,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 496,
+						"y": 232,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallHalfCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 90,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 23,
+					"sid": 476611201027655,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "wallHalf",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 260,
+						"uid": 23,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 910,
+						"y": 236,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsCollider1",
+					"properties": {
+						"shape": "box",
+						"z-height": 15,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 262,
+					"sid": 578015341106230,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "stairs",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 27,
+						"uid": 262,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 708,
+						"y": 280,
+						"width": 100,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallNarrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 83,
+					"sid": 311267418356098,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 83,
+						"children": [
+							{
+								"uid": 85,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 84,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1082,
+						"y": 126,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallNarrowCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 90,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 84,
+					"sid": 701113400882422,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "wallNarrow",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 83,
+						"uid": 84,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1076,
+						"y": 240,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallNarrowModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonWallNarrow.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 85,
+					"sid": 482731967426884,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 83,
+						"uid": 85,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1076,
+						"y": 356,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonRocks",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 86,
+					"sid": 634453667499741,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 86,
+						"children": [
+							{
+								"uid": 269,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 87,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1290,
+						"y": 124,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonRocksCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 41,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 87,
+					"sid": 681584671692614,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "rocks",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 86,
+						"uid": 87,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1284,
+						"y": 248,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonRocksModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonRocks.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 269,
+					"sid": 681100523170896,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 86,
+						"uid": 269,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1284,
+						"y": 362,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsCollider2",
+					"properties": {
+						"shape": "box",
+						"z-height": 30,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 270,
+					"sid": 901473688124578,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "stairs",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 27,
+						"uid": 270,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 708,
+						"y": 266,
+						"width": 100,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsCollider3",
+					"properties": {
+						"shape": "box",
+						"z-height": 45,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 263,
+					"sid": 764188800389658,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "stairs",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 27,
+						"uid": 263,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 708,
+						"y": 250,
+						"width": 100,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsCollider4",
+					"properties": {
+						"shape": "box",
+						"z-height": 60,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 264,
+					"sid": 437278217756507,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "stairs",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 27,
+						"uid": 264,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 708,
+						"y": 236,
+						"width": 100,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsCollider5",
+					"properties": {
+						"shape": "box",
+						"z-height": 75,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 265,
+					"sid": 212905327080933,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "stairs",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 27,
+						"uid": 265,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 708,
+						"y": 220,
+						"width": 100,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsCollider6",
+					"properties": {
+						"shape": "box",
+						"z-height": 90,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 266,
+					"sid": 370682327972218,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "stairs",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 27,
+						"uid": 266,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 708,
+						"y": 200,
+						"width": 100,
+						"height": 28,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonBannerCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 48,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 267,
+					"sid": 999865056284356,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "banner",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 9,
+						"uid": 267,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 150,
+						"y": 278,
+						"width": 48,
+						"height": 6,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonDirt",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"sid": 593437385982208,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 11,
+						"children": [
+							{
+								"uid": 268,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 271,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1486,
+						"y": 130,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonDirtCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 90,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 268,
+					"sid": 877492059096496,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "dirt",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 11,
+						"uid": 268,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1490,
+						"y": 254,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonDirtModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonDirt.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 271,
+					"sid": 612858836067537,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 11,
+						"uid": 271,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1490,
+						"y": 376,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsRamp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 295,
+					"sid": 442871010608714,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 295,
+						"children": [
+							{
+								"uid": 296,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 298,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1664,
+						"y": 130,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsRampCollider",
+					"properties": {
+						"shape": "wedge",
+						"z-height": 90,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 296,
+					"sid": 921043036246677,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "stairs",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 295,
+						"uid": 296,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1662,
+						"y": 260,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStairsModelRamp",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonStairs.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 298,
+					"sid": 766736258311642,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 295,
+						"uid": 298,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1670,
+						"y": 384,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonChest",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 8,
+					"sid": 277362871805147,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 8,
+						"children": [
+							{
+								"uid": 14,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 13,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1830,
+						"y": 132,
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonChestCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 40,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 13,
+					"sid": 707925105504264,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "chest",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 8,
+						"uid": 13,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1828,
+						"y": 284,
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonChestModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonChest.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 14,
+					"sid": 733369889639627,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 8,
+						"uid": 14,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1830,
+						"y": 404,
+						"width": 50.00000037252994,
+						"height": 50.000000074505806,
+						"originX": 0.5000000037252994,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonCoin",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 28,
+					"sid": 401824970999441,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 28,
+						"children": [
+							{
+								"uid": 29,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 30,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 154,
+						"y": 558,
+						"width": 40,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonCoinCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 40,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 29,
+					"sid": 511397551863175,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "coin",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 28,
+						"uid": 29,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 150,
+						"y": 650,
+						"width": 40,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonCoinModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonCoin.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 30,
+					"sid": 883861545732456,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 28,
+						"uid": 30,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 156,
+						"y": 744,
+						"width": 41.50000810623169,
+						"height": 16.666673123836517,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonColumn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 32,
+					"sid": 150068406593745,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 32,
+						"children": [
+							{
+								"uid": 34,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 33,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 252,
+						"y": 558,
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonColumnCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 110,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 33,
+					"sid": 745819719719756,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "column",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 32,
+						"uid": 33,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 266,
+						"y": 646,
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonColumnModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonColumn.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 34,
+					"sid": 375869374452582,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 32,
+						"uid": 34,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 256,
+						"y": 736,
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonFloorDetail",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 35,
+					"sid": 830741011847843,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 35,
+						"children": [
+							{
+								"uid": 37,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 36,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 370,
+						"y": 530,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonFloorDetailModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonFloorDetail.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 37,
+					"sid": 411018770223531,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 35,
+						"uid": 37,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 376,
+						"y": 770,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonFloor",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 38,
+					"sid": 435121462737770,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 38,
+						"children": [
+							{
+								"uid": 40,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 39,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 540,
+						"y": 538,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonFloorModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonFloor.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 40,
+					"sid": 384617864053548,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 38,
+						"uid": 40,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 538,
+						"y": 768,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonGate",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 41,
+					"sid": 948815476966719,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 41,
+						"children": [
+							{
+								"uid": 43,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 42,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 728,
+						"y": 546,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonGateModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonGate.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 43,
+					"sid": 492570950570148,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 41,
+						"uid": 43,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 726,
+						"y": 766,
+						"width": 80.0000011920929,
+						"height": 20.000001788139343,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStones",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 44,
+					"sid": 523583255074716,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 44,
+						"children": [
+							{
+								"uid": 46,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 45,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 912,
+						"y": 548,
+						"width": 88,
+						"height": 78,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStonesCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 10,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 45,
+					"sid": 875052779581493,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonStones",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 44,
+						"uid": 45,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 914,
+						"y": 674,
+						"width": 88,
+						"height": 78,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonStonesModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonStones.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 46,
+					"sid": 717905053749089,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 44,
+						"uid": 46,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 916,
+						"y": 800,
+						"width": 89.24160301685333,
+						"height": 80.45327365398407,
+						"originX": 0.4999999833024501,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonTrap",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"sid": 563298809314171,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 47,
+						"children": [
+							{
+								"uid": 49,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 48,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1068,
+						"y": 556,
+						"width": 55,
+						"height": 55,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonTrapCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 25,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 48,
+					"sid": 317561914864798,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonTrap",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 47,
+						"uid": 48,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1072,
+						"y": 680,
+						"width": 55,
+						"height": 55,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonTrapModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonTrap.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 49,
+					"sid": 315951547854216,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 47,
+						"uid": 49,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1070,
+						"y": 794,
+						"width": 63.9200359582901,
+						"height": 63.749998807907104,
+						"originX": 0.5013300770864236,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallOpening",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 50,
+					"sid": 749279284823286,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 50,
+						"children": [
+							{
+								"uid": 51,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 52,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 56,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 58,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1212,
+						"y": 558,
+						"width": 100,
+						"height": 105,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallOpeningCollider1",
+					"properties": {
+						"shape": "box",
+						"z-height": 80,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 51,
+					"sid": 219361881014113,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWallOpening",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 50,
+						"uid": 51,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1174,
+						"y": 696,
+						"width": 10,
+						"height": 105,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallOpeningModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonWallOpening.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 52,
+					"sid": 800539943134135,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 50,
+						"uid": 52,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1214,
+						"y": 848,
+						"width": 100,
+						"height": 105.0000011920929,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWallOpeningCollider2",
+					"properties": {
+						"shape": "box",
+						"z-height": 80,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 56,
+					"sid": 876820647142883,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWallOpening",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 50,
+						"uid": 56,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1262,
+						"y": 696,
+						"width": 10,
+						"height": 105,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructure",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 57,
+					"sid": 944563811960603,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 57,
+						"children": [
+							{
+								"uid": 62,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 63,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 64,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 65,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 66,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 67,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 68,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 69,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 70,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1438,
+						"y": 560,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureCollider1",
+					"properties": {
+						"shape": "box",
+						"z-height": 100,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 62,
+					"sid": 546621609494451,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 62,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1413,
+						"y": 781.5,
+						"width": 15,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonWoodStructure.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 63,
+					"sid": 381660187285302,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 63,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1452,
+						"y": 873,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureCollider1",
+					"properties": {
+						"shape": "box",
+						"z-height": 100,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 64,
+					"sid": 242973505576476,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 64,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1498,
+						"y": 781,
+						"width": 15,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureCollider1",
+					"properties": {
+						"shape": "box",
+						"z-height": 100,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 65,
+					"sid": 570032134100296,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 65,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1413,
+						"y": 696,
+						"width": 15,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureCollider1",
+					"properties": {
+						"shape": "box",
+						"z-height": 100,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 66,
+					"sid": 116513936762822,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 66,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1498,
+						"y": 696,
+						"width": 15,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodSupport",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 71,
+					"sid": 304221572429259,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 71,
+						"children": [
+							{
+								"uid": 73,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 74,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 75,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 72,
+								"flags": {
+									"x": false,
+									"y": false,
+									"z": false,
+									"w": false,
+									"h": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1679,
+						"y": 571,
+						"width": 100,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodSupportModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": 0,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonWoodSupport.glb",
+						"debug": false,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 73,
+					"sid": 549986561109340,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 71,
+						"uid": 73,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1687,
+						"y": 856,
+						"width": 100,
+						"height": 15.000000596046448,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodSupportCollider1",
+					"properties": {
+						"shape": "box",
+						"z-height": 100,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 74,
+					"sid": 571892917003714,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 71,
+						"uid": 74,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1644,
+						"y": 769,
+						"width": 12,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "miniDungeonWoodSupportCollider1",
+					"properties": {
+						"shape": "box",
+						"z-height": 100,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 75,
+					"sid": 984983643462270,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 71,
+						"uid": 75,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1733,
+						"y": 769,
+						"width": 12,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemyMiniDungeonOrc",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 76,
+					"sid": 716886057303545,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 76,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 154,
+						"y": 899,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemyMiniDungeonOrcCollider",
+					"properties": {
+						"shape": "box",
+						"z-height": 70,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 77,
+					"sid": 175083082886169,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "barrel",
+						"impactMovement": false,
+						"impactCameraRadial": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 77,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 156,
+						"y": 964,
+						"width": 24,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemyMiniDungeonOrcModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": -90,
+						"rotation-order": "xyz",
+						"gtlf-path": "miniDungeonOrc.glb",
+						"debug": true,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": false
+					},
+					"uid": 78,
+					"sid": 238417847942320,
+					"tags": "",
+					"instanceVariables": {
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 152,
+						"y": 1042,
+						"width": 33.24664216289352,
+						"height": 78.0564151763001,
+						"originX": 0.47481850928103114,
+						"originY": 0.4999999999999971,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "playerModel",
+					"properties": {
+						"scale": "100",
+						"z-elevation": 0,
+						"angle-x": -90,
+						"angle-y": 0,
+						"angle-z": -90,
+						"rotation-order": "xyz",
+						"gtlf-path": "character-human-foozle.glb",
+						"debug": true,
+						"animation-blend": 0,
+						"instance-model": false,
+						"image-texture": false,
+						"x-scale": 1,
+						"y-scale": 1,
+						"z-scale": 1,
+						"wireframe": false,
+						"worker-animation": false,
+						"cpu-xform": true
+					},
+					"uid": 88,
+					"sid": 645130049661610,
+					"tags": "",
+					"instanceVariables": {
+						"currentAnimationPlaying": "",
+						"default3DAngleX": -90,
+						"default3DAngleY": 0,
+						"default3DAngleZ": 0,
+						"acceptsLight": false
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 382,
+						"y": 1035,
+						"width": 177.41721656894794,
+						"height": 177.85602092118143,
+						"originX": 0.0001227731521666557,
+						"originY": 0.5263705193597941,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "player",
+					"properties": {
+						"shape": "box",
+						"z-height": 75,
+						"initially-visible": false,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 80,
+					"sid": 515019998370572,
+					"tags": "",
+					"instanceVariables": {
+						"onGround": 0,
+						"state": "",
+						"acceleration": 1000,
+						"deceleration": 800,
+						"maxSpeed": 300,
+						"vX": 0,
+						"vY": 0,
+						"vZ": 0,
+						"jumping": false,
+						"jumpForce": 10,
+						"jumpCurve": 1,
+						"gravityForce": -20,
+						"falling": false,
+						"current_x": 3336,
+						"current_y": 1132,
+						"current_zone": "demozone0",
+						"current_z": 1.1,
+						"name": "test_name"
+					},
+					"behaviors": {
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": false,
+								"shape": "auto",
+								"bodyType": "kinematic-position",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 383,
+						"y": 969,
+						"width": 24,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "miniDungeonWoodSupportCollider2",
+					"properties": {
+						"shape": "box",
+						"z-height": 10,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 72,
+					"sid": 408847533672626,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodSupport",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 71,
+						"uid": 72,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1688,
+						"y": 769,
+						"width": 80,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 80
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureCollider2",
+					"properties": {
+						"shape": "box",
+						"z-height": 10,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 67,
+					"sid": 223779636842037,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 67,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1454,
+						"y": 781,
+						"width": 74,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 80
+					}
+				},
+				{
+					"type": "miniDungeonWallOpeningCollider3",
+					"properties": {
+						"shape": "box",
+						"z-height": 10,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 58,
+					"sid": 210174397185337,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWallOpening",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 50,
+						"uid": 58,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1214,
+						"y": 696,
+						"width": 100,
+						"height": 105,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 80
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureCollider2",
+					"properties": {
+						"shape": "box",
+						"z-height": 10,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 68,
+					"sid": 318215363756062,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 68,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1456,
+						"y": 696,
+						"width": 74,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 80
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureCollider2",
+					"properties": {
+						"shape": "box",
+						"z-height": 10,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 69,
+					"sid": 970364751685533,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 69,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1413,
+						"y": 739,
+						"width": 10,
+						"height": 74,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 80
+					}
+				},
+				{
+					"type": "miniDungeonWoodStructureCollider2",
+					"properties": {
+						"shape": "box",
+						"z-height": 10,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": true,
+						"face-left": true,
+						"face-right": true,
+						"face-top": true,
+						"face-bottom": true,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 70,
+					"sid": 962189163101106,
+					"tags": "",
+					"instanceVariables": {
+						"collisionTag": "miniDungeonWoodStructure",
+						"impactMovement": true,
+						"impactCameraRadial": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate3D": {
+							"properties": {
+								"angle-x": 0,
+								"angle-y": 0,
+								"angle-z": 0,
+								"offset-x": 0,
+								"offset-y": 0,
+								"offset-z": 0,
+								"scale-x": 1,
+								"scale-y": 1,
+								"scale-z": 1
+							}
+						},
+						"Rapier3DPhysics": {
+							"properties": {
+								"enable": true,
+								"immovable": true,
+								"shape": "auto",
+								"bodyType": "dynamic",
+								"colliderType": "solid",
+								"mass": 1,
+								"size-override": false,
+								"body-size-height": -1,
+								"body-size-width": -1,
+								"body-size-depth": -1
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": 57,
+						"uid": 70,
+						"flags": {
+							"x": false,
+							"y": false,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1498,
+						"y": 739,
+						"width": 10,
+						"height": 74,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 80
+					}
+				}
+			],
+			"sid": 335507800821006,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "colliders",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 958474591296977,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "models",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 892198984965058,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"scene-graphs-folder-root": {
+		"items": [],
+		"subfolders": []
+	},
+	"sid": 354775642315171,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 3840,
+	"height": 2160,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": null
+}

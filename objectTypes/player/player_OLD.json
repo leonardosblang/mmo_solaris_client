@@ -1,0 +1,207 @@
+{
+	"name": "player_OLD",
+	"plugin-id": "Sprite",
+	"sid": 465433095221655,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "state",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 737987145373896
+		},
+		{
+			"name": "falling",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 970927160706471
+		},
+		{
+			"name": "jumping",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 633188287836396
+		},
+		{
+			"name": "groundZ",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 710287138127779
+		},
+		{
+			"name": "grounded",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 744883554265213
+		},
+		{
+			"name": "vX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 981567224055767
+		},
+		{
+			"name": "vY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 285873187908635
+		},
+		{
+			"name": "vZ",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 824553941572410
+		},
+		{
+			"name": "maxSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 624959820564605
+		},
+		{
+			"name": "jumpForce",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 443507004546021
+		},
+		{
+			"name": "jumpCurve",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 709961882465263
+		},
+		{
+			"name": "gravityForce",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 241138078806658
+		},
+		{
+			"name": "maxStepHeight",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 718595446327916
+		},
+		{
+			"name": "lastDirection",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 698465720344209
+		},
+		{
+			"name": "acceleration",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 665856908748606
+		},
+		{
+			"name": "deceleration",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 682996423190313
+		},
+		{
+			"name": "movementVertexX1",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 281711295550823
+		},
+		{
+			"name": "movementVertexY1",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 979982813002677
+		},
+		{
+			"name": "movementVertexX2",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 279355155996191
+		},
+		{
+			"name": "movementVertexY2",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 507449704606288
+		},
+		{
+			"name": "movementVertexX3",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 836307445540997
+		},
+		{
+			"name": "movementVertexY3",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 232729778997181
+		},
+		{
+			"name": "wallSliding",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 509897744221762
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "custom",
+			"name": "Custom",
+			"sid": 707111461947498
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9332744,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 714051289514690,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
