@@ -1,0 +1,30 @@
+{
+	"name": "otherplayer_sprite_text",
+	"plugin-id": "Spritefont2",
+	"sid": 954409319546571,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "current_user",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 646004028800999
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 1024,
+		"height": 1024,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 6470286,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

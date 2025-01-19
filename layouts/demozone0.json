@@ -297,7 +297,7 @@
 								"width": 97.57946911292129,
 								"height": 97.82081150664953,
 								"originX": 0.00012277315216586938,
-								"originY": 0.5263705193597935,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -607,7 +607,7 @@
 								"current_x": 0,
 								"current_y": 0,
 								"current_z": 0,
-								"current_user": "\"a\""
+								"current_user": ""
 							},
 							"behaviors": {},
 							"instanceFolderItem": {
@@ -3059,6 +3059,235 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "gameUI",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "otherplayer_uibox",
+					"properties": {
+						"shape": "box",
+						"z-height": 120,
+						"initially-visible": true,
+						"face-back": false,
+						"face-front": false,
+						"face-left": false,
+						"face-right": true,
+						"face-top": false,
+						"face-bottom": false,
+						"z-tiling-factor": 8,
+						"object-back": -1,
+						"object-front": -1,
+						"object-left": -1,
+						"object-right": -1,
+						"object-top": -1,
+						"object-bottom": -1
+					},
+					"uid": 79,
+					"sid": 784051418181793,
+					"tags": "",
+					"instanceVariables": {
+						"current_user": "a"
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 784051418181793,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -316,
+						"y": 650,
+						"width": 120,
+						"height": 120,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "otherplayer_sprite_text",
+					"properties": {
+						"text": "Leodasadslang123",
+						"enable-bbcode": true,
+						"character-width": 78,
+						"character-height": 75,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>%",
+						"spacing-data": "[[22,\" \"],[8,\"|\"],[11,\"'\"],[13,\"!\"],[14,\".:\"],[16,\",;\"],[18,\"`\"],[21,\"[\"],[22,\"]\"],[23,\"Iil-(\"],[24,\")\"],[26,\"j\"],[27,\"\\\"\"],[28,\"t\"],[29,\"1°\"],[30,\"?\"],[31,\"f/\"],[32,\"s\\\\\"],[33,\"Jr\"],[34,\"cz\"],[35,\"$\"],[36,\"e*\"],[37,\"£<>\"],[38,\"S235\"],[39,\"go7=\"],[40,\"FPa69\"],[41,\"Ldpqx8~#+€\"],[42,\"Zbvy\"],[43,\"BEknu0\"],[44,\"Ch4\"],[46,\"T_\"],[48,\"Y\"],[49,\"DGKOQR\"],[50,\"X&\"],[52,\"AV\"],[53,\"HU\"],[54,\"N\"],[63,\"@\"],[64,\"M\"],[65,\"mw\"],[71,\"%\"],[76,\"W\"]]",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 89,
+					"sid": 368823323683769,
+					"tags": "",
+					"instanceVariables": {
+						"current_user": "a"
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 368823323683769,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 480,
+						"y": -1208,
+						"width": 1734,
+						"height": 152,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.010909009209012388,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DrawingCanvas",
+					"properties": {
+						"resolution-mode": "auto",
+						"initially-visible": true,
+						"origin": "top-left",
+						"antialiasing": "off"
+					},
+					"uid": 90,
+					"sid": 456402681421799,
+					"tags": "",
+					"instanceVariables": {
+						"current_user": "a"
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 456402681421799,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -14,
+						"y": -1096,
+						"width": 716,
+						"height": 378,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "otherplayer_namesprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 91,
+					"sid": 526543769422789,
+					"tags": "",
+					"instanceVariables": {
+						"current_user": "a"
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 526543769422789,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1008,
+						"y": -898,
+						"width": 366,
+						"height": 224,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 791856409192853,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "2d",
+			"drawOrder": "camera-distance",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 20,
 			"global": false
 		}
 	],

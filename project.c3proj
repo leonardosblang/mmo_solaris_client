@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "DrawingCanvas",
+			"name": "Drawing canvas",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Json",
 			"name": "JSON",
 			"author": "Scirra",
@@ -72,6 +79,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
@@ -95,6 +109,13 @@
 			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -189,7 +210,13 @@
 		],
 		"subfolders": [
 			{
-				"items": [],
+				"items": [
+					"otherplayer_uibox",
+					"UsernameInput",
+					"otherplayer_sprite_text",
+					"otherplayer_namesprite",
+					"DrawingCanvas"
+				],
 				"subfolders": [
 					{
 						"items": [
@@ -234,7 +261,6 @@
 						"items": [
 							"background",
 							"bg",
-							"UsernameInput",
 							"LoginButton"
 						],
 						"subfolders": [],

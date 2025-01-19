@@ -1,0 +1,17 @@
+{
+	"name": "DrawingCanvas",
+	"plugin-id": "DrawingCanvas",
+	"sid": 859872614623763,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "current_user",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 432856216555647
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

@@ -2,272 +2,829 @@
 	"name": "e_otherplayer",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "variable",
+			"name": "lastname",
+			"type": "string",
+			"initialValue": "\"b\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 218864439532637
+		},
+		{
+			"eventType": "variable",
+			"name": "otherplayercount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 124451536017806
+		},
+		{
+			"eventType": "variable",
+			"name": "check_name",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 762058849875399
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 235712831819942,
-					"parameters": {
-						"interval-seconds": "0.25"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "otherPlayer",
-					"sid": 936920139390330,
-					"parameters": {
-						"instance-variable": "current_x",
-						"value": "floor(otherPlayer.X)"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 790466114370606,
+							"parameters": {
+								"interval-seconds": "0.25"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "otherPlayer",
+							"sid": 468905695338330,
+							"parameters": {
+								"instance-variable": "current_x",
+								"value": "floor(otherPlayer.X)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "otherPlayer",
+							"sid": 362707580393413,
+							"parameters": {
+								"instance-variable": "current_y",
+								"value": "floor(otherPlayer.Y)"
+							}
+						}
+					],
+					"sid": 588011124927892
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "otherPlayer",
-					"sid": 707206069411445,
-					"parameters": {
-						"instance-variable": "current_y",
-						"value": "floor(otherPlayer.Y)"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 547249581004435,
+							"parameters": {
+								"interval-seconds": "0.3"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "otherPlayer",
+							"sid": 797421362040272,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "otherPlayer.current_x+5"
+							}
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "otherPlayer",
+							"sid": 108009630053929,
+							"parameters": {
+								"animation-name": "\"walk\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play-animation",
+							"objectClass": "otherPlayer",
+							"sid": 649535208276623,
+							"parameters": {
+								"animation": "\"walk\"",
+								"loop": true
+							}
+						}
+					],
+					"sid": 857436605052900
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 803021734675251,
+							"parameters": {
+								"interval-seconds": "0.3"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "otherPlayer",
+							"sid": 977503140582604,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "otherPlayer.current_x+5"
+							}
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "otherPlayer",
+							"sid": 336665527563668,
+							"parameters": {
+								"animation-name": "\"walk\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play-animation",
+							"objectClass": "otherPlayer",
+							"sid": 467262994142767,
+							"parameters": {
+								"animation": "\"walk\"",
+								"loop": true
+							}
+						}
+					],
+					"sid": 348866760870078
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 661347057467029,
+							"parameters": {
+								"interval-seconds": "0.3"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "otherPlayer",
+							"sid": 887285120865540,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "floor(otherPlayer.current_y)+5"
+							}
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "otherPlayer",
+							"sid": 381677978291247,
+							"parameters": {
+								"animation-name": "\"walk\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play-animation",
+							"objectClass": "otherPlayer",
+							"sid": 467387000128914,
+							"parameters": {
+								"animation": "\"walk\"",
+								"loop": true
+							}
+						}
+					],
+					"sid": 815435310199886
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 120263658579423,
+							"parameters": {
+								"interval-seconds": "0.3"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "otherPlayer",
+							"sid": 732219906882548,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "floor(otherPlayer.current_y)+5"
+							}
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "otherPlayer",
+							"sid": 834511836362671,
+							"parameters": {
+								"animation-name": "\"walk\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play-animation",
+							"objectClass": "otherPlayer",
+							"sid": 155322654602430,
+							"parameters": {
+								"animation": "\"walk\"",
+								"loop": true
+							}
+						}
+					],
+					"sid": 648665609415968
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 427266159390293,
+							"parameters": {
+								"interval-seconds": "0.3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherPlayer",
+							"sid": 863075494915431,
+							"parameters": {
+								"instance-variable": "current_x",
+								"comparison": 0,
+								"value": "floor(otherPlayer.X)"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherPlayer",
+							"sid": 982896480869227,
+							"parameters": {
+								"instance-variable": "current_y",
+								"comparison": 0,
+								"value": "floor(otherPlayer.Y)"
+							}
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "otherPlayer",
+							"sid": 581225894061933,
+							"parameters": {
+								"animation-name": "\"walk\""
+							}
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "otherPlayer",
+							"sid": 756805640313551,
+							"parameters": {
+								"animation-name": "\"idle\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play-animation",
+							"objectClass": "otherPlayer",
+							"sid": 333650173528725,
+							"parameters": {
+								"animation": "\"idle\"",
+								"loop": true
+							}
+						}
+					],
+					"sid": 248523030689334
 				}
 			],
-			"sid": 290084744019516
+			"sid": 232000931836964
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Name",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 879195225372722,
+							"parameters": {
+								"variable": "otherplayercount",
+								"comparison": 5,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 638544096571746,
+							"parameters": {
+								"variable": "check_name",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 430119891052873,
+							"parameters": {
+								"object-to-create": "DrawingCanvas",
+								"layer": "\"gameUI\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 191167805297192,
+							"parameters": {
+								"object-to-create": "otherplayer_sprite_text",
+								"layer": "\"gameUI\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 505386559020289,
+							"parameters": {
+								"object-to-create": "otherplayer_namesprite",
+								"layer": "\"gameUI\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 298880779472052,
+							"parameters": {
+								"object-to-create": "otherplayer_uibox",
+								"layer": "\"worldDepth0\"",
+								"x": "otherPlayer.X",
+								"y": "otherPlayer.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 203257780567901
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 172030764897779,
+							"parameters": {
+								"variable": "check_name",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 565439040754071
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 651571573378715
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherplayer_uibox",
+							"sid": 560962180044642,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "otherPlayer.current_user"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherPlayer",
+							"sid": 780229082120952,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "otherplayer_uibox.current_user"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 755077749651334,
+							"parameters": {
+								"variable": "otherplayercount",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "otherplayer_uibox",
+							"sid": 772820486050749,
+							"parameters": {
+								"x": "otherPlayer.X - 50"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "otherplayer_uibox",
+							"sid": 602887453985562,
+							"parameters": {
+								"y": "otherPlayer.Y - 30"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "otherplayer_uibox",
+							"sid": 721741674066157,
+							"parameters": {
+								"z": "otherPlayer.ZElevation"
+							}
+						}
+					],
+					"sid": 134487361649474
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DrawingCanvas",
+							"sid": 603416440590360,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "otherplayer_sprite_text.current_user"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 212129785541872,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "clear-canvas",
+							"objectClass": "DrawingCanvas",
+							"sid": 497061514931914,
+							"parameters": {
+								"color": "rgba(0, 0, 0, 0)"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 282015354722397
+						},
+						{
+							"id": "clear-canvas",
+							"objectClass": "DrawingCanvas",
+							"sid": 135841704155653,
+							"parameters": {
+								"color": "rgba(0, 0, 0, 0)"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 773302576438619,
+							"parameters": {
+								"object": "otherplayer_sprite_text",
+								"effects": "with-effects"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 218919788985516
+						},
+						{
+							"id": "save-image",
+							"objectClass": "DrawingCanvas",
+							"sid": 591640937153570,
+							"parameters": {
+								"format": "png",
+								"jpeg-quality": "100",
+								"x": "0",
+								"y": "0",
+								"width": "0",
+								"height": "0"
+							}
+						}
+					],
+					"sid": 494952914102808
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-saved-image",
+							"objectClass": "DrawingCanvas",
+							"sid": 314203111664414
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherplayer_namesprite",
+							"sid": 786674354719667,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "otherplayer_namesprite.current_user"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "otherplayer_namesprite",
+							"sid": 177626691200931,
+							"parameters": {
+								"uri": "DrawingCanvas.SavedImageURL",
+								"size": "resize-to-image-size",
+								"cross-origin": "anonymous"
+							}
+						}
+					],
+					"sid": 499033660784020
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherplayer_uibox",
+							"sid": 918403955356961,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "otherplayer_namesprite.current_user"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherplayer_namesprite",
+							"sid": 349979735776295,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "otherplayer_uibox.current_user"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-face-object",
+							"objectClass": "otherplayer_uibox",
+							"sid": 971462979581619,
+							"parameters": {
+								"face": "right",
+								"object": "otherplayer_namesprite"
+							}
+						}
+					],
+					"sid": 967044114646391
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherplayer_namesprite",
+							"sid": 403054714993123,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "\"a\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "otherplayer_namesprite",
+							"sid": 847584181165053,
+							"parameters": {
+								"instance-variable": "current_user",
+								"value": "lastname"
+							}
+						}
+					],
+					"sid": 432129236928609
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DrawingCanvas",
+							"sid": 718561264472746,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "\"a\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DrawingCanvas",
+							"sid": 973737642470447,
+							"parameters": {
+								"instance-variable": "current_user",
+								"value": "lastname"
+							}
+						}
+					],
+					"sid": 399532003872018
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherplayer_sprite_text",
+							"sid": 589515402697040,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "\"a\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "otherplayer_sprite_text",
+							"sid": 887984104788913,
+							"parameters": {
+								"text": "lastname"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "otherplayer_sprite_text",
+							"sid": 148201858686398,
+							"parameters": {
+								"instance-variable": "current_user",
+								"value": "lastname"
+							}
+						}
+					],
+					"sid": 183723044581742
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherplayer_uibox",
+							"sid": 566254147909806,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "\"a\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "otherplayer_uibox",
+							"sid": 283861146178364,
+							"parameters": {
+								"instance-variable": "current_user",
+								"value": "lastname"
+							}
+						}
+					],
+					"sid": 177792680313348
+				}
+			],
+			"sid": 497190867693102
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 459926973993325,
-					"parameters": {
-						"interval-seconds": "0.3"
-					}
-				},
-				{
-					"id": "compare-x",
+					"id": "on-loaded",
 					"objectClass": "otherPlayer",
-					"sid": 835701925671403,
-					"parameters": {
-						"comparison": 4,
-						"x-co-ordinate": "otherPlayer.current_x+5"
-					}
-				},
-				{
-					"id": "is-playing",
-					"objectClass": "otherPlayer",
-					"sid": 558547167634501,
-					"parameters": {
-						"animation-name": "\"walk\""
-					},
-					"isInverted": true
+					"sid": 727634009595664
 				}
 			],
 			"actions": [
 				{
-					"id": "play-animation",
-					"objectClass": "otherPlayer",
-					"sid": 930210134424431,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 332965126530086,
 					"parameters": {
-						"animation": "\"walk\"",
-						"loop": true
+						"variable": "check_name",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 286711139042686,
+					"parameters": {
+						"variable": "otherplayercount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 481894272857854,
+					"parameters": {
+						"variable": "lastname",
+						"value": "otherPlayer.current_user"
 					}
 				}
 			],
-			"sid": 110659509716881
+			"sid": 230094200399840
 		},
 		{
 			"eventType": "block",
 			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 699348422120286,
-					"parameters": {
-						"interval-seconds": "0.3"
-					}
-				},
-				{
-					"id": "compare-x",
-					"objectClass": "otherPlayer",
-					"sid": 692858668618091,
-					"parameters": {
-						"comparison": 2,
-						"x-co-ordinate": "otherPlayer.current_x+5"
-					}
-				},
-				{
-					"id": "is-playing",
-					"objectClass": "otherPlayer",
-					"sid": 476329482817131,
-					"parameters": {
-						"animation-name": "\"walk\""
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "play-animation",
-					"objectClass": "otherPlayer",
-					"sid": 853782596053948,
-					"parameters": {
-						"animation": "\"walk\"",
-						"loop": true
-					}
-				}
-			],
-			"sid": 504781319942758
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 552470510801850,
-					"parameters": {
-						"interval-seconds": "0.3"
-					}
-				},
-				{
-					"id": "compare-y",
-					"objectClass": "otherPlayer",
-					"sid": 847203827537782,
-					"parameters": {
-						"comparison": 4,
-						"y-co-ordinate": "floor(otherPlayer.current_y)+5"
-					}
-				},
-				{
-					"id": "is-playing",
-					"objectClass": "otherPlayer",
-					"sid": 361379508811744,
-					"parameters": {
-						"animation-name": "\"walk\""
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "play-animation",
-					"objectClass": "otherPlayer",
-					"sid": 439054474241928,
-					"parameters": {
-						"animation": "\"walk\"",
-						"loop": true
-					}
-				}
-			],
-			"sid": 483390759332462
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 394181098150564,
-					"parameters": {
-						"interval-seconds": "0.3"
-					}
-				},
-				{
-					"id": "compare-y",
-					"objectClass": "otherPlayer",
-					"sid": 596568990688078,
-					"parameters": {
-						"comparison": 2,
-						"y-co-ordinate": "floor(otherPlayer.current_y)+5"
-					}
-				},
-				{
-					"id": "is-playing",
-					"objectClass": "otherPlayer",
-					"sid": 657112523858443,
-					"parameters": {
-						"animation-name": "\"walk\""
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "play-animation",
-					"objectClass": "otherPlayer",
-					"sid": 133422898588032,
-					"parameters": {
-						"animation": "\"walk\"",
-						"loop": true
-					}
-				}
-			],
-			"sid": 717708710271555
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 796771155904228,
-					"parameters": {
-						"interval-seconds": "0.3"
-					}
-				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "otherPlayer",
-					"sid": 414891173043544,
+					"sid": 191405192498888,
 					"parameters": {
-						"instance-variable": "current_x",
+						"instance-variable": "current_user",
 						"comparison": 0,
-						"value": "floor(otherPlayer.X)"
+						"value": "\"\""
 					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "otherPlayer",
-					"sid": 401323384412104,
-					"parameters": {
-						"instance-variable": "current_y",
-						"comparison": 0,
-						"value": "floor(otherPlayer.Y)"
-					}
-				},
-				{
-					"id": "is-playing",
-					"objectClass": "otherPlayer",
-					"sid": 108873990609112,
-					"parameters": {
-						"animation-name": "\"walk\""
-					}
-				},
-				{
-					"id": "is-playing",
-					"objectClass": "otherPlayer",
-					"sid": 479355758337369,
-					"parameters": {
-						"animation-name": "\"idle\""
-					},
-					"isInverted": true
 				}
 			],
 			"actions": [
 				{
-					"id": "play-animation",
+					"id": "destroy",
 					"objectClass": "otherPlayer",
-					"sid": 387696126554591,
+					"sid": 951638802924565
+				}
+			],
+			"sid": 313149835613291
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 325696477165087,
 					"parameters": {
-						"animation": "\"idle\"",
-						"loop": true
+						"variable": "otherplayercount",
+						"comparison": 5,
+						"value": "2"
 					}
 				}
 			],
-			"sid": 846253534147180
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "otherplayer_uibox",
+					"sid": 336325011036826
+				}
+			],
+			"sid": 341533290513346
 		}
 	],
 	"sid": 560533800128829
