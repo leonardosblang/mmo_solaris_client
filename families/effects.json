@@ -1,0 +1,22 @@
+{
+	"name": "effects",
+	"plugin-id": "Mikal_3DObject",
+	"sid": 326143320971465,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		},
+		{
+			"effectId": "toon",
+			"name": "Toon"
+		}
+	],
+	"members": [
+		"playerModel",
+		"otherPlayer",
+		"tree_low_poly"
+	]
+}

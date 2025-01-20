@@ -76,6 +76,15 @@
 											}
 										}
 									},
+									"effects": {
+										"Toon": {
+											"isEnabled": true,
+											"parameters": {
+												"threshold": 0.2,
+												"levels": 10
+											}
+										}
+									},
 									"sceneGraphData": {
 										"parent-uid": 2422,
 										"uid": 2421,
@@ -7355,7 +7364,7 @@
 								"width": 4000,
 								"height": 100.0000000000002,
 								"originX": 0.5,
-								"originY": 0.500000000000001,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -7586,7 +7595,7 @@
 								"width": 100,
 								"height": 2500,
 								"originX": 0.5,
-								"originY": 0.5000000000000001,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -13492,7 +13501,7 @@
 								"width": 60.00000238418579,
 								"height": 10.000002384185791,
 								"originX": 0.5,
-								"originY": 5.2499991059305415,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -13792,7 +13801,7 @@
 								"width": 60.00000238418579,
 								"height": 10.000002384185791,
 								"originX": 0.5,
-								"originY": 5.2499991059305415,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -20098,7 +20107,7 @@
 								"width": 100,
 								"height": 100.00000000000003,
 								"originX": 0.5,
-								"originY": 0.5000000000000001,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -20282,7 +20291,7 @@
 								"width": 100,
 								"height": 100.00000000000003,
 								"originX": 0.5,
-								"originY": 0.5000000000000001,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -31180,7 +31189,7 @@
 								"width": 51.76267623901367,
 								"height": 47.61904180049896,
 								"originX": 0.5,
-								"originY": 1,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -31264,7 +31273,7 @@
 								"width": 51.76267623901367,
 								"height": 47.61904180049896,
 								"originX": 0.5,
-								"originY": 1,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -31348,7 +31357,7 @@
 								"width": 51.76267623901367,
 								"height": 47.61904180049896,
 								"originX": 0.5,
-								"originY": 1,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -31432,7 +31441,7 @@
 								"width": 51.76267623901367,
 								"height": 47.61904180049896,
 								"originX": 0.5,
-								"originY": 1,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -31544,7 +31553,7 @@
 								"width": 100,
 								"height": 100.00000000000003,
 								"originX": 0.5,
-								"originY": 0.5000000000000001,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -39802,6 +39811,29 @@
 								"acceptsLight": true
 							},
 							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -39810,7 +39842,7 @@
 								"width": 97.5794691129214,
 								"height": 97.82081150664976,
 								"originX": 0.0001227731521670343,
-								"originY": 0.5263705193597946,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,

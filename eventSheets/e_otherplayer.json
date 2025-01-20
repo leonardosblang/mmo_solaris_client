@@ -320,6 +320,53 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 628271893728363
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 898662665081397,
+							"parameters": {
+								"variable": "otherplayercount",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "otherplayer_uibox",
+							"sid": 734700882808676,
+							"parameters": {
+								"x": "floor(otherPlayer.X - 50)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "otherplayer_uibox",
+							"sid": 164428033728913,
+							"parameters": {
+								"y": "floor(otherPlayer.Y - 30)"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "otherplayer_uibox",
+							"sid": 357784987263781,
+							"parameters": {
+								"z": "floor(otherPlayer.ZElevation)"
+							}
+						}
+					],
+					"sid": 548944416032564
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
 							"sid": 879195225372722,
@@ -383,10 +430,10 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 298880779472052,
+							"sid": 144873041036277,
 							"parameters": {
 								"object-to-create": "otherplayer_uibox",
-								"layer": "\"worldDepth0\"",
+								"layer": "\"worldDepth6\"",
 								"x": "otherPlayer.X",
 								"y": "otherPlayer.Y",
 								"create-hierarchy": false,
@@ -401,81 +448,14 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 172030764897779,
+							"sid": 471907459109071,
 							"parameters": {
 								"variable": "check_name",
-								"value": "0"
+								"value": "2"
 							}
 						}
 					],
 					"sid": 565439040754071
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 651571573378715
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "otherplayer_uibox",
-							"sid": 560962180044642,
-							"parameters": {
-								"instance-variable": "current_user",
-								"comparison": 0,
-								"value": "otherPlayer.current_user"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "otherPlayer",
-							"sid": 780229082120952,
-							"parameters": {
-								"instance-variable": "current_user",
-								"comparison": 0,
-								"value": "otherplayer_uibox.current_user"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 755077749651334,
-							"parameters": {
-								"variable": "otherplayercount",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-x",
-							"objectClass": "otherplayer_uibox",
-							"sid": 772820486050749,
-							"parameters": {
-								"x": "otherPlayer.X - 50"
-							}
-						},
-						{
-							"id": "set-y",
-							"objectClass": "otherplayer_uibox",
-							"sid": 602887453985562,
-							"parameters": {
-								"y": "otherPlayer.Y - 30"
-							}
-						},
-						{
-							"id": "set-z-elevation",
-							"objectClass": "otherplayer_uibox",
-							"sid": 721741674066157,
-							"parameters": {
-								"z": "otherPlayer.ZElevation"
-							}
-						}
-					],
-					"sid": 134487361649474
 				},
 				{
 					"eventType": "block",
@@ -491,15 +471,26 @@
 							}
 						},
 						{
-							"id": "every-x-seconds",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 212129785541872,
+							"sid": 465059507777389,
 							"parameters": {
-								"interval-seconds": "2"
+								"variable": "check_name",
+								"comparison": 0,
+								"value": "2"
 							}
 						}
 					],
 					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 471797609146485,
+							"parameters": {
+								"variable": "check_name",
+								"value": "0"
+							}
+						},
 						{
 							"id": "clear-canvas",
 							"objectClass": "DrawingCanvas",
@@ -512,14 +503,6 @@
 							"id": "wait-for-previous-actions",
 							"objectClass": "System",
 							"sid": 282015354722397
-						},
-						{
-							"id": "clear-canvas",
-							"objectClass": "DrawingCanvas",
-							"sid": 135841704155653,
-							"parameters": {
-								"color": "rgba(0, 0, 0, 0)"
-							}
 						},
 						{
 							"id": "paste-object",
@@ -547,6 +530,11 @@
 								"width": "0",
 								"height": "0"
 							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 230037685775002
 						}
 					],
 					"sid": 494952914102808
@@ -736,6 +724,92 @@
 						}
 					],
 					"sid": 177792680313348
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-loaded",
+							"objectClass": "otherPlayer",
+							"sid": 278288467388777
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 233876151343553,
+							"parameters": {
+								"variable": "check_name",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 764567555897734,
+							"parameters": {
+								"variable": "otherplayercount",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 114996782215502,
+							"parameters": {
+								"variable": "lastname",
+								"value": "otherPlayer.current_user"
+							}
+						}
+					],
+					"sid": 642272727737619
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "otherPlayer",
+							"sid": 848713959072266,
+							"parameters": {
+								"instance-variable": "current_user",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "otherPlayer",
+							"sid": 130283193642048
+						}
+					],
+					"sid": 936488297115408
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 187133203465549,
+							"parameters": {
+								"variable": "otherplayercount",
+								"comparison": 5,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "otherplayer_uibox",
+							"sid": 994028032453778
+						}
+					],
+					"sid": 330870188111493
 				}
 			],
 			"sid": 497190867693102
@@ -744,87 +818,22 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-loaded",
-					"objectClass": "otherPlayer",
-					"sid": 727634009595664
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 400340810130533
 				}
 			],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 332965126530086,
+					"id": "set-bbox-scale",
+					"objectClass": "playerModel",
+					"sid": 632545322587740,
 					"parameters": {
-						"variable": "check_name",
-						"value": "1"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 286711139042686,
-					"parameters": {
-						"variable": "otherplayercount",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 481894272857854,
-					"parameters": {
-						"variable": "lastname",
-						"value": "otherPlayer.current_user"
+						"scale": "2"
 					}
 				}
 			],
-			"sid": 230094200399840
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "otherPlayer",
-					"sid": 191405192498888,
-					"parameters": {
-						"instance-variable": "current_user",
-						"comparison": 0,
-						"value": "\"\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "otherPlayer",
-					"sid": 951638802924565
-				}
-			],
-			"sid": 313149835613291
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 325696477165087,
-					"parameters": {
-						"variable": "otherplayercount",
-						"comparison": 5,
-						"value": "2"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "otherplayer_uibox",
-					"sid": 336325011036826
-				}
-			],
-			"sid": 341533290513346
+			"sid": 644330040283982
 		}
 	],
 	"sid": 560533800128829

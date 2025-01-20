@@ -76,6 +76,15 @@
 											}
 										}
 									},
+									"effects": {
+										"Toon": {
+											"isEnabled": true,
+											"parameters": {
+												"threshold": 0.2,
+												"levels": 10
+											}
+										}
+									},
 									"sceneGraphData": {
 										"parent-uid": null,
 										"uid": 31,
@@ -289,6 +298,29 @@
 								"acceptsLight": true
 							},
 							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 0.3,
+										"precision-step": 10,
+										"samples": 64
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -297,7 +329,7 @@
 								"width": 97.57946911292129,
 								"height": 97.82081150664953,
 								"originX": 0.00012277315216586938,
-								"originY": 0.5,
+								"originY": 0.5263705193597935,
 								"color": [
 									1,
 									1,
@@ -610,6 +642,29 @@
 								"current_user": ""
 							},
 							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 0.3,
+										"precision-step": 10,
+										"samples": 64
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
 							"instanceFolderItem": {
 								"sid": 247342113256547,
 								"expanded": true,
@@ -622,10 +677,8298 @@
 							"world": {
 								"x": 4974,
 								"y": -1020,
-								"width": 36.05078589171171,
-								"height": 78.0564159154892,
-								"originX": 0.43788562856855723,
-								"originY": 0.5,
+								"width": 97.57946911292129,
+								"height": 97.82081150664976,
+								"originX": 0.00012277315217052966,
+								"originY": 0.5263705193597946,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 61,
+							"sid": 821267220693934,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 821267220693934,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1292,
+								"y": 208,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 92,
+							"sid": 876287634211390,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 876287634211390,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1432,
+								"y": 236,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 93,
+							"sid": 632312779448598,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 632312779448598,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1152,
+								"y": 160,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 94,
+							"sid": 408484699076061,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 408484699076061,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 922,
+								"y": 154,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 95,
+							"sid": 521934474482076,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 521934474482076,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 892,
+								"y": 332,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 96,
+							"sid": 834451016114205,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 834451016114205,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1048,
+								"y": 124,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 97,
+							"sid": 105902239268518,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 105902239268518,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1464,
+								"y": 106,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 98,
+							"sid": 376913720696615,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 376913720696615,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1288,
+								"y": 126,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 99,
+							"sid": 255495835596239,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 255495835596239,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 588,
+								"y": 282,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 100,
+							"sid": 398700787243699,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 398700787243699,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 728,
+								"y": 310,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 101,
+							"sid": 394533263147847,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 394533263147847,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 448,
+								"y": 234,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 102,
+							"sid": 639028487301971,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 639028487301971,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 218,
+								"y": 228,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 103,
+							"sid": 892465775164081,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 892465775164081,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 188,
+								"y": 406,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 104,
+							"sid": 976959662812857,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 976959662812857,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 344,
+								"y": 198,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 105,
+							"sid": 552073835977895,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 552073835977895,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 760,
+								"y": 180,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 106,
+							"sid": 870041730959750,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 870041730959750,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 584,
+								"y": 200,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 107,
+							"sid": 307978258893834,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 307978258893834,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2018,
+								"y": 236,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 108,
+							"sid": 813946848171171,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 813946848171171,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2158,
+								"y": 264,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 109,
+							"sid": 443770892773803,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 443770892773803,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1878,
+								"y": 188,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 110,
+							"sid": 436798893270431,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 436798893270431,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1648,
+								"y": 182,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 111,
+							"sid": 144332675366924,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 144332675366924,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1618,
+								"y": 360,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 112,
+							"sid": 211399364760981,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 211399364760981,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1774,
+								"y": 152,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 113,
+							"sid": 853345985036219,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 853345985036219,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2190,
+								"y": 134,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 114,
+							"sid": 707895654048969,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 707895654048969,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2014,
+								"y": 154,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 115,
+							"sid": 987615624198174,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 987615624198174,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2704,
+								"y": 248,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 118,
+							"sid": 535217343202070,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 535217343202070,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2844,
+								"y": 276,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 119,
+							"sid": 837650969426998,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 837650969426998,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2564,
+								"y": 200,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 120,
+							"sid": 470097220345203,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 470097220345203,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2334,
+								"y": 194,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 121,
+							"sid": 686799812386549,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 686799812386549,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2304,
+								"y": 372,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 122,
+							"sid": 605035732912519,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 605035732912519,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2460,
+								"y": 164,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 123,
+							"sid": 433930853511061,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 433930853511061,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2876,
+								"y": 146,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 124,
+							"sid": 243672601044769,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 243672601044769,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2700,
+								"y": 166,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 125,
+							"sid": 484576656105134,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 484576656105134,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3344,
+								"y": 286,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 126,
+							"sid": 328435000804390,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 328435000804390,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3484,
+								"y": 314,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 127,
+							"sid": 409729557930635,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 409729557930635,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3204,
+								"y": 238,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001145,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 128,
+							"sid": 641260943072735,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 641260943072735,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2974,
+								"y": 232,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 129,
+							"sid": 227403457576428,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 227403457576428,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2944,
+								"y": 410,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 130,
+							"sid": 809113998799440,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 809113998799440,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3100,
+								"y": 202,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 131,
+							"sid": 443130449167220,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 443130449167220,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3516,
+								"y": 184,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 132,
+							"sid": 308477867067660,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 308477867067660,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3340,
+								"y": 204,
+								"width": 279.8110008239746,
+								"height": 212.26147313893938,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001146,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 133,
+							"sid": 147654530447841,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 147654530447841,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3348,
+								"y": 1628,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 134,
+							"sid": 312753123382450,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 312753123382450,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3488,
+								"y": 1656,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 135,
+							"sid": 187879678595765,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 187879678595765,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3208,
+								"y": 1580,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 136,
+							"sid": 615862640827496,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 615862640827496,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2978,
+								"y": 1574,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 137,
+							"sid": 258719953639518,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 258719953639518,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2948,
+								"y": 1752,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 138,
+							"sid": 582041425949275,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 582041425949275,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3104,
+								"y": 1544,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 139,
+							"sid": 700592467472532,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 700592467472532,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3520,
+								"y": 1526,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 140,
+							"sid": 965071369512646,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 965071369512646,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3344,
+								"y": 1546,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 141,
+							"sid": 684174814541381,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 684174814541381,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3356,
+								"y": 1938,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 142,
+							"sid": 723703446115663,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 723703446115663,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3496,
+								"y": 1966,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 143,
+							"sid": 232605102803673,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 232605102803673,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3216,
+								"y": 1890,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 144,
+							"sid": 406162843797202,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 406162843797202,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2986,
+								"y": 1884,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 145,
+							"sid": 571208841936017,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 571208841936017,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2956,
+								"y": 2062,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 146,
+							"sid": 550778919051408,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 550778919051408,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3112,
+								"y": 1854,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 147,
+							"sid": 147674678573969,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 147674678573969,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3528,
+								"y": 1836,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 148,
+							"sid": 857277928439730,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 857277928439730,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3352,
+								"y": 1856,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 149,
+							"sid": 533774306759493,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 533774306759493,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2584,
+								"y": 1770,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 150,
+							"sid": 428986815467344,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 428986815467344,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2724,
+								"y": 1798,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 151,
+							"sid": 623982702927611,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 623982702927611,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2444,
+								"y": 1722,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 152,
+							"sid": 807101910916833,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 807101910916833,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2214,
+								"y": 1716,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 153,
+							"sid": 447652758575514,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 447652758575514,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2184,
+								"y": 1894,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 154,
+							"sid": 237085987580653,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 237085987580653,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2340,
+								"y": 1686,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 155,
+							"sid": 851069751550323,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 851069751550323,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2756,
+								"y": 1668,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 156,
+							"sid": 125662410524492,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 125662410524492,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2580,
+								"y": 1688,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 157,
+							"sid": 135868464338965,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 135868464338965,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2486,
+								"y": 2078,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 158,
+							"sid": 399258929113744,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 399258929113744,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2626,
+								"y": 2106,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 159,
+							"sid": 431431061678468,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 431431061678468,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2346,
+								"y": 2030,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 160,
+							"sid": 193025609972960,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 193025609972960,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2116,
+								"y": 2024,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 161,
+							"sid": 236404277454036,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 236404277454036,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2086,
+								"y": 2202,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001154,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 162,
+							"sid": 829236871935815,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 829236871935815,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2242,
+								"y": 1994,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 163,
+							"sid": 959553570730977,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 959553570730977,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2658,
+								"y": 1976,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 164,
+							"sid": 791781086717938,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 791781086717938,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2482,
+								"y": 1996,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 165,
+							"sid": 856159794708154,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 856159794708154,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1916,
+								"y": 1798,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 166,
+							"sid": 246495063049707,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 246495063049707,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2056,
+								"y": 1826,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 167,
+							"sid": 644673430128040,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 644673430128040,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1776,
+								"y": 1750,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 168,
+							"sid": 504112745286028,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 504112745286028,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1546,
+								"y": 1744,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 169,
+							"sid": 981784422712530,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 981784422712530,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1516,
+								"y": 1922,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 170,
+							"sid": 330902734259646,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 330902734259646,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1672,
+								"y": 1714,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 171,
+							"sid": 790825059258867,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 790825059258867,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2088,
+								"y": 1696,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 172,
+							"sid": 137848241551833,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 137848241551833,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1912,
+								"y": 1716,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 173,
+							"sid": 375253107305791,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 375253107305791,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1676,
+								"y": 2090,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 174,
+							"sid": 719385374630145,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 719385374630145,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1816,
+								"y": 2118,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 175,
+							"sid": 956475536725520,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 956475536725520,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1536,
+								"y": 2042,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 176,
+							"sid": 497523489195328,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 497523489195328,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1306,
+								"y": 2036,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 177,
+							"sid": 241874952957076,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 241874952957076,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1276,
+								"y": 2214,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001154,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 178,
+							"sid": 256167319180663,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 256167319180663,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1432,
+								"y": 2006,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 179,
+							"sid": 982198176487426,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 982198176487426,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1848,
+								"y": 1988,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 180,
+							"sid": 252096019067327,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 252096019067327,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1672,
+								"y": 2008,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 181,
+							"sid": 556730578258353,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 556730578258353,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1112,
+								"y": 1842,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 182,
+							"sid": 874093218796743,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 874093218796743,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1252,
+								"y": 1870,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 183,
+							"sid": 143015347703882,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 143015347703882,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 972,
+								"y": 1794,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 184,
+							"sid": 398658059322774,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 398658059322774,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 742,
+								"y": 1788,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 185,
+							"sid": 849377039509264,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 849377039509264,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 712,
+								"y": 1966,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 186,
+							"sid": 501191750561950,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 501191750561950,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 868,
+								"y": 1758,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 187,
+							"sid": 994979884329594,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 994979884329594,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1284,
+								"y": 1740,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 188,
+							"sid": 685981457128633,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 685981457128633,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1108,
+								"y": 1760,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 189,
+							"sid": 768326546368224,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 768326546368224,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 920,
+								"y": 2186,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001154,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 190,
+							"sid": 316704630782001,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 316704630782001,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1060,
+								"y": 2214,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001154,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 191,
+							"sid": 113854620304251,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 113854620304251,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 780,
+								"y": 2138,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 192,
+							"sid": 391405110212568,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 391405110212568,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 550,
+								"y": 2132,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 194,
+							"sid": 320844595500755,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 320844595500755,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 520,
+								"y": 2310,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001154,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 203,
+							"sid": 790202588013060,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 790202588013060,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 676,
+								"y": 2102,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 225,
+							"sid": 673214134631881,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 673214134631881,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1092,
+								"y": 2084,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 227,
+							"sid": 981381000823901,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 981381000823901,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 916,
+								"y": 2104,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 228,
+							"sid": 405614259991818,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 405614259991818,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 612,
+								"y": 1884,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 229,
+							"sid": 843898941874273,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 843898941874273,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 752,
+								"y": 1912,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 230,
+							"sid": 173899727490267,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 173899727490267,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 472,
+								"y": 1836,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 231,
+							"sid": 208369983259353,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 208369983259353,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 242,
+								"y": 1830,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 232,
+							"sid": 543518174935871,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 543518174935871,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 212,
+								"y": 2008,
+								"width": 279.8110008239746,
+								"height": 212.2614731389392,
+								"originX": 0.5025499389747415,
+								"originY": 0.509398793500115,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 233,
+							"sid": 420416853070919,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 420416853070919,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 368,
+								"y": 1800,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 234,
+							"sid": 624464858306330,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 624464858306330,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 784,
+								"y": 1782,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "tree_low_poly",
+							"properties": {
+								"scale": "10",
+								"z-elevation": 0,
+								"angle-x": -100,
+								"angle-y": 0,
+								"angle-z": 0,
+								"rotation-order": "xyz",
+								"gtlf-path": "tree.gltf",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 235,
+							"sid": 278440933185307,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"effects": {
+								"BetterOutline": {
+									"isEnabled": true,
+									"parameters": {
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"width": 1,
+										"precision-step": 1,
+										"samples": 16
+									}
+								},
+								"Toon": {
+									"isEnabled": true,
+									"parameters": {
+										"threshold": 0.2,
+										"levels": 10
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 278440933185307,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 608,
+								"y": 1802,
+								"width": 279.8110008239746,
+								"height": 212.26147313893944,
+								"originX": 0.5025499389747415,
+								"originY": 0.5093987935001144,
 								"color": [
 									1,
 									1,
@@ -704,6 +9047,14 @@
 			"sid": 586871410070285,
 			"effectTypes": [
 				{
+					"effectId": "Mikal_FXAA",
+					"name": "FXAA",
+					"instance": {
+						"isEnabled": true,
+						"parameters": {}
+					}
+				},
+				{
 					"effectId": "fogexponential",
 					"name": "Fogexponential",
 					"instance": {
@@ -746,14 +9097,6 @@
 							"z-near": 50,
 							"z-far": 10000
 						}
-					}
-				},
-				{
-					"effectId": "Mikal_FXAA",
-					"name": "FXAA",
-					"instance": {
-						"isEnabled": true,
-						"parameters": {}
 					}
 				}
 			],

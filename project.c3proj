@@ -200,6 +200,13 @@
 			"author": "skymen",
 			"bundled": false,
 			"version": "1.4.0.3"
+		},
+		{
+			"type": "effect",
+			"id": "toon",
+			"name": "Toon",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "dbhie3icafy",
@@ -378,7 +385,8 @@
 							"miniDungeonTrapModel",
 							"miniDungeonWallOpeningModel",
 							"miniDungeonWoodStructureModel",
-							"miniDungeonWoodSupportModel"
+							"miniDungeonWoodSupportModel",
+							"tree_low_poly"
 						],
 						"subfolders": [],
 						"name": "models"
@@ -499,7 +507,8 @@
 			"models",
 			"controls",
 			"vBox",
-			"outline"
+			"outline",
+			"effects"
 		],
 		"subfolders": []
 	},
@@ -822,6 +831,14 @@
 					"name": "untitled.gltf",
 					"type": "application/octet-stream",
 					"sid": 256628398470349,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "tree.gltf",
+					"type": "application/octet-stream",
+					"sid": 420049268450304,
 					"file-info": {
 						"purpose": "none"
 					}
