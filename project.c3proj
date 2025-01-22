@@ -195,6 +195,14 @@
 		},
 		{
 			"type": "effect",
+			"id": "mikal_frag_light-1",
+			"name": "Frag Light - 1 Light",
+			"author": "Mikal",
+			"bundled": false,
+			"version": "1.0.0"
+		},
+		{
+			"type": "effect",
 			"id": "skymen_BetterOutline",
 			"name": "BetterOutline",
 			"author": "skymen",
@@ -213,7 +221,8 @@
 	"objectTypes": {
 		"items": [
 			"enemyMiniDungeonOrcModel",
-			"controlsToggleControls"
+			"controlsToggleControls",
+			"skybox"
 		],
 		"subfolders": [
 			{
@@ -272,6 +281,15 @@
 						],
 						"subfolders": [],
 						"name": "login"
+					},
+					{
+						"items": [
+							"scan",
+							"scan_hp",
+							"scan_image"
+						],
+						"subfolders": [],
+						"name": "scan"
 					}
 				],
 				"name": "userInterface"
@@ -493,6 +511,14 @@
 				],
 				"subfolders": [],
 				"name": "3DRayNonPhysics"
+			},
+			{
+				"items": [
+					"enemy_model",
+					"enemy"
+				],
+				"subfolders": [],
+				"name": "enemy"
 			}
 		]
 	},

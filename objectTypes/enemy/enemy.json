@@ -1,0 +1,89 @@
+{
+	"name": "enemy",
+	"plugin-id": "Sprite",
+	"sid": 640781342164872,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "unique_code",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 943079195733188
+		},
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 529424624483116
+		},
+		{
+			"name": "atk",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 621080310955674
+		},
+		{
+			"name": "defense",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 788210651636674
+		},
+		{
+			"name": "name",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 327519320895354
+		},
+		{
+			"name": "type",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 762818892240573
+		},
+		{
+			"name": "dead",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 431849981378582
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1953785,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 292387140319459,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

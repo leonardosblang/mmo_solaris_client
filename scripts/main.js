@@ -5378,6 +5378,55 @@
 
 //# sourceMappingURL=colyseus.js.map
 
+
+
+const C3=self.C3
+
+
+function GetDefaultVertexShaderSource_WebGL2(useHighP) {
+    const texPrecision = useHighP ? "highp" : "mediump";
+    return [
+	`#version 300 es`,
+	`in highp vec3 aPos;`,
+	`in ${texPrecision} vec2 aTex;`,
+	`out ${texPrecision} vec2 vTex;`,
+	`out highp vec3 pos;`,
+	`uniform highp mat4 matP;`,
+	`uniform highp mat4 matMV;`, 
+	`void main(void) {`, 
+	//`    if (matP[0][3] > 10000000.0) {`, 
+	`    if (matP[0][3] > 10000000.0) {`, 
+	`    	mat4 dest;`,
+	`    	for(int i = 0; i < 4; i++) {`,
+	`    		for(int j = 0; j < 4; j++) {`,
+	`    			dest[i][j] = matP[i][j];`,
+	`    		}`,
+	`    	}`,
+	`    	dest[0][3] = dest[0][3] - 11000000.0;`,
+	`    	pos = (dest * vec4(aPos,1.0)).xyz;`,
+	`    	gl_Position = matMV * vec4(aPos, 1.0);`, 
+	`    } else {`, 
+	`    	pos = aPos;`,
+	`	    gl_Position = matP * matMV * vec4(aPos, 1.0);`,
+	`    }`, 
+	`    vTex = aTex;`, 
+	`}`].join("\n")
+}
+
+
+const shader = globalThis['C3_Shaders']['mikal_frag_light-1']
+shader.glslWebGL2 = shader.glslWebGL2.replace("in mediump vec2 vTex;", "in mediump vec2 vTex;\nin highp vec3 pos;");
+shader.glslWebGL2 = shader.glslWebGL2.replace('highp vec3 pos = vec3(0.0, 0.0, 0.0);','');
+console.log('shader',shader.glslWebGL2)
+C3.Gfx.WebGLShaderProgram.GetDefaultVertexShaderSource_WebGL2 = GetDefaultVertexShaderSource_WebGL2;
+
+
+
+
+
+
+
+
 // If you're loading colyseus from an external script in index.html:
 // If you're loading colyseus from an external script in index.html:
 const Colyseus = window.colyseus || window.Colyseus;
@@ -5539,3 +5588,11 @@ function UpdateOtherPlayerPosition(runtime, data) {
     inst.zElevation = data.z;
   }
 }
+
+
+
+
+
+
+
+
