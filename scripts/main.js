@@ -5424,20 +5424,15 @@ C3.Gfx.WebGLShaderProgram.GetDefaultVertexShaderSource_WebGL2 = GetDefaultVertex
 
 
 
-
-
-
-// If you're loading colyseus from an external script in index.html:
-// If you're loading colyseus from an external script in index.html:
 const Colyseus = window.colyseus || window.Colyseus;
 
-// Keep references
 let client = null;
 let room = null;
 let localPlayer = null;
 let otherPlayers = {};
+let enemies = {}; // Keep track of enemy instances
 
-// Called by a Construct 3 action (e.g. in your event sheet):
+// Called by a Construct 3 action (e.g., in your event sheet):
 window.SendLogin = function (runtime) {
   const username = runtime.globalVars.GlobalUserName || "";
   if (!username) {
@@ -5466,12 +5461,10 @@ runOnStartup(async (runtime) => {
     room.onMessage("loginSuccess", (data) => {
       console.log("[Client] loginSuccess =>", data);
 
-      // Store DB coordinates from server in global variables
       runtime.globalVars.DBX = data.x;
       runtime.globalVars.DBY = data.y;
       runtime.globalVars.DBZ = data.z;
 
-      // Ensure layout matches the received zone
       if (runtime.layout.name !== data.zone) {
         runtime.goToLayout(data.zone);
       }
@@ -5480,7 +5473,6 @@ runOnStartup(async (runtime) => {
     // (2) "initialPlayers": existing players in the room
     room.onMessage("initialPlayers", (players) => {
       console.log("[Client] initialPlayers =>", players);
-      // Spawn them all
       players.forEach((playerData) => {
         UpdateOtherPlayerPosition(runtime, playerData);
       });
@@ -5498,12 +5490,30 @@ runOnStartup(async (runtime) => {
       const { sessionId } = data;
       const inst = otherPlayers[sessionId];
       if (inst) {
-        inst.destroy(); // Destroy the Construct instance
-        delete otherPlayers[sessionId]; // Remove from our dictionary
+        inst.destroy();
+        delete otherPlayers[sessionId];
       }
     });
 
-    // Every tick, we’ll send our movement
+    // (5) Initialize enemies
+    room.onMessage("initializeEnemies", (enemyDataList) => {
+      console.log("[Client] Initializing enemies =>", enemyDataList);
+      enemyDataList.forEach((enemyData) => {
+        InitializeEnemy(runtime, enemyData);
+      });
+    });
+
+    // (6) Update enemy state (combat, respawn, etc.)
+    room.onMessage("combatUpdate", (data) => {
+      UpdateEnemyState(runtime, data);
+    });
+
+    // (7) Enemy respawn
+    room.onMessage("enemyRespawn", (data) => {
+      RespawnEnemy(runtime, data);
+    });
+
+    // Every tick, send our movement
     runtime.addEventListener("tick", () => Tick(runtime));
   } catch (e) {
     console.error("[Client] Failed to join room:", e);
@@ -5514,21 +5524,13 @@ runOnStartup(async (runtime) => {
 // TICK: sends our player’s movement
 //--------------------------------
 function Tick(runtime) {
-  // Only run if the current layout is "demozone0" (or whatever your main game layout is)
-  if (!runtime.layout || runtime.layout.name !== "demozone0") {
-    return;
-  }
+  if (!runtime.layout || runtime.layout.name !== "demozone0") return;
 
-  // Ensure your player object type exists in this layout
-  if (!runtime.objects.player) {
-    return;
-  }
+  if (!runtime.objects.player) return;
 
-  // Attempt to get or create the localPlayer
   if (!localPlayer) {
     localPlayer = runtime.objects.player.getFirstPickedInstance();
     if (!localPlayer) {
-      // Create at coordinates retrieved from DB
       localPlayer = runtime.objects.player.createInstance(
         "worldDepth0",
         runtime.globalVars.DBX,
@@ -5538,7 +5540,6 @@ function Tick(runtime) {
     }
   }
 
-  // Send our current position/angle to the server
   if (localPlayer) {
     room.send("move", {
       x: localPlayer.x,
@@ -5554,34 +5555,26 @@ function Tick(runtime) {
 //--------------------------------
 function UpdateOtherPlayerPosition(runtime, data) {
   if (!data.zone) {
-    console.error("[UpdateOtherPlayerPosition] No zone provided in data. Unable to update.");
+    console.error("[UpdateOtherPlayerPosition] No zone provided in data.");
     return;
   }
 
-  // Ensure the layout matches the player's zone
-  if (runtime.layout.name !== data.zone) {
-    console.log(`[UpdateOtherPlayerPosition] Skipped: current layout is ${runtime.layout.name}, but data.zone is ${data.zone}`);
-    return;
-  }
+  if (runtime.layout.name !== data.zone) return;
 
   const otherPlayerObject = runtime.objects.otherPlayer;
   if (!otherPlayerObject) {
-    console.error("[UpdateOtherPlayerPosition] 'otherPlayer' object does not exist in Construct.");
+    console.error("[UpdateOtherPlayerPosition] 'otherPlayer' object does not exist.");
     return;
   }
 
   let inst = otherPlayers[data.sessionId];
   if (!inst) {
     inst = otherPlayerObject.createInstance("worldDepth0", data.x, data.y);
-    if (!inst) {
-      console.error("[UpdateOtherPlayerPosition] Failed to create instance on layer 'worldDepth0'.");
-      return;
-    }
+    if (!inst) return;
     otherPlayers[data.sessionId] = inst;
     inst.instVars.current_user = data.username;
   }
 
-  // Update position
   inst.x = data.x;
   inst.y = data.y;
   if (typeof inst.zElevation !== "undefined") {
@@ -5589,9 +5582,98 @@ function UpdateOtherPlayerPosition(runtime, data) {
   }
 }
 
+//--------------------------------
+// CREATE/UPDATE enemies
+//--------------------------------
+function InitializeEnemy(runtime, data) {
+  const enemyObject = runtime.objects.enemy;
+  if (!enemyObject) {
+    console.error("[InitializeEnemy] 'enemy' object does not exist.");
+    return;
+  }
+
+  let inst = enemyObject.createInstance("worldDepth0", data.x, data.y);
+  if (!inst) return;
+
+  inst.instVars.unique_code = data.unique_code;
+  inst.instVars.name = data.name;
+  inst.instVars.type = data.type;
+  inst.instVars.hp = data.hp;
+  inst.instVars.current_hp = data.current_hp;
+  inst.instVars.atk = data.atk;
+  inst.instVars.defense = data.defense;
+  inst.instVars.dead = data.dead;
+
+  enemies[data.unique_code] = inst;
+}
+
+//--------------------------------
+// UPDATE enemy state (e.g., health, dead/alive)
+//--------------------------------
+function UpdateEnemyState(runtime, data) {
+  const inst = enemies[data.unique_code];
+  if (!inst) return;
+
+  inst.instVars.current_hp = data.enemy_hp;
+  if (data.enemy_hp <= 0) {
+    inst.instVars.dead = true;
+  }
+}
+
+//--------------------------------
+// RESPAWN enemies
+//--------------------------------
+function RespawnEnemy(runtime, data) {
+  const inst = enemies[data.unique_code];
+  if (!inst) return;
+
+  inst.instVars.dead = false;
+  inst.instVars.current_hp = inst.instVars.hp;
+  inst.x = data.x;
+  inst.y = data.y;
+  inst.zElevation = data.z;
+}
+
+//--------------------------------
+// ATTACK enemy
+//--------------------------------
+window.AttackEnemy = function (runtime, uniqueCode) {
+  if (!room || !uniqueCode) {
+    console.warn("[Client] Cannot attack. Room or uniqueCode is missing.");
+    return;
+  }
+
+  console.log(`[Client] Attacking enemy with unique_code: ${uniqueCode}`);
+  room.send("attack", { unique_code: uniqueCode });
+  console.log("[Client] Sent attack message to server:", { unique_code: uniqueCode });
+};
 
 
+// Collect all enemies in the layout and send them to the server
+window.CollectEnemyData = function (runtime) {
+  const enemies = runtime.objects.enemy.getAllInstances(); // Get all enemy instances
+  const enemyDataList = [];
 
+  enemies.forEach((enemy) => {
+    enemyDataList.push({
+      unique_code: enemy.instVars.unique_code,
+      name: enemy.instVars.name,
+      type: enemy.instVars.type,
+      x: enemy.x,
+      y: enemy.y,
+      z: enemy.zElevation || 0,
+      zone: runtime.layout.name, // Get the current layout's zone
+      hp: enemy.instVars.hp,
+      current_hp: enemy.instVars.current_hp,
+      atk: enemy.instVars.atk,
+      defense: enemy.instVars.defense,
+      dead: enemy.instVars.dead,
+    });
+  });
+
+  // Send the data to the server
+  room.send("initializeEnemies", enemyDataList);
+};
 
 
 

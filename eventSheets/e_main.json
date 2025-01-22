@@ -42,6 +42,10 @@
 			"includeSheet": "database"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "enemy"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "3D Object",

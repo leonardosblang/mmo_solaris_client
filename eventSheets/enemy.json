@@ -1,0 +1,74 @@
+{
+	"name": "enemy",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 485120108198359
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "CollectEnemyData(runtime)"
+				}
+			],
+			"sid": 178096257656063
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 723847455387995,
+					"parameters": {
+						"mouse-button": "right",
+						"click-type": "clicked",
+						"object-clicked": "enemy_model"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "combat",
+					"sid": 570888395690364
+				}
+			],
+			"sid": 306119214382051
+		},
+		{
+			"functionName": "combat",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy",
+					"sid": 892924497296078,
+					"parameters": {
+						"instance-variable": "unique_code",
+						"comparison": 0,
+						"value": "enemy_model.unique_code"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "const enemyInstance = runtime.objects.enemy.getFirstPickedInstance();\nif (enemyInstance) {\n  const uniqueCode = enemyInstance.instVars.unique_code;\n  AttackEnemy(runtime, uniqueCode);\n}\nconsole.log(\"aaaaa\")\n"
+				}
+			],
+			"sid": 722756424698489
+		}
+	],
+	"sid": 639176213944381
+}

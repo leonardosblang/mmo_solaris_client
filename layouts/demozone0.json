@@ -351,63 +351,9 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "enemy_model",
-							"properties": {
-								"scale": "1",
-								"z-elevation": 0,
-								"angle-x": 0,
-								"angle-y": 0,
-								"angle-z": 0,
-								"rotation-order": "xyz",
-								"gtlf-path": "",
-								"debug": false,
-								"animation-blend": 0,
-								"instance-model": false,
-								"image-texture": false,
-								"x-scale": 1,
-								"y-scale": 1,
-								"z-scale": 1,
-								"wireframe": false,
-								"worker-animation": false,
-								"cpu-xform": false
-							},
-							"uid": 237,
-							"sid": 205791828723091,
-							"tags": "",
-							"instanceVariables": {
-								"unique_code": 0,
-								"name": 0
-							},
-							"behaviors": {},
-							"instanceFolderItem": {
-								"sid": 205791828723091,
-								"expanded": true,
-								"folderName": "",
-								"indexInFolder": -1,
-								"folderNestingLevel": -1
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 2348,
-								"y": 806,
-								"width": 250,
-								"height": 250,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"zElevation": 0
-							}
-						},
-						{
 							"type": "enemy",
 							"properties": {
-								"initially-visible": true,
+								"initially-visible": false,
 								"initial-animation": "Animation 1",
 								"initial-frame": 0,
 								"enable-collisions": true,
@@ -417,13 +363,22 @@
 							"sid": 186066043610312,
 							"tags": "",
 							"instanceVariables": {
-								"unique_code": "",
-								"hp": 0,
-								"atk": 0,
-								"defense": 0,
-								"name": "",
-								"type": 0,
-								"dead": false
+								"unique_code": "slime_1",
+								"hp": 100,
+								"atk": 2,
+								"defense": 2,
+								"name": "green slime",
+								"dead": false,
+								"current_hp": 100,
+								"current_defense": 2,
+								"current_atk": 2,
+								"current_x": 2188,
+								"current_y": 650,
+								"current_z": 40,
+								"default_x": 2188,
+								"default_y": 650,
+								"default_z": 0,
+								"type": "default"
 							},
 							"behaviors": {},
 							"instanceFolderItem": {
@@ -436,8 +391,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 2338,
-								"y": 716,
+								"x": 2254,
+								"y": 968,
 								"width": 250,
 								"height": 250,
 								"originX": 0.5,
@@ -449,6 +404,60 @@
 									1
 								],
 								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "enemy_model",
+							"properties": {
+								"scale": "350",
+								"z-elevation": 0,
+								"angle-x": -90.3333740234375,
+								"angle-y": 10.333313000000004,
+								"angle-z": -0.66668701171875,
+								"rotation-order": "xyz",
+								"gtlf-path": "character-human.glb",
+								"debug": false,
+								"animation-blend": 0,
+								"instance-model": false,
+								"image-texture": false,
+								"x-scale": 1,
+								"y-scale": 1,
+								"z-scale": 1,
+								"wireframe": false,
+								"worker-animation": false,
+								"cpu-xform": false
+							},
+							"uid": 237,
+							"sid": 547041470926050,
+							"tags": "",
+							"instanceVariables": {
+								"unique_code": "slime_1",
+								"name": "slime"
+							},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 547041470926050,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2244,
+								"y": 962,
+								"width": 275.71897439201075,
+								"height": 127.18592990259799,
+								"originX": 0.4342157123353475,
+								"originY": 0.43615179449584796,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
 								"zElevation": 0
 							}
 						},
@@ -566,7 +575,13 @@
 								"current_y": 1132,
 								"current_zone": "demozone0",
 								"current_z": 1.1,
-								"name": "test_name"
+								"name": "test_name",
+								"hp": 100,
+								"current_hp": 100,
+								"current_defense": 2,
+								"defense": 5,
+								"atk": 5,
+								"current_atk": 5
 							},
 							"behaviors": {
 								"Rapier3DPhysics": {

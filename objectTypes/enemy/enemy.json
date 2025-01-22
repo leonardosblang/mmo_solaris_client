@@ -40,18 +40,81 @@
 			"sid": 327519320895354
 		},
 		{
-			"name": "type",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 762818892240573
-		},
-		{
 			"name": "dead",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
 			"sid": 431849981378582
+		},
+		{
+			"name": "current_hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 721079936588926
+		},
+		{
+			"name": "current_defense",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 921236642794832
+		},
+		{
+			"name": "current_atk",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 316404081453096
+		},
+		{
+			"name": "current_x",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 208252402662866
+		},
+		{
+			"name": "current_y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 830628502693697
+		},
+		{
+			"name": "current_z",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 927676931150147
+		},
+		{
+			"name": "default_x",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 645465609630026
+		},
+		{
+			"name": "default_y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 771726205950365
+		},
+		{
+			"name": "default_z",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 661791062379073
+		},
+		{
+			"name": "type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 228949844058945
 		}
 	],
 	"behaviorTypes": [],

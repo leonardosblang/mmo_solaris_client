@@ -39893,7 +39893,13 @@
 								"current_y": 1132,
 								"current_zone": "demozone0",
 								"current_z": 1.1,
-								"name": "test_name"
+								"name": "test_name",
+								"hp": 100,
+								"current_hp": 100,
+								"current_defense": 2,
+								"defense": 5,
+								"atk": 5,
+								"current_atk": 5
 							},
 							"behaviors": {
 								"Rapier3DPhysics": {

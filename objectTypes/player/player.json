@@ -129,6 +129,48 @@
 			"desc": "",
 			"show": true,
 			"sid": 621740441464345
+		},
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 447771564657055
+		},
+		{
+			"name": "current_hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 583215163122991
+		},
+		{
+			"name": "current_defense",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 930419402528871
+		},
+		{
+			"name": "defense",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 689151487813003
+		},
+		{
+			"name": "atk",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 990760557585866
+		},
+		{
+			"name": "current_atk",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 703543251113215
 		}
 	],
 	"behaviorTypes": [

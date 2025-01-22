@@ -556,7 +556,8 @@
 			"e_utilities",
 			"e_otherplayer",
 			"LoginSheet",
-			"database"
+			"database",
+			"enemy"
 		],
 		"subfolders": []
 	},
