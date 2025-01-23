@@ -13,7 +13,7 @@
 			"actions": [
 				{
 					"type": "script",
-					"script": "CollectEnemyData(runtime)"
+					"script": "CollectEnemyData(runtime)\nwindow.RemoveEnemy(runtime, \"slime_1\");\n\n"
 				}
 			],
 			"sid": 178096257656063
@@ -64,10 +64,51 @@
 			"actions": [
 				{
 					"type": "script",
-					"script": "const enemyInstance = runtime.objects.enemy.getFirstPickedInstance();\nif (enemyInstance) {\n  const uniqueCode = enemyInstance.instVars.unique_code;\n  AttackEnemy(runtime, uniqueCode);\n}\nconsole.log(\"aaaaa\")\n"
+					"script": "// Example JS action in Construct 3\nconst enemyInstance = runtime.objects.enemy.getFirstPickedInstance();\nif (enemyInstance) {\n  const uniqueCode = enemyInstance.instVars.unique_code;\n  window.TargetEnemy(runtime, uniqueCode);\n}\n\n"
 				}
 			],
 			"sid": 722756424698489
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 875117028684362,
+					"parameters": {
+						"key": 49
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "window.BasicAttack(runtime);"
+				}
+			],
+			"sid": 640030298051599
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 702518240698975
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "scan_hp",
+					"sid": 168575902676255,
+					"parameters": {
+						"width": "(scan_hp.current_value / scan_hp.max_value) * 426"
+					}
+				}
+			],
+			"sid": 732920337931630
 		}
 	],
 	"sid": 639176213944381

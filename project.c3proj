@@ -286,7 +286,8 @@
 						"items": [
 							"scan",
 							"scan_hp",
-							"scan_image"
+							"scan_image",
+							"enemy_name"
 						],
 						"subfolders": [],
 						"name": "scan"

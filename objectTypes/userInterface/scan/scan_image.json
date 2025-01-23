@@ -19,7 +19,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 275615,
+						"imageSpriteId": 1930467,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -27,6 +27,31 @@
 				],
 				"sid": 502814838232678,
 				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9070704,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 948662983181129,
+				"name": "test2",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

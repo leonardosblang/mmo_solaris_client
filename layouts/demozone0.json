@@ -363,11 +363,11 @@
 							"sid": 186066043610312,
 							"tags": "",
 							"instanceVariables": {
-								"unique_code": "slime_1",
+								"unique_code": "teste2",
 								"hp": 100,
-								"atk": 2,
+								"atk": 7,
 								"defense": 2,
-								"name": "green slime",
+								"name": "test2",
 								"dead": false,
 								"current_hp": 100,
 								"current_defense": 2,
@@ -432,8 +432,8 @@
 							"sid": 547041470926050,
 							"tags": "",
 							"instanceVariables": {
-								"unique_code": "slime_1",
-								"name": "slime"
+								"unique_code": "teste2",
+								"name": "test2"
 							},
 							"behaviors": {},
 							"instanceFolderItem": {
@@ -881,7 +881,7 @@
 								"width": 97.57946911292129,
 								"height": 97.82081150664976,
 								"originX": 0.00012277315217052966,
-								"originY": 0.5263705193597946,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -11877,7 +11877,7 @@
 				{
 					"type": "scan",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -11898,10 +11898,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 952,
-						"y": 182,
-						"width": 964,
-						"height": 370,
+						"x": 200,
+						"y": 187,
+						"width": 608,
+						"height": 244,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -11917,7 +11917,7 @@
 				{
 					"type": "scan_hp",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -11926,7 +11926,10 @@
 					"uid": 239,
 					"sid": 300037872280594,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"current_value": 0,
+						"max_value": 100
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 300037872280594,
@@ -11938,10 +11941,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 966,
-						"y": 275,
-						"width": 678,
-						"height": 20,
+						"x": 208,
+						"y": 247,
+						"width": 426,
+						"height": 14,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -11957,7 +11960,7 @@
 				{
 					"type": "scan_image",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -11978,12 +11981,68 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 978,
-						"y": 92,
-						"width": 250,
-						"height": 250,
+						"x": 214,
+						"y": 130,
+						"width": 184,
+						"height": 188,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemy_name",
+					"properties": {
+						"text": "Slime",
+						"enable-bbcode": true,
+						"font": "fantasy",
+						"size": 20,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 242,
+					"sid": 288918405262884,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 288918405262884,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 182,
+						"y": 200,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

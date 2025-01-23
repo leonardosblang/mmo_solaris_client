@@ -5459,16 +5459,25 @@ runOnStartup(async (runtime) => {
 
     // (1) "loginSuccess"
     room.onMessage("loginSuccess", (data) => {
-      console.log("[Client] loginSuccess =>", data);
+  console.log("[Client] loginSuccess =>", data);
 
-      runtime.globalVars.DBX = data.x;
-      runtime.globalVars.DBY = data.y;
-      runtime.globalVars.DBZ = data.z;
+  // Position stuff
+  runtime.globalVars.DBX = data.x;
+  runtime.globalVars.DBY = data.y;
+  runtime.globalVars.DBZ = data.z;
 
-      if (runtime.layout.name !== data.zone) {
-        runtime.goToLayout(data.zone);
-      }
-    });
+  // If you have UI text or variables for HP
+  runtime.globalVars.PlayerCurrentHP = data.current_hp;
+  runtime.globalVars.PlayerMaxHP = data.hp;
+  runtime.globalVars.PlayerAtk = data.atk;
+  runtime.globalVars.PlayerDef = data.defense;
+
+  // Switch layout if needed
+  if (runtime.layout.name !== data.zone) {
+    runtime.goToLayout(data.zone);
+  }
+});
+
 
     // (2) "initialPlayers": existing players in the room
     room.onMessage("initialPlayers", (players) => {
@@ -5512,6 +5521,65 @@ runOnStartup(async (runtime) => {
     room.onMessage("enemyRespawn", (data) => {
       RespawnEnemy(runtime, data);
     });
+	
+	room.onMessage("enemyRespawn", (data) => {
+  // If the user was targeting the monster that died, maybe hide the UI
+  if (data.unique_code === runtime.globalVars.CurrentTargetCode) {
+    HideScanUI(runtime);
+  }
+});
+
+	
+	room.onMessage("combatUpdate", (data) => {
+  // data = { unique_code, enemy_hp, player_hp, sessionId }
+  if (data.unique_code === runtime.globalVars.CurrentTargetCode) {
+    const hpBar = runtime.objects.scan_hp.getFirstInstance();
+    if (hpBar) {
+      hpBar.instVars.current_value = data.enemy_hp;
+    }
+  }
+});
+	
+	room.onMessage("enemyScan", (data) => {
+  console.log("[Client] enemyScan =>", data);
+
+  // data = { unique_code, name, current_hp, hp }
+
+  // 1) Make the scan panel visible
+  const scanPanel = runtime.objects.scan.getFirstInstance();
+  if (scanPanel) {
+    scanPanel.isVisible = true;
+  }
+
+  // 2) Make the HP bar visible and set its value
+  //    Assume you're storing "current_value" and "max_value" in instVars:
+  const hpBar = runtime.objects.scan_hp.getFirstInstance();
+  if (hpBar) {
+    hpBar.isVisible = true;
+    hpBar.instVars.current_value = data.current_hp;
+    hpBar.instVars.max_value = data.hp;
+    // If you have a method or behavior for progress bars, call it here
+  }
+
+  // 3) Make the image visible and set its animation to the monster name
+  const scanImage = runtime.objects.scan_image.getFirstInstance();
+  if (scanImage) {
+    scanImage.isVisible = true;
+    // If your sprite animations match the monster’s name, you can do:
+   scanImage.setAnimation(data.name);
+  }
+
+  // 4) Make the enemy_name text visible and update its text
+  const enemyNameObj = runtime.objects.enemy_name.getFirstInstance();
+  if (enemyNameObj) {
+    enemyNameObj.isVisible = true;
+    enemyNameObj.text = data.name;
+  }
+
+  // 5) (Optional) Store the monster code in a global var for easy reference
+  runtime.globalVars.CurrentTargetCode = data.unique_code;
+});
+
 
     // Every tick, send our movement
     runtime.addEventListener("tick", () => Tick(runtime));
@@ -5670,10 +5738,29 @@ window.CollectEnemyData = function (runtime) {
       dead: enemy.instVars.dead,
     });
   });
+  
+window.TargetEnemy = function(runtime, uniqueCode) {
+  if (!room || !uniqueCode) return;
+  room.send("targetEnemy", { unique_code: uniqueCode });
+  console.log("[Client] Targeting enemy:", uniqueCode);
+};
+  
+ window.BasicAttack = function(runtime) {
+  console.log("[Client] Basic Attack!");
+  room.send("basicAttack", {});
+};
+
 
   // Send the data to the server
   room.send("initializeEnemies", enemyDataList);
 };
+
+window.RemoveEnemy = function(runtime, uniqueCode) {
+  if (!room) return;
+  console.log(`[Client] Requesting removal of enemy: ${uniqueCode}`);
+  room.send("removeEnemy", { unique_code: uniqueCode });
+};
+
 
 
 
