@@ -113,6 +113,21 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "mikal_effekseer",
+			"name": "effekseer",
+			"author": "Mikal",
+			"bundled": false,
+			"version": "1.2.7"
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
@@ -222,7 +237,8 @@
 		"items": [
 			"enemyMiniDungeonOrcModel",
 			"controlsToggleControls",
-			"skybox"
+			"skybox",
+			"effekseer"
 		],
 		"subfolders": [
 			{
@@ -897,6 +913,14 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "heal.efk",
+					"type": "application/octet-stream",
+					"sid": 414490901697344,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": [
@@ -909,10 +933,258 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "Aura.png",
+							"type": "image/png",
+							"sid": 589166010841972,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Aura_2.png",
+							"type": "image/png",
+							"sid": 996177953152247,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ColorNoise.png",
+							"type": "image/png",
+							"sid": 297744689647919,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Gradient_2.png",
+							"type": "image/png",
+							"sid": 878717038250514,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Gradient__1.png",
+							"type": "image/png",
+							"sid": 556758267309849,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Gradient__3.png",
+							"type": "image/png",
+							"sid": 483269854466328,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Noise1.png",
+							"type": "image/png",
+							"sid": 851567947638480,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Noise2.png",
+							"type": "image/png",
+							"sid": 715835388476403,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Noise3.png",
+							"type": "image/png",
+							"sid": 481011936756640,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Noise4.png",
+							"type": "image/png",
+							"sid": 330080359164958,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Noise_Distortion.efkmat",
+							"type": "application/octet-stream",
+							"sid": 659154289896677,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Null.png",
+							"type": "image/png",
+							"sid": 730190089626952,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Particle1.png",
+							"type": "image/png",
+							"sid": 219908338392407,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Particle2.png",
+							"type": "image/png",
+							"sid": 881338245755049,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ParticleCore.png",
+							"type": "image/png",
+							"sid": 937929298854408,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "RadiarNoise.efkmat",
+							"type": "application/octet-stream",
+							"sid": 192347111663512,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Ring.png",
+							"type": "image/png",
+							"sid": 617488071051849,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Ring2.png",
+							"type": "image/png",
+							"sid": 376179862640229,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Round.efkmodel",
+							"type": "application/octet-stream",
+							"sid": 324386400788985,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Round.fbx",
+							"type": "application/octet-stream",
+							"sid": 956095906595627,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ToonBase.efkmat",
+							"type": "application/octet-stream",
+							"sid": 114488961635428,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ToonImpact.efkmat",
+							"type": "application/octet-stream",
+							"sid": 801633886862750,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ToonWater.efkmat",
+							"type": "application/octet-stream",
+							"sid": 469065646718335,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ToonWaterTube.efkmat",
+							"type": "application/octet-stream",
+							"sid": 786401589384743,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Tube.efkmodel",
+							"type": "application/octet-stream",
+							"sid": 263937591868654,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AuraTube.efkmat",
+							"type": "application/octet-stream",
+							"sid": 453175953749995,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AuraTubeModel.efkmodel",
+							"type": "application/octet-stream",
+							"sid": 252999254067210,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Impact.efkmodel",
+							"type": "application/octet-stream",
+							"sid": 988683378732962,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Impact.fbx",
+							"type": "application/octet-stream",
+							"sid": 600037093121869,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AuraTubeModel.fbx",
+							"type": "application/octet-stream",
+							"sid": 843179136136640,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Tube.fbx",
+							"type": "application/octet-stream",
+							"sid": 564731864602536,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
-					"name": "Textures"
+					"name": "Parts"
 				}
 			]
 		}

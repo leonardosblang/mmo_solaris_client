@@ -45,7 +45,7 @@
 										"folderNestingLevel": -1
 									},
 									"showing": true,
-									"locked": false,
+									"locked": true,
 									"world": {
 										"x": 936,
 										"y": 764,
@@ -9224,6 +9224,58 @@
 									1
 								],
 								"zElevation": 0
+							}
+						},
+						{
+							"type": "effekseer",
+							"properties": {
+								"scaleX": 50,
+								"scaleY": 50,
+								"scaleZ": 50,
+								"rotationX": 90,
+								"rotationY": 0,
+								"rotationZ": 0
+							},
+							"uid": 256,
+							"sid": 709924907981418,
+							"tags": "",
+							"instanceVariables": {
+								"effectPath": "heal.efk",
+								"autoPlay": false,
+								"loop": false,
+								"destroyOnFinish": false
+							},
+							"behaviors": {
+								"DragDrop": {
+									"properties": {
+										"axes": "both",
+										"enabled": true
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 709924907981418,
+								"expanded": true,
+								"folderName": "",
+								"indexInFolder": -1,
+								"folderNestingLevel": -1
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 934,
+								"y": 540,
+								"width": 100,
+								"height": 100,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 1
 							}
 						},
 						{

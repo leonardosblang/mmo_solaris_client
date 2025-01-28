@@ -476,224 +476,429 @@
 			"sid": 213501691410831
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 453392695363179,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "ability"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 749634005808613
+						}
+					],
+					"actions": [
+						{
+							"id": "LoadEffect",
+							"objectClass": "effekseer",
+							"sid": 878480519471113,
+							"parameters": {
+								"effectPath": "Self.effectPath",
+								"name": "Self.effectPath",
+								"autoPlay": false
+							}
+						}
+					],
+					"sid": 593546302426552
 				},
 				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 740879657576040,
-					"parameters": {
-						"first-value": "lowercase((ability.ability))",
-						"comparison": 0,
-						"second-value": "\"punch\""
-					}
+					"eventType": "variable",
+					"name": "ticks",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 242836010606763
 				},
 				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "player",
-					"sid": 556629145411527,
-					"parameters": {
-						"instance-variable": "animation_lock"
-					},
-					"isInverted": true
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 628499249600580
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 607677930894552,
+							"parameters": {
+								"variable": "ticks",
+								"value": "tickcount"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "effekseer",
+							"sid": 444666424787010,
+							"parameters": {
+								"object": "player",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 106744898857792
 				},
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "cooldown",
-					"sid": 498960425620479,
-					"parameters": {
-						"instance-variable": "spell",
-						"comparison": 0,
-						"value": "ability.number"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "OnLoaded",
+							"objectClass": "effekseer",
+							"sid": 962357946358706
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "console.log('loaded:', runtime.globalVars.ticks)"
+						}
+					],
+					"sid": 707032288467153,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "effekseer",
+									"sid": 568133911230866,
+									"parameters": {
+										"instance-variable": "autoPlay"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "Play",
+									"objectClass": "effekseer",
+									"sid": 821532983077309
+								}
+							],
+							"sid": 772935861525291
+						}
+					]
 				},
 				{
-					"id": "is-visible",
-					"objectClass": "cooldown",
-					"sid": 380938315267642,
-					"isInverted": true
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "OnFinished",
+							"objectClass": "effekseer",
+							"sid": 574456933112516
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "console.log('finished:', runtime.globalVars.ticks)"
+						}
+					],
+					"sid": 522619917184234,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "effekseer",
+									"sid": 249557906916635,
+									"parameters": {
+										"instance-variable": "destroyOnFinish"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "effekseer",
+									"sid": 459762689171509
+								}
+							],
+							"sid": 980671600532087
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "effekseer",
+									"sid": 134413598574321,
+									"parameters": {
+										"instance-variable": "loop"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "Play",
+									"objectClass": "effekseer",
+									"sid": 742673359948800
+								}
+							],
+							"sid": 783229188596357,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "effekseer",
+											"sid": 507231874494983,
+											"parameters": {
+												"instance-variable": "effectPath",
+												"comparison": 0,
+												"value": "\"water3.efk\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 904719635016236,
+											"parameters": {
+												"seconds": "0.2"
+											}
+										}
+									],
+									"sid": 280743698906661
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 875443003038414,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ability"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 229375800980900,
+							"parameters": {
+								"first-value": "lowercase((ability.ability))",
+								"comparison": 0,
+								"second-value": "\"punch\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 148020001006759,
+							"parameters": {
+								"instance-variable": "animation_lock"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "cooldown",
+							"sid": 731154524930744,
+							"parameters": {
+								"instance-variable": "spell",
+								"comparison": 0,
+								"value": "ability.number"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "cooldown",
+							"sid": 342682325229339,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": ""
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 398007998117582,
+							"parameters": {
+								"instance-variable": "animation_lock",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play-animation",
+							"objectClass": "playerModel",
+							"sid": 502123528763126,
+							"parameters": {
+								"animation": "\"punch\"",
+								"loop": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 806868542900239,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 996739227166296
+						},
+						{
+							"id": "play-animation",
+							"objectClass": "playerModel",
+							"sid": 980848786171426,
+							"parameters": {
+								"animation": "\"idle\"",
+								"loop": true
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 807711059184763,
+							"parameters": {
+								"instance-variable": "animation_lock",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 756844314567533
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 568645163134589,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ability"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 447465947215003,
+							"parameters": {
+								"first-value": "lowercase((ability.ability))",
+								"comparison": 0,
+								"second-value": "\"basicheal\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 219666009311896,
+							"parameters": {
+								"instance-variable": "animation_lock"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "cooldown",
+							"sid": 536808938972595,
+							"parameters": {
+								"instance-variable": "spell",
+								"comparison": 0,
+								"value": "ability.number"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "cooldown",
+							"sid": 158947756866373,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": ""
+						},
+						{
+							"id": "LoadEffect",
+							"objectClass": "effekseer",
+							"sid": 661265239091001,
+							"parameters": {
+								"effectPath": "\"heal.efk\"",
+								"name": "\"heal.efk\"",
+								"autoPlay": true
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 400153179509457,
+							"parameters": {
+								"instance-variable": "animation_lock",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play-animation",
+							"objectClass": "playerModel",
+							"sid": 954364344653458,
+							"parameters": {
+								"animation": "\"cast\"",
+								"loop": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 659515505345804,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 283200151259108
+						},
+						{
+							"id": "play-animation",
+							"objectClass": "playerModel",
+							"sid": 476808895023319,
+							"parameters": {
+								"animation": "\"idle\"",
+								"loop": true
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 590886027291280,
+							"parameters": {
+								"instance-variable": "animation_lock",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 602832013887699
 				}
 			],
-			"actions": [
-				{
-					"type": "script",
-					"script": ""
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 818340898704006,
-					"parameters": {
-						"instance-variable": "animation_lock",
-						"value": "true"
-					}
-				},
-				{
-					"id": "play-animation",
-					"objectClass": "playerModel",
-					"sid": 191345290238497,
-					"parameters": {
-						"animation": "\"punch\"",
-						"loop": false
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 341012812537173,
-					"parameters": {
-						"seconds": "2"
-					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 818266486497483
-				},
-				{
-					"id": "play-animation",
-					"objectClass": "playerModel",
-					"sid": 832720590377652,
-					"parameters": {
-						"animation": "\"idle\"",
-						"loop": true
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 804275856400169,
-					"parameters": {
-						"instance-variable": "animation_lock",
-						"value": "false"
-					}
-				}
-			],
-			"sid": 246461014540734
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 601633175783644,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "ability"
-					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 715041325581602,
-					"parameters": {
-						"first-value": "lowercase((ability.ability))",
-						"comparison": 0,
-						"second-value": "\"basicheal\""
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "player",
-					"sid": 566039703746818,
-					"parameters": {
-						"instance-variable": "animation_lock"
-					},
-					"isInverted": true
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "cooldown",
-					"sid": 983359540380370,
-					"parameters": {
-						"instance-variable": "spell",
-						"comparison": 0,
-						"value": "ability.number"
-					}
-				},
-				{
-					"id": "is-visible",
-					"objectClass": "cooldown",
-					"sid": 369528572385902,
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"type": "script",
-					"script": ""
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 546216818978954,
-					"parameters": {
-						"instance-variable": "animation_lock",
-						"value": "true"
-					}
-				},
-				{
-					"id": "play-animation",
-					"objectClass": "playerModel",
-					"sid": 342996067381037,
-					"parameters": {
-						"animation": "\"cast\"",
-						"loop": false
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 562981790223396,
-					"parameters": {
-						"seconds": "2"
-					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 513111676222977
-				},
-				{
-					"id": "play-animation",
-					"objectClass": "playerModel",
-					"sid": 850936049607958,
-					"parameters": {
-						"animation": "\"idle\"",
-						"loop": true
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 465846806278598,
-					"parameters": {
-						"instance-variable": "animation_lock",
-						"value": "false"
-					}
-				}
-			],
-			"sid": 802361502660220
-		},
-		{
-			"eventType": "script",
-			"script": ""
-		},
-		{
-			"eventType": "script",
-			"script": ""
+			"sid": 364851652165784
 		}
 	],
 	"sid": 639176213944381

@@ -1,0 +1,56 @@
+{
+	"name": "effekseer",
+	"plugin-id": "mikal_effekseer",
+	"sid": 871905896350513,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "effectPath",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 549805866777474
+		},
+		{
+			"name": "autoPlay",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 494054576058278
+		},
+		{
+			"name": "loop",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 283157093939431
+		},
+		{
+			"name": "destroyOnFinish",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 885739276006971
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 979789816565135
+		}
+	],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 4905080,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}
