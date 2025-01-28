@@ -899,6 +899,27 @@
 				}
 			],
 			"sid": 364851652165784
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 746290625555728
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "enemy",
+					"sid": 788198679210190,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 946202878240721
 		}
 	],
 	"sid": 639176213944381
