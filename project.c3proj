@@ -291,6 +291,17 @@
 						],
 						"subfolders": [],
 						"name": "scan"
+					},
+					{
+						"items": [
+							"ui",
+							"ability",
+							"player_hp",
+							"player_mana",
+							"cooldown"
+						],
+						"subfolders": [],
+						"name": "bar"
 					}
 				],
 				"name": "userInterface"
@@ -515,8 +526,8 @@
 			},
 			{
 				"items": [
-					"enemy_model",
-					"enemy"
+					"enemy",
+					"enemy_model1"
 				],
 				"subfolders": [],
 				"name": "enemy"
@@ -553,11 +564,11 @@
 			"e_main",
 			"e_camera",
 			"e_3D_Functions",
-			"e_player",
 			"e_utilities",
 			"e_otherplayer",
 			"LoginSheet",
 			"database",
+			"e_player",
 			"enemy"
 		],
 		"subfolders": []
@@ -867,6 +878,22 @@
 					"name": "tree.gltf",
 					"type": "application/octet-stream",
 					"sid": 420049268450304,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SLIME.gltf",
+					"type": "application/octet-stream",
+					"sid": 632025348599364,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sample.glb",
+					"type": "application/octet-stream",
+					"sid": 486702042459751,
 					"file-info": {
 						"purpose": "none"
 					}

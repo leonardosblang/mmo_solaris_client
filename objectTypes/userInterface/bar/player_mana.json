@@ -1,0 +1,66 @@
+{
+	"name": "player_mana",
+	"plugin-id": "Sprite",
+	"sid": 922110968769464,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "current_value",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 300704733560699
+		},
+		{
+			"name": "max_value",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 723648158371607
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 913,
+						"height": 40,
+						"originX": 0.5005476451259584,
+						"originY": 0.55,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8996049,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.025,
+								1,
+								0.025,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 335228559009521,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

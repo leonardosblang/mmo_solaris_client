@@ -171,6 +171,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 703543251113215
+		},
+		{
+			"name": "animation_lock",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 577431774728109
+		},
+		{
+			"name": "mana",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 779215126736088
+		},
+		{
+			"name": "current_mana",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 962782790433548
 		}
 	],
 	"behaviorTypes": [

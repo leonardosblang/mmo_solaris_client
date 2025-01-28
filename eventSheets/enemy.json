@@ -2,6 +2,96 @@
 	"name": "enemy",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "skill1",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 849204123432132
+		},
+		{
+			"eventType": "variable",
+			"name": "skill2",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 768509308413617
+		},
+		{
+			"eventType": "variable",
+			"name": "skill3",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 834080785961494
+		},
+		{
+			"eventType": "variable",
+			"name": "skill4",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 811905453270818
+		},
+		{
+			"eventType": "variable",
+			"name": "skill5",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 746929765658704
+		},
+		{
+			"eventType": "variable",
+			"name": "skill6",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 139791852703114
+		},
+		{
+			"eventType": "variable",
+			"name": "skill7",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 662468302853473
+		},
+		{
+			"eventType": "variable",
+			"name": "skill8",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 908613789566262
+		},
+		{
+			"eventType": "variable",
+			"name": "skill9",
+			"type": "string",
+			"initialValue": "\"punch\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 673712027531839
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -19,96 +109,591 @@
 			"sid": 178096257656063
 		},
 		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "combat",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 647277214665062,
+							"parameters": {
+								"mouse-button": "right",
+								"click-type": "clicked",
+								"object-clicked": "enemy_model1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "HandleRightClickTarget(runtime);\n"
+						}
+					],
+					"sid": 269313439415897
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 335271238020936,
+							"parameters": {
+								"key": 49
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 709330272616597,
+							"parameters": {
+								"instance-variable": "animation_lock"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "window.BasicAttack(runtime);"
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 383011090306308,
+							"parameters": {
+								"instance-variable": "animation_lock",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play-animation",
+							"objectClass": "playerModel",
+							"sid": 863638805128404,
+							"parameters": {
+								"animation": "\"punch\"",
+								"loop": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 244022074748187,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 472077843851865
+						},
+						{
+							"id": "play-animation",
+							"objectClass": "playerModel",
+							"sid": 225821862874237,
+							"parameters": {
+								"animation": "\"idle\"",
+								"loop": true
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 437155307191457,
+							"parameters": {
+								"instance-variable": "animation_lock",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 686390439719616
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 250206333665063
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "scan_hp",
+							"sid": 249376693313566,
+							"parameters": {
+								"width": "(scan_hp.current_value / scan_hp.max_value) * 426"
+							}
+						}
+					],
+					"sid": 647671015247847
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 255942604247612
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "// We'll loop from 1 to 8, matching each slot number:\nfor (let slot = 1; slot <= 8; slot++) {\n    // Find the ability object that has instVars.number === slot\n    const abilityObj = runtime.objects.ability.getAllInstances().find(\n        (inst) => inst.instVars.number === slot\n    );\n    if (!abilityObj) {\n        console.warn(\"No ability object found for slot:\", slot);\n        continue; \n    }\n\n    // Create a cooldown text instance on the same layer as the ability\n    const textInst = runtime.objects.cooldown.createInstance(\n        abilityObj.layer.name,    // place on same layer\n        abilityObj.x,            // same position \n        abilityObj.y - 20        // slightly above it (20px up)\n    );\n\n    // Initialize the text\n    textInst.text = \"\";\n    textInst.isVisible = false;\n    \n    // We'll store the slot number in its \"spell\" instance var\n    // so we know which ability it belongs to\n    textInst.instVars.spell = slot;\n}\n"
+						}
+					],
+					"sid": 255105859163393
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 172621962480261
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const allCooldownTexts = runtime.objects.cooldown.getAllInstances();\nif (!allCooldownTexts) return; // Exit if no cooldown texts exist\n\nallCooldownTexts.forEach((txtInst) => {\n    const slot = txtInst.instVars.spell; // Slot number linked to text\n    const remainingMs = window.skillCooldowns?.[slot] || 0; // Cooldown time\n\n    // Find the ability icon linked to this slot\n    const abilityInst = runtime.objects.ability.getAllInstances().find(\n        (inst) => inst.instVars.number === slot\n    );\n    if (!abilityInst) return; // Skip if no icon found\n\n    // Reposition text above the icon\n    txtInst.x = abilityInst.x;\n    txtInst.y = abilityInst.y - 20;\n\n    if (remainingMs > 0) {\n        // Calculate remaining seconds\n        const secondsLeft = Math.ceil(remainingMs / 1000);\n        if (isNaN(secondsLeft) || secondsLeft < 0) {\n            txtInst.text = \"\";\n            txtInst.isVisible = false;\n            abilityInst.opacity = 100; // Restore opacity\n            return;\n        }\n\n        // Update cooldown text\n        txtInst.text = `${secondsLeft}s`;\n        txtInst.isVisible = true;\n\n        // Dim the ability icon\n        abilityInst.opacity = 50; // Dim icon\n    } else {\n        // No cooldown remaining\n        txtInst.text = \"\";\n        txtInst.isVisible = false;\n\n        // Restore full opacity for the ability icon\n        abilityInst.opacity = 100; // Restore icon opacity\n    }\n});\n"
+						}
+					],
+					"sid": 935789051515973
+				}
+			],
+			"sid": 330674765438555
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "UI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 741300242982383
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "player_hp",
+							"sid": 946247108202312,
+							"parameters": {
+								"width": "(player_hp.current_value / player_hp.max_value) * 1024"
+							}
+						}
+					],
+					"sid": 696478817192640
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 998106167302846
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "player_mana",
+							"sid": 286678733694113,
+							"parameters": {
+								"width": "(player_mana.current_value / player_mana.max_value) * 1024"
+							}
+						}
+					],
+					"sid": 638994458106781
+				}
+			],
+			"sid": 768666699947596
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 252086293583497,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "UpdateEnemyModelPosition(runtime);"
+				},
+				{
+					"type": "script",
+					"script": "CompareEnemyNames(runtime);"
+				}
+			],
+			"sid": 726085597532043
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy_model1",
+					"sid": 484824637785970,
+					"parameters": {
+						"instance-variable": "name",
+						"comparison": 0,
+						"value": "\"q\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemy_model1",
+					"sid": 817784824280193
+				}
+			],
+			"sid": 226964790079278
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 972061091772462
+				}
+			],
+			"actions": [
+				{
+					"id": "set-bbox-scale",
+					"objectClass": "enemy_model1",
+					"sid": 840505793658000,
+					"parameters": {
+						"scale": "2"
+					}
+				}
+			],
+			"sid": 592584062269465
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 723847455387995,
+					"sid": 961549483697769,
 					"parameters": {
-						"mouse-button": "right",
+						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "enemy_model"
+						"object-clicked": "ability"
 					}
-				}
-			],
-			"actions": [
+				},
 				{
-					"callFunction": "combat",
-					"sid": 570888395690364
-				}
-			],
-			"sid": 306119214382051
-		},
-		{
-			"functionName": "combat",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 179652487299015,
+					"parameters": {
+						"instance-variable": "animation_lock"
+					},
+					"isInverted": true
+				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "enemy",
-					"sid": 892924497296078,
+					"objectClass": "ability",
+					"sid": 336193319508960,
 					"parameters": {
-						"instance-variable": "unique_code",
+						"instance-variable": "number",
 						"comparison": 0,
-						"value": "enemy_model.unique_code"
+						"value": "1"
 					}
 				}
 			],
 			"actions": [
 				{
 					"type": "script",
-					"script": "// Example JS action in Construct 3\nconst enemyInstance = runtime.objects.enemy.getFirstPickedInstance();\nif (enemyInstance) {\n  const uniqueCode = enemyInstance.instVars.unique_code;\n  window.TargetEnemy(runtime, uniqueCode);\n}\n\n"
+					"script": "const clickedAbility = runtime.objects.ability.getFirstPickedInstance();\nif (!clickedAbility) return;\n\n// The slot\nconst slotNum = clickedAbility.instVars.number;\n\nwindow.UseSkill(runtime, slotNum)"
 				}
 			],
-			"sid": 722756424698489
+			"sid": 471281693382500
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 875117028684362,
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 845441148400327,
 					"parameters": {
-						"key": 49
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ability"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 455125196009488,
+					"parameters": {
+						"instance-variable": "animation_lock"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ability",
+					"sid": 429087627379449,
+					"parameters": {
+						"instance-variable": "number",
+						"comparison": 0,
+						"value": "2"
 					}
 				}
 			],
 			"actions": [
 				{
 					"type": "script",
-					"script": "window.BasicAttack(runtime);"
+					"script": "const clickedAbility = runtime.objects.ability.getFirstPickedInstance();\nif (!clickedAbility) return;\n\n// The slot\nconst slotNum = clickedAbility.instVars.number;\n\nwindow.UseSkill(runtime, slotNum)"
 				}
 			],
-			"sid": 640030298051599
+			"sid": 213501691410831
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 453392695363179,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ability"
+					}
+				},
+				{
+					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 702518240698975
+					"sid": 740879657576040,
+					"parameters": {
+						"first-value": "lowercase((ability.ability))",
+						"comparison": 0,
+						"second-value": "\"punch\""
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 556629145411527,
+					"parameters": {
+						"instance-variable": "animation_lock"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "cooldown",
+					"sid": 498960425620479,
+					"parameters": {
+						"instance-variable": "spell",
+						"comparison": 0,
+						"value": "ability.number"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "cooldown",
+					"sid": 380938315267642,
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
-					"id": "set-width",
-					"objectClass": "scan_hp",
-					"sid": 168575902676255,
+					"type": "script",
+					"script": ""
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 818340898704006,
 					"parameters": {
-						"width": "(scan_hp.current_value / scan_hp.max_value) * 426"
+						"instance-variable": "animation_lock",
+						"value": "true"
+					}
+				},
+				{
+					"id": "play-animation",
+					"objectClass": "playerModel",
+					"sid": 191345290238497,
+					"parameters": {
+						"animation": "\"punch\"",
+						"loop": false
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 341012812537173,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 818266486497483
+				},
+				{
+					"id": "play-animation",
+					"objectClass": "playerModel",
+					"sid": 832720590377652,
+					"parameters": {
+						"animation": "\"idle\"",
+						"loop": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 804275856400169,
+					"parameters": {
+						"instance-variable": "animation_lock",
+						"value": "false"
 					}
 				}
 			],
-			"sid": 732920337931630
+			"sid": 246461014540734
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 601633175783644,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ability"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 715041325581602,
+					"parameters": {
+						"first-value": "lowercase((ability.ability))",
+						"comparison": 0,
+						"second-value": "\"basicheal\""
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 566039703746818,
+					"parameters": {
+						"instance-variable": "animation_lock"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "cooldown",
+					"sid": 983359540380370,
+					"parameters": {
+						"instance-variable": "spell",
+						"comparison": 0,
+						"value": "ability.number"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "cooldown",
+					"sid": 369528572385902,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": ""
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 546216818978954,
+					"parameters": {
+						"instance-variable": "animation_lock",
+						"value": "true"
+					}
+				},
+				{
+					"id": "play-animation",
+					"objectClass": "playerModel",
+					"sid": 342996067381037,
+					"parameters": {
+						"animation": "\"cast\"",
+						"loop": false
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 562981790223396,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 513111676222977
+				},
+				{
+					"id": "play-animation",
+					"objectClass": "playerModel",
+					"sid": 850936049607958,
+					"parameters": {
+						"animation": "\"idle\"",
+						"loop": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 465846806278598,
+					"parameters": {
+						"instance-variable": "animation_lock",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 802361502660220
+		},
+		{
+			"eventType": "script",
+			"script": ""
+		},
+		{
+			"eventType": "script",
+			"script": ""
 		}
 	],
 	"sid": 639176213944381

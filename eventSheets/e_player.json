@@ -730,6 +730,14 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 396504222254458,
+											"parameters": {
+												"instance-variable": "animation_lock"
+											}
+										},
+										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
 											"sid": 433153807215382,
@@ -803,6 +811,14 @@
 								{
 									"eventType": "block",
 									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 768952677024247,
+											"parameters": {
+												"instance-variable": "animation_lock"
+											}
+										},
 										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
@@ -878,6 +894,14 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 337481297541650,
+											"parameters": {
+												"instance-variable": "animation_lock"
+											}
+										},
+										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
 											"sid": 419286863356931,
@@ -933,6 +957,14 @@
 								{
 									"eventType": "block",
 									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 419207581858148,
+											"parameters": {
+												"instance-variable": "animation_lock"
+											}
+										},
 										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
@@ -990,6 +1022,14 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 281699233916388,
+											"parameters": {
+												"instance-variable": "animation_lock"
+											}
+										},
+										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
 											"sid": 212509634910446,
@@ -1037,6 +1077,14 @@
 								{
 									"eventType": "block",
 									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 353632594145683,
+											"parameters": {
+												"instance-variable": "animation_lock"
+											}
+										},
 										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
@@ -2748,6 +2796,15 @@
 						{
 							"eventType": "block",
 							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "player",
+									"sid": 447796245573088,
+									"parameters": {
+										"instance-variable": "animation_lock"
+									},
+									"isInverted": true
+								},
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "player",

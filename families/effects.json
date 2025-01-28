@@ -17,6 +17,7 @@
 	"members": [
 		"playerModel",
 		"otherPlayer",
-		"tree_low_poly"
+		"tree_low_poly",
+		"enemy_model1"
 	]
 }

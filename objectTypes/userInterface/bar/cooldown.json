@@ -1,0 +1,17 @@
+{
+	"name": "cooldown",
+	"plugin-id": "Text",
+	"sid": 422558252453829,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "spell",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 507327755347902
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

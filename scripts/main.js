@@ -5420,180 +5420,387 @@ shader.glslWebGL2 = shader.glslWebGL2.replace('highp vec3 pos = vec3(0.0, 0.0, 0
 console.log('shader',shader.glslWebGL2)
 C3.Gfx.WebGLShaderProgram.GetDefaultVertexShaderSource_WebGL2 = GetDefaultVertexShaderSource_WebGL2;
 
-
-
-
-
 const Colyseus = window.colyseus || window.Colyseus;
 
+// Keep references
 let client = null;
 let room = null;
 let localPlayer = null;
-let otherPlayers = {};
-let enemies = {}; // Keep track of enemy instances
+let otherPlayers = {}; // { sessionId: ConstructInstance }
+let enemies = {};      // { unique_code: ConstructInstance }
 
-// Called by a Construct 3 action (e.g., in your event sheet):
-window.SendLogin = function (runtime) {
+// Track cooldowns on the client
+ window.skillCooldowns = {
+  1: 0, 2: 0, 3: 0, 4: 0,
+  5: 0, 6: 0, 7: 0, 8: 0
+};
+
+// Called by a Construct 3 action:
+window.SendLogin = function(runtime) {
   const username = runtime.globalVars.GlobalUserName || "";
   if (!username) {
-    console.warn("No username to send login!");
+    console.warn("[Client] No username to send login!");
     return;
   }
   console.log("[Client] Sending login with username:", username);
-  // This tells the server we want to log in with this username
   room.send("login", { username });
 };
 
+// Called by a Construct 3 action to spawn a brand-new enemy
+window.SpawnNewEnemy = function(runtime, uniqueCode, x, y) {
+  if (!room) {
+    console.warn("[Client] Not connected, cannot spawn new enemy.");
+    return;
+  }
+  if (!uniqueCode) {
+    console.warn("[Client] No unique code for new enemy!");
+    return;
+  }
+
+  console.log(`[Client] Requesting spawn of new enemy => code=${uniqueCode}, x=${x}, y=${y}`);
+  room.send("spawnNewEnemy", {
+    unique_code: uniqueCode,
+    name: "CustomEnemyName",
+    hp: 120,
+    atk: 8,
+    defense: 3,
+    x: x,
+    y: y,
+    z: 0,
+    zone: runtime.layout.name
+    // etc.
+  });
+};
+
+// New function: UseSkill => calls "useSkill" on server
+window.UseSkill = function(runtime, slot) {
+  if (!room) {
+    console.warn("[Client] Not connected, cannot use skill.");
+    return;
+  }
+  console.log(`[Client] Attempting to use skill slot ${slot}`);
+  room.send("useSkill", { slot });
+};
+
+// Handle ability clicks via a global function
+window.HandleAbilityClick = function(slot) {
+  console.log(`[Client] Ability clicked: Slot ${slot}`);
+
+  if (skillCooldowns[slot] > 0) {
+    console.log(`[Client] Skill ${slot} is on cooldown: ${skillCooldowns[slot]}ms remaining.`);
+    return;
+  }
+
+  console.log(`[Client] Using skill slot ${slot}`);
+  window.UseSkill(runtime, slot);
+};
+
+// Called on game startup
 runOnStartup(async (runtime) => {
+  console.log("[Client] Attempting to connect to server...");
   // Connect to server
   client = new Colyseus.Client("ws://localhost:2567");
 
   try {
-    // Join or create your room
+    // Join or create the room
     room = await client.joinOrCreate("my_room");
-    console.log("[Client] Joined or created room. sessionId =", room.sessionId);
+    console.log("[Client] Joined room. sessionId =", room.sessionId);
 
     //--------------------------------
-    //  SERVER -> CLIENT MESSAGES
+    // SERVER -> CLIENT MESSAGES
     //--------------------------------
 
     // (1) "loginSuccess"
     room.onMessage("loginSuccess", (data) => {
-  console.log("[Client] loginSuccess =>", data);
+      console.log("[Client] Received loginSuccess =>", data);
 
-  // Position stuff
-  runtime.globalVars.DBX = data.x;
-  runtime.globalVars.DBY = data.y;
-  runtime.globalVars.DBZ = data.z;
+      // Position from DB
+      runtime.globalVars.DBX = data.x;
+      runtime.globalVars.DBY = data.y;
+      runtime.globalVars.DBZ = data.z;
 
-  // If you have UI text or variables for HP
-  runtime.globalVars.PlayerCurrentHP = data.current_hp;
-  runtime.globalVars.PlayerMaxHP = data.hp;
-  runtime.globalVars.PlayerAtk = data.atk;
-  runtime.globalVars.PlayerDef = data.defense;
+      // Player stats
+      runtime.globalVars.PlayerCurrentHP = data.current_hp;
+      runtime.globalVars.PlayerMaxHP = data.hp;
+      runtime.globalVars.PlayerAtk = data.atk;
+      runtime.globalVars.PlayerDef = data.defense;
 
-  // Switch layout if needed
-  if (runtime.layout.name !== data.zone) {
-    runtime.goToLayout(data.zone);
-  }
-});
+      // Mana
+      runtime.globalVars.PlayerCurrentMP = data.current_mana;
+      runtime.globalVars.PlayerMaxMP = data.mana;
 
+      // Skills 1-8
+      runtime.globalVars.Skill1 = data.skill1;
+      runtime.globalVars.Skill2 = data.skill2;
+      runtime.globalVars.Skill3 = data.skill3;
+      runtime.globalVars.Skill4 = data.skill4;
+      runtime.globalVars.Skill5 = data.skill5;
+      runtime.globalVars.Skill6 = data.skill6;
+      runtime.globalVars.Skill7 = data.skill7;
+      runtime.globalVars.Skill8 = data.skill8;
 
-    // (2) "initialPlayers": existing players in the room
-    room.onMessage("initialPlayers", (players) => {
-      console.log("[Client] initialPlayers =>", players);
-      players.forEach((playerData) => {
-        UpdateOtherPlayerPosition(runtime, playerData);
+      // If needed, switch layout
+      if (runtime.layout.name !== data.zone) {
+        console.log(`[Client] Layout mismatch: switching from '${runtime.layout.name}' to '${data.zone}'`);
+        runtime.goToLayout(data.zone);
+      }
+
+      // Update local player's UI
+      UpdatePlayerBars(runtime);
+      UpdateAbilities(runtime);
+      SetupAbilityClickHandlers(runtime); // Setup click handlers after abilities are updated
+    });
+
+    // (2) "initialPlayers"
+    room.onMessage("initialPlayers", (playerArray) => {
+      console.log("[Client] initialPlayers =>", playerArray);
+      playerArray.forEach((pData) => {
+        UpdateOtherPlayerPosition(runtime, pData);
       });
     });
 
-    // (3) "positionUpdate": a single player moved or joined
+    // (3) "positionUpdate"
     room.onMessage("positionUpdate", (data) => {
-      if (data.sessionId === room.sessionId) return; // Skip updates about the local player
+      if (data.sessionId === room.sessionId) return; // skip self
       UpdateOtherPlayerPosition(runtime, data);
     });
 
-    // (4) "playerLeft": remove them
+    // (4) "playerLeft"
     room.onMessage("playerLeft", (data) => {
       console.log("[Client] playerLeft =>", data);
       const { sessionId } = data;
-      const inst = otherPlayers[sessionId];
-      if (inst) {
-        inst.destroy();
+      const pInst = otherPlayers[sessionId];
+      if (pInst) {
+        pInst.destroy();
         delete otherPlayers[sessionId];
       }
     });
 
-    // (5) Initialize enemies
+    // (5) "playerStatsUpdate"
+    room.onMessage("playerStatsUpdate", (playersArray) => {
+      console.log("[Client] playerStatsUpdate =>", playersArray);
+      const mySessionId = room.sessionId;
+      playersArray.forEach((pd) => {
+        if (pd.sessionId === mySessionId) {
+          console.log("[Client] Updating local player stats from server =>", pd);
+          runtime.globalVars.PlayerCurrentHP = pd.current_hp;
+          runtime.globalVars.PlayerMaxHP = pd.hp;
+          runtime.globalVars.PlayerCurrentMP = pd.current_mana;
+          runtime.globalVars.PlayerMaxMP = pd.mana;
+
+          runtime.globalVars.Skill1 = pd.skill1;
+          runtime.globalVars.Skill2 = pd.skill2;
+          runtime.globalVars.Skill3 = pd.skill3;
+          runtime.globalVars.Skill4 = pd.skill4;
+          runtime.globalVars.Skill5 = pd.skill5;
+          runtime.globalVars.Skill6 = pd.skill6;
+          runtime.globalVars.Skill7 = pd.skill7;
+          runtime.globalVars.Skill8 = pd.skill8;
+
+          // Update local UI
+          UpdatePlayerBars(runtime);
+          UpdateAbilities(runtime);
+          SetupAbilityClickHandlers(runtime); // Re-setup click handlers in case skills have changed
+        }
+      });
+    });
+
+    // (6) "initializeEnemies"
     room.onMessage("initializeEnemies", (enemyDataList) => {
-      console.log("[Client] Initializing enemies =>", enemyDataList);
+      console.log("[Client] initializeEnemies =>", enemyDataList);
       enemyDataList.forEach((enemyData) => {
         InitializeEnemy(runtime, enemyData);
       });
     });
 
-    // (6) Update enemy state (combat, respawn, etc.)
+    // (7) "combatUpdate"
     room.onMessage("combatUpdate", (data) => {
+      // data = { unique_code, enemy_hp, player_hp, sessionId }
+      console.log("[Client] combatUpdate =>", data);
       UpdateEnemyState(runtime, data);
+
+      // If scanning that enemy, update scan_hp bar
+      if (runtime.globalVars.CurrentTargetCode === data.unique_code) {
+        const hpBar = runtime.objects.scan_hp?.getFirstInstance();
+        if (hpBar) {
+          hpBar.instVars.current_value = data.enemy_hp;
+        }
+      }
+
+      // If local player
+      if (data.sessionId === room.sessionId) {
+        runtime.globalVars.PlayerCurrentHP = data.player_hp;
+        UpdatePlayerBars(runtime);
+      }
     });
 
-    // (7) Enemy respawn
+    // (8) "enemyRespawn"
     room.onMessage("enemyRespawn", (data) => {
+      console.log("[Client] enemyRespawn =>", data);
       RespawnEnemy(runtime, data);
+
+      if (data.unique_code === runtime.globalVars.CurrentTargetCode) {
+        HideScanUI(runtime);
+      }
     });
-	
-	room.onMessage("enemyRespawn", (data) => {
-  // If the user was targeting the monster that died, maybe hide the UI
-  if (data.unique_code === runtime.globalVars.CurrentTargetCode) {
-    HideScanUI(runtime);
-  }
-});
 
-	
-	room.onMessage("combatUpdate", (data) => {
-  // data = { unique_code, enemy_hp, player_hp, sessionId }
-  if (data.unique_code === runtime.globalVars.CurrentTargetCode) {
-    const hpBar = runtime.objects.scan_hp.getFirstInstance();
-    if (hpBar) {
-      hpBar.instVars.current_value = data.enemy_hp;
-    }
-  }
-});
-	
-	room.onMessage("enemyScan", (data) => {
-  console.log("[Client] enemyScan =>", data);
+    // (9) "enemyScan"
+    room.onMessage("enemyScan", (data) => {
+      console.log("[Client] enemyScan =>", data);
 
-  // data = { unique_code, name, current_hp, hp }
+      const scanPanel = runtime.objects.scan.getFirstInstance();
+      if (scanPanel) scanPanel.isVisible = true;
 
-  // 1) Make the scan panel visible
-  const scanPanel = runtime.objects.scan.getFirstInstance();
-  if (scanPanel) {
-    scanPanel.isVisible = true;
-  }
+      const hpBar = runtime.objects.scan_hp.getFirstInstance();
+      if (hpBar) {
+        hpBar.isVisible = true;
+        hpBar.instVars.current_value = data.current_hp;
+        hpBar.instVars.max_value = data.hp;
+      }
 
-  // 2) Make the HP bar visible and set its value
-  //    Assume you're storing "current_value" and "max_value" in instVars:
-  const hpBar = runtime.objects.scan_hp.getFirstInstance();
-  if (hpBar) {
-    hpBar.isVisible = true;
-    hpBar.instVars.current_value = data.current_hp;
-    hpBar.instVars.max_value = data.hp;
-    // If you have a method or behavior for progress bars, call it here
-  }
+      const scanImage = runtime.objects.scan_image.getFirstInstance();
+      if (scanImage) {
+        scanImage.isVisible = true;
+        scanImage.setAnimation(data.name);
+      }
 
-  // 3) Make the image visible and set its animation to the monster name
-  const scanImage = runtime.objects.scan_image.getFirstInstance();
-  if (scanImage) {
-    scanImage.isVisible = true;
-    // If your sprite animations match the monster’s name, you can do:
-   scanImage.setAnimation(data.name);
-  }
+      const enemyNameObj = runtime.objects.enemy_name.getFirstInstance();
+      if (enemyNameObj) {
+        enemyNameObj.isVisible = true;
+        enemyNameObj.text = data.name;
+      }
 
-  // 4) Make the enemy_name text visible and update its text
-  const enemyNameObj = runtime.objects.enemy_name.getFirstInstance();
-  if (enemyNameObj) {
-    enemyNameObj.isVisible = true;
-    enemyNameObj.text = data.name;
-  }
+      runtime.globalVars.CurrentTargetCode = data.unique_code;
+    });
 
-  // 5) (Optional) Store the monster code in a global var for easy reference
-  runtime.globalVars.CurrentTargetCode = data.unique_code;
-});
+    // (10) "enemyRemoved"
+    room.onMessage("enemyRemoved", (data) => {
+      const { unique_code } = data;
+      console.log("[Client] enemyRemoved =>", unique_code);
+      const enemyInst = enemies[unique_code];
+      if (enemyInst) {
+        enemyInst.destroy();
+        delete enemies[unique_code];
+      }
+    });
 
+    //--------------------------------
+    // New message from server: "skillUsed"
+    // Tells us which skill was used & the cooldown time
+    //--------------------------------
+    room.onMessage("skillUsed", (data) => {
+      // data = { slot, skillName, remainingMs }
+      console.log(`[Client] skillUsed => slot=${data.slot}, skillName=${data.skillName}, cooldown=${data.remainingMs}ms`);
+      
+      // Parse and validate slot and remainingMs
+      const slot = parseInt(data.slot, 10);
+      const remainingMs = Number(data.remainingMs);
 
-    // Every tick, send our movement
-    runtime.addEventListener("tick", () => Tick(runtime));
-  } catch (e) {
-    console.error("[Client] Failed to join room:", e);
+      if (isNaN(slot) || isNaN(remainingMs)) {
+        console.error("[Client] Invalid skillUsed data:", data);
+        return;
+      }
+
+      if (slot < 1 || slot > 8) {
+        console.error(`[Client] skillUsed => slot ${slot} is out of valid range (1-8).`);
+        return;
+      }
+
+      // Store the cooldown in our local tracking
+      skillCooldowns[slot] = remainingMs;
+
+      console.log(`[Client] Updated skillCooldowns[${slot}] = ${skillCooldowns[slot]}ms`);
+    });
+
+    //--------------------------------
+    // Combined runtime.addEventListener("tick")
+    //--------------------------------
+    runtime.addEventListener("tick", () => {
+      // Call Tick function for player movement
+      Tick(runtime);
+
+      // Handle skill cooldowns
+      const currentTime = performance.now();
+      const deltaMs = currentTime - (window.lastTickTime || currentTime);
+      window.lastTickTime = currentTime;
+
+      // Get all cooldown text and ability objects
+      const cooldownObjects = runtime.objects.cooldown?.getAllInstances() || [];
+      const abilityObjects = runtime.objects.ability?.getAllInstances() || [];
+
+      for (let slot = 1; slot <= 8; slot++) {
+        // Check if the slot has an active cooldown
+        if (skillCooldowns[slot] > 0) {
+          // Decrease the cooldown time
+          skillCooldowns[slot] = Math.max(0, skillCooldowns[slot] - deltaMs);
+        }
+
+        // Find the cooldown text object for this slot
+        const cooldownTextObj = cooldownObjects.find((obj) => obj.instVars.spell === slot);
+        // Find the corresponding ability icon
+        const abilityIcon = abilityObjects.find((obj) => obj.instVars.number === slot);
+
+        if (cooldownTextObj && abilityIcon) {
+          // Debug Logs
+          console.log(`Slot ${slot}: remainingMs=${skillCooldowns[slot]}`);
+
+          if (skillCooldowns[slot] > 0) {
+            // Calculate remaining seconds
+            const secondsLeft = Math.ceil(skillCooldowns[slot] / 1000);
+            console.log(`Slot ${slot}: secondsLeft=${secondsLeft}`);
+
+            // Validate secondsLeft
+            if (isNaN(secondsLeft) || secondsLeft < 0) {
+              console.warn(`Invalid secondsLeft for slot ${slot}: ${secondsLeft}`);
+              cooldownTextObj.text = "";
+              cooldownTextObj.isVisible = false;
+              abilityIcon.opacity = 100; // Restore opacity
+              continue;
+            }
+
+            // Update cooldown text
+            cooldownTextObj.text = `${secondsLeft}s`;
+            cooldownTextObj.isVisible = true;
+
+            // Dim the ability icon
+            abilityIcon.opacity = 50; // Set opacity to 50 (dim)
+          } else {
+            // No cooldown remaining, hide the text
+            cooldownTextObj.text = "";
+            cooldownTextObj.isVisible = false;
+
+            // Restore full opacity for the ability icon
+            abilityIcon.opacity = 100; // Set opacity to 100 (fully visible)
+          }
+
+          // Ensure the cooldown text remains positioned above the ability icon
+          cooldownTextObj.x = abilityIcon.x;
+          cooldownTextObj.y = abilityIcon.y - 20; // Offset 20px above the icon
+
+          // Additional Logging to Verify UI Update
+          console.log(`Slot ${slot} UI updated: text="${cooldownTextObj.text}", isVisible=${cooldownTextObj.isVisible}`);
+        } else {
+          // Enhanced Logging to Specify Which Object is Missing
+          if (!cooldownTextObj && !abilityIcon) {
+            console.warn(`Missing both cooldownTextObj and abilityIcon for slot ${slot}`);
+          } else if (!cooldownTextObj) {
+            console.warn(`Missing cooldownTextObj for slot ${slot}`);
+          } else if (!abilityIcon) {
+            console.warn(`Missing abilityIcon for slot ${slot}`);
+          }
+        }
+      }
+    });
+  } catch (err) {
+    console.error("[Client] Failed to join room:", err);
   }
 });
 
 //--------------------------------
-// TICK: sends our player’s movement
+// TICK => send local player's movement
 //--------------------------------
 function Tick(runtime) {
   if (!runtime.layout || runtime.layout.name !== "demozone0") return;
-
   if (!runtime.objects.player) return;
 
   if (!localPlayer) {
@@ -5605,6 +5812,7 @@ function Tick(runtime) {
         runtime.globalVars.DBY
       );
       localPlayer.zElevation = runtime.globalVars.DBZ;
+      console.log("[Client] Created local player at DB coords:", runtime.globalVars.DBX, runtime.globalVars.DBY);
     }
   }
 
@@ -5613,7 +5821,7 @@ function Tick(runtime) {
       x: localPlayer.x,
       y: localPlayer.y,
       z: localPlayer.zElevation || 0,
-      angle: localPlayer.angleDegrees || 0,
+      angle: localPlayer.angleDegrees || 0
     });
   }
 }
@@ -5622,25 +5830,21 @@ function Tick(runtime) {
 // CREATE/UPDATE other players
 //--------------------------------
 function UpdateOtherPlayerPosition(runtime, data) {
-  if (!data.zone) {
-    console.error("[UpdateOtherPlayerPosition] No zone provided in data.");
-    return;
-  }
-
+  if (!data.zone) return;
   if (runtime.layout.name !== data.zone) return;
 
   const otherPlayerObject = runtime.objects.otherPlayer;
-  if (!otherPlayerObject) {
-    console.error("[UpdateOtherPlayerPosition] 'otherPlayer' object does not exist.");
-    return;
-  }
+  if (!otherPlayerObject) return;
 
   let inst = otherPlayers[data.sessionId];
   if (!inst) {
+    console.log(`[Client] Creating otherPlayer for sessionId=${data.sessionId}, user=${data.username}`);
     inst = otherPlayerObject.createInstance("worldDepth0", data.x, data.y);
     if (!inst) return;
     otherPlayers[data.sessionId] = inst;
     inst.instVars.current_user = data.username;
+  } else {
+    console.log(`[Client] Updating otherPlayer for sessionId=${data.sessionId}, user=${data.username}`);
   }
 
   inst.x = data.x;
@@ -5651,78 +5855,117 @@ function UpdateOtherPlayerPosition(runtime, data) {
 }
 
 //--------------------------------
-// CREATE/UPDATE enemies
+// Initialize Enemy => no duplicates, no forced HP override
 //--------------------------------
 function InitializeEnemy(runtime, data) {
-  const enemyObject = runtime.objects.enemy;
-  if (!enemyObject) {
-    console.error("[InitializeEnemy] 'enemy' object does not exist.");
+  const enemyObj = runtime.objects.enemy;
+  if (!enemyObj) {
+    console.error("[InitializeEnemy] 'enemy' object not found.");
     return;
   }
 
-  let inst = enemyObject.createInstance("worldDepth0", data.x, data.y);
-  if (!inst) return;
+  let enemyInst = enemies[data.unique_code];
+  if (enemyInst) {
+    console.log(`[Client] Updating existing enemy: ${data.unique_code}`);
+    // Only update server-provided values
+    enemyInst.x = data.x;
+    enemyInst.y = data.y;
+    enemyInst.instVars.hp = data.hp;
+    if (data.current_hp !== undefined) {
+      enemyInst.instVars.current_hp = data.current_hp;
+    }
+    enemyInst.instVars.dead = data.dead;
+    console.log(`[Client] Enemy ${data.unique_code} => updated current_hp=${enemyInst.instVars.current_hp}, maxHP=${enemyInst.instVars.hp}`);
+  } else {
+    console.log(`[Client] Creating new enemy: ${data.unique_code}`);
+    enemyInst = enemyObj.createInstance("worldDepth0", data.x, data.y);
+    if (!enemyInst) return;
 
-  inst.instVars.unique_code = data.unique_code;
-  inst.instVars.name = data.name;
-  inst.instVars.type = data.type;
-  inst.instVars.hp = data.hp;
-  inst.instVars.current_hp = data.current_hp;
-  inst.instVars.atk = data.atk;
-  inst.instVars.defense = data.defense;
-  inst.instVars.dead = data.dead;
+    enemyInst.instVars.unique_code = data.unique_code;
+    enemyInst.instVars.name = data.name;
+    enemyInst.instVars.type = data.type;
+    enemyInst.instVars.hp = data.hp;
+    enemyInst.instVars.current_hp = data.current_hp ?? data.hp; 
+    enemyInst.instVars.dead = data.dead;
 
-  enemies[data.unique_code] = inst;
+    console.log(`[Client] New enemy ${data.unique_code} => current_hp=${enemyInst.instVars.current_hp}, maxHP=${enemyInst.instVars.hp}`);
+    enemies[data.unique_code] = enemyInst;
+  }
 }
 
 //--------------------------------
-// UPDATE enemy state (e.g., health, dead/alive)
+// Update Enemy State
 //--------------------------------
 function UpdateEnemyState(runtime, data) {
-  const inst = enemies[data.unique_code];
-  if (!inst) return;
-
-  inst.instVars.current_hp = data.enemy_hp;
-  if (data.enemy_hp <= 0) {
-    inst.instVars.dead = true;
-  }
-}
-
-//--------------------------------
-// RESPAWN enemies
-//--------------------------------
-function RespawnEnemy(runtime, data) {
-  const inst = enemies[data.unique_code];
-  if (!inst) return;
-
-  inst.instVars.dead = false;
-  inst.instVars.current_hp = inst.instVars.hp;
-  inst.x = data.x;
-  inst.y = data.y;
-  inst.zElevation = data.z;
-}
-
-//--------------------------------
-// ATTACK enemy
-//--------------------------------
-window.AttackEnemy = function (runtime, uniqueCode) {
-  if (!room || !uniqueCode) {
-    console.warn("[Client] Cannot attack. Room or uniqueCode is missing.");
+  // data = { unique_code, enemy_hp, player_hp, sessionId }
+  const enemyInst = enemies[data.unique_code];
+  if (!enemyInst) {
+    console.warn("[Client] No local enemy found with code:", data.unique_code);
     return;
   }
+  console.log(`[Client] Updating enemyState => code=${data.unique_code}, newHP=${data.enemy_hp}`);
 
-  console.log(`[Client] Attacking enemy with unique_code: ${uniqueCode}`);
+  enemyInst.instVars.current_hp = data.enemy_hp;
+  if (data.enemy_hp <= 0) {
+    enemyInst.instVars.dead = true;
+    console.log(`[Client] Enemy ${data.unique_code} is now dead.`);
+  }
+}
+
+//--------------------------------
+// Respawn Enemy => reset to defaults
+//--------------------------------
+function RespawnEnemy(runtime, data) {
+  console.log("[Client] enemyRespawn =>", data);
+  const enemyInst = enemies[data.unique_code];
+  if (!enemyInst) return;
+
+  enemyInst.instVars.dead = false;
+  enemyInst.instVars.current_hp = data.current_hp ?? enemyInst.instVars.hp;
+  enemyInst.x = data.x;
+  enemyInst.y = data.y;
+  enemyInst.zElevation = data.z;
+
+  console.log(`[Client] Enemy ${data.unique_code} respawned => HP reset to ${enemyInst.instVars.current_hp}`);
+}
+
+//--------------------------------
+// Attack Enemy
+//--------------------------------
+window.AttackEnemy = function(runtime, uniqueCode) {
+  if (!room || !uniqueCode) {
+    console.warn("[Client] Missing room or uniqueCode for attack.");
+    return;
+  }
+  console.log(`[Client] Attempting attack => uniqueCode=${uniqueCode}`);
   room.send("attack", { unique_code: uniqueCode });
-  console.log("[Client] Sent attack message to server:", { unique_code: uniqueCode });
 };
 
+//--------------------------------
+// Target Enemy
+//--------------------------------
+window.TargetEnemy = function(runtime, uniqueCode) {
+  if (!room || !uniqueCode) return;
+  console.log(`[Client] Attempting to target => code=${uniqueCode}`);
+  room.send("targetEnemy", { unique_code: uniqueCode });
+};
 
-// Collect all enemies in the layout and send them to the server
-window.CollectEnemyData = function (runtime) {
-  const enemies = runtime.objects.enemy.getAllInstances(); // Get all enemy instances
+//--------------------------------
+// Basic Attack
+//--------------------------------
+window.BasicAttack = function(runtime) {
+  console.log("[Client] Basic Attack pressed!");
+  room.send("basicAttack", {});
+};
+
+//--------------------------------
+// Collect enemies to server (only for brand-new!)
+//--------------------------------
+window.CollectEnemyData = function(runtime) {
+  const allEnemies = runtime.objects.enemy.getAllInstances();
   const enemyDataList = [];
 
-  enemies.forEach((enemy) => {
+  allEnemies.forEach((enemy) => {
     enemyDataList.push({
       unique_code: enemy.instVars.unique_code,
       name: enemy.instVars.name,
@@ -5730,38 +5973,183 @@ window.CollectEnemyData = function (runtime) {
       x: enemy.x,
       y: enemy.y,
       z: enemy.zElevation || 0,
-      zone: runtime.layout.name, // Get the current layout's zone
+      zone: runtime.layout.name,
       hp: enemy.instVars.hp,
       current_hp: enemy.instVars.current_hp,
-      atk: enemy.instVars.atk,
-      defense: enemy.instVars.defense,
-      dead: enemy.instVars.dead,
+      dead: enemy.instVars.dead
     });
   });
-  
-window.TargetEnemy = function(runtime, uniqueCode) {
-  if (!room || !uniqueCode) return;
-  room.send("targetEnemy", { unique_code: uniqueCode });
-  console.log("[Client] Targeting enemy:", uniqueCode);
-};
-  
- window.BasicAttack = function(runtime) {
-  console.log("[Client] Basic Attack!");
-  room.send("basicAttack", {});
-};
 
-
-  // Send the data to the server
+  console.log("[Client] CollectEnemyData => sending to server:", enemyDataList);
   room.send("initializeEnemies", enemyDataList);
 };
 
+//--------------------------------
+// Remove Enemy
+//--------------------------------
 window.RemoveEnemy = function(runtime, uniqueCode) {
   if (!room) return;
-  console.log(`[Client] Requesting removal of enemy: ${uniqueCode}`);
+  console.log(`[Client] RemoveEnemy request => uniqueCode=${uniqueCode}`);
   room.send("removeEnemy", { unique_code: uniqueCode });
 };
 
+//--------------------------------
+// Hide Scan UI
+//--------------------------------
+function HideScanUI(runtime) {
+  const scanPanel = runtime.objects.scan.getFirstInstance();
+  const hpBar = runtime.objects.scan_hp.getFirstInstance();
+  const scanImage = runtime.objects.scan_image.getFirstInstance();
+  const enemyNameObj = runtime.objects.enemy_name.getFirstInstance();
 
+  if (scanPanel) scanPanel.isVisible = false;
+  if (hpBar) hpBar.isVisible = false;
+  if (scanImage) scanImage.isVisible = false;
+  if (enemyNameObj) enemyNameObj.isVisible = false;
 
+  runtime.globalVars.CurrentTargetCode = "";
+}
 
+//--------------------------------
+// Update Player HP & Mana Bars
+//--------------------------------
+function UpdatePlayerBars(runtime) {
+  const hpBar = runtime.objects.player_hp?.getFirstInstance();
+  const mpBar = runtime.objects.player_mana?.getFirstInstance();
+
+  if (hpBar) {
+    hpBar.instVars.current_value = runtime.globalVars.PlayerCurrentHP;
+    hpBar.instVars.max_value = runtime.globalVars.PlayerMaxHP;
+    console.log(`[Client] Updated Player HP Bar => Current=${hpBar.instVars.current_value}, Max=${hpBar.instVars.max_value}`);
+  }
+  if (mpBar) {
+    mpBar.instVars.current_value = runtime.globalVars.PlayerCurrentMP;
+    mpBar.instVars.max_value = runtime.globalVars.PlayerMaxMP;
+    console.log(`[Client] Updated Player MP Bar => Current=${mpBar.instVars.current_value}, Max=${mpBar.instVars.max_value}`);
+  }
+}
+
+//--------------------------------
+// UpdateEnemyModelPosition
+//--------------------------------
+window.UpdateEnemyModelPosition = function(runtime) {
+  const enemyModelList = runtime.objects.enemy_model1.getAllInstances();
+  const enemyList = runtime.objects.enemy.getAllInstances();
+
+  if (!enemyModelList || !enemyList) {
+    console.warn("No instances of enemy_model1 or enemy found.");
+    return;
+  }
+
+  enemyModelList.forEach((enemyModel) => {
+    const modelName = enemyModel.instVars.name.trim().toLowerCase();
+    const matchedEnemy = enemyList.find(
+      (enemy) => enemy.instVars.name.trim().toLowerCase() === modelName
+    );
+
+    if (matchedEnemy) {
+      console.log(`[Matching] Found a match for '${modelName}' with enemy.`);
+      enemyModel.x = matchedEnemy.x;
+      enemyModel.y = matchedEnemy.y;
+    } else {
+      console.warn(`[No Match] No enemy found for model: ${modelName}`);
+    }
+  });
+};
+
+//--------------------------------
+// CompareEnemyNames
+//--------------------------------
+window.CompareEnemyNames = function(runtime) {
+  const enemyModelInstances = runtime.objects.enemy_model1.getAllInstances();
+  const enemies = runtime.objects.enemy.getAllInstances();
+
+  if (!enemyModelInstances || !enemies) {
+    console.warn("No instances of enemy_model1 or enemy found.");
+    return;
+  }
+
+  enemyModelInstances.forEach((enemyModel) => {
+    const trimmedModelName = enemyModel.instVars.name.trim().toLowerCase();
+
+    enemies.forEach((enemy) => {
+      const trimmedEnemyName = enemy.instVars.name.trim().toLowerCase();
+
+      if (trimmedModelName === trimmedEnemyName) {
+        console.log(`[Match Found] Model Name: ${trimmedModelName}`);
+        enemyModel.x = enemy.x;
+        enemyModel.y = enemy.y;
+      }
+    });
+  });
+};
+
+//--------------------------------
+// HandleRightClickTarget
+//--------------------------------
+window.HandleRightClickTarget = function(runtime) {
+  const clickedEnemyModel = runtime.objects.enemy_model1.getFirstPickedInstance();
+
+  if (!clickedEnemyModel) {
+    console.warn("No clicked enemy_model1 instance found.");
+    return;
+  }
+
+  const uniqueCode = clickedEnemyModel.instVars.unique_code;
+
+  if (uniqueCode) {
+    console.log(`Right-clicked enemy with unique code: ${uniqueCode}`);
+    window.TargetEnemy(runtime, uniqueCode);
+  } else {
+    console.warn("No unique_code found for the clicked enemy_model1.");
+  }
+};
+
+//--------------------------------
+// Setup Ability Click Handlers
+//--------------------------------
+function SetupAbilityClickHandlers(runtime) {
+  const abilityInstances = runtime.objects.ability.getAllInstances();
+  
+  abilityInstances.forEach((ability) => {
+    // Prevent attaching multiple listeners by checking a custom flag
+    if (!ability.isListenerAttached) {
+      ability.isListenerAttached = true; // Custom flag
+
+      // No JavaScript event listeners needed; handled via Construct 3's event system
+      console.log(`[Client] SetupAbilityClickHandlers: Listener attached for slot ${ability.instVars.number}`);
+    }
+  });
+}
+
+//--------------------------------
+// Update Abilities => skill icons
+//--------------------------------
+function UpdateAbilities(runtime) {
+  const abilityObj = runtime.objects.ability?.getAllInstances();
+  if (!abilityObj) return;
+
+  console.log("[Client] Updating ability icons...");
+  abilityObj.forEach((inst) => {
+    const slotNum = inst.instVars.number; // 1..8
+    let skillName = "default";
+
+    // Match skills from global variables
+    switch (slotNum) {
+      case 1: skillName = runtime.globalVars.Skill1; break;
+      case 2: skillName = runtime.globalVars.Skill2; break;
+      case 3: skillName = runtime.globalVars.Skill3; break;
+      case 4: skillName = runtime.globalVars.Skill4; break;
+      case 5: skillName = runtime.globalVars.Skill5; break;
+      case 6: skillName = runtime.globalVars.Skill6; break;
+      case 7: skillName = runtime.globalVars.Skill7; break;
+      case 8: skillName = runtime.globalVars.Skill8; break;
+      default: skillName = "default"; break;
+    }
+
+    inst.instVars.ability = skillName;
+    inst.setAnimation(skillName);
+    console.log(`[Client] Set ability slot ${slotNum} => '${skillName}'`);
+  });
+}
 

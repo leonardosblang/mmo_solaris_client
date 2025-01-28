@@ -592,10 +592,10 @@
 					"world": {
 						"x": 350,
 						"y": 304,
-						"width": 51.76267508202773,
-						"height": 47.619050573169886,
+						"width": 51.76267623901367,
+						"height": 51.76267623901367,
 						"originX": 0.5,
-						"originY": 0.499614723734963,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -7292,7 +7292,10 @@
 						"current_defense": 2,
 						"defense": 5,
 						"atk": 5,
-						"current_atk": 5
+						"current_atk": 5,
+						"animation_lock": false,
+						"mana": 100,
+						"current_mana": 100
 					},
 					"behaviors": {
 						"Rapier3DPhysics": {

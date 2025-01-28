@@ -1,7 +1,7 @@
 {
-	"name": "enemy_model",
+	"name": "enemy_model1",
 	"plugin-id": "Mikal_3DObject",
-	"sid": 620507750633486,
+	"sid": 904834920606170,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
@@ -9,14 +9,14 @@
 			"type": "string",
 			"desc": "",
 			"show": true,
-			"sid": 976366009999306
+			"sid": 929831705615270
 		},
 		{
 			"name": "name",
 			"type": "string",
 			"desc": "",
 			"show": true,
-			"sid": 326539768655906
+			"sid": 959258321203922
 		}
 	],
 	"behaviorTypes": [],
@@ -30,7 +30,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 8415285,
+		"imageSpriteId": 9719766,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

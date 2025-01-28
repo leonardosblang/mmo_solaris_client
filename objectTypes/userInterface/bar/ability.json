@@ -1,9 +1,24 @@
 {
-	"name": "scan_image",
+	"name": "ability",
 	"plugin-id": "Sprite",
-	"sid": 336578367251757,
+	"sid": 153910867626862,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "number",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 186288551085942
+		},
+		{
+			"name": "ability",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 277563043047279
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -11,22 +26,22 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1024,
+						"height": 1024,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1930467,
+						"imageSpriteId": 6658135,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 502814838232678,
-				"name": "Animation 1",
+				"sid": 226536001523540,
+				"name": "default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -36,22 +51,22 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1024,
+						"height": 1024,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9070704,
+						"imageSpriteId": 1122041,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 948662983181129,
-				"name": "test2",
+				"sid": 243663328184304,
+				"name": "punch",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -61,22 +76,22 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1024,
+						"height": 1024,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6119544,
+						"imageSpriteId": 6945499,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 662437051138688,
-				"name": "test3",
+				"sid": 705623219008505,
+				"name": "basicheal",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
