@@ -1,18 +1,23 @@
 {
-	"name": "cooldown",
+	"name": "level",
 	"plugin-id": "Text",
-	"sid": 422558252453829,
+	"sid": 352533160640193,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "spell",
+			"name": "level",
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 507327755347902
+			"sid": 958505514689826
 		}
 	],
 	"behaviorTypes": [],
-	"effectTypes": []
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
 }

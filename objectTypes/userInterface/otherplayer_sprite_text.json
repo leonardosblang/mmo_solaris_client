@@ -3,6 +3,7 @@
 	"plugin-id": "Spritefont2",
 	"sid": 954409319546571,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "current_user",

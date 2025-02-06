@@ -1,18 +1,23 @@
 {
-	"name": "cooldown",
+	"name": "gold",
 	"plugin-id": "Text",
-	"sid": 422558252453829,
+	"sid": 210190735248130,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "spell",
+			"name": "gold",
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 507327755347902
+			"sid": 850784052895075
 		}
 	],
 	"behaviorTypes": [],
-	"effectTypes": []
+	"effectTypes": [
+		{
+			"effectId": "outline",
+			"name": "Outline"
+		}
+	]
 }

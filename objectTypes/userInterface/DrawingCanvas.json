@@ -3,6 +3,7 @@
 	"plugin-id": "DrawingCanvas",
 	"sid": 859872614623763,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "current_user",

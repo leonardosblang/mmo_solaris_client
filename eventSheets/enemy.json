@@ -186,7 +186,8 @@
 							"objectClass": "System",
 							"sid": 244022074748187,
 							"parameters": {
-								"seconds": "2"
+								"seconds": "2",
+								"use-timescale": true
 							}
 						},
 						{
@@ -321,6 +322,48 @@
 						}
 					],
 					"sid": 638994458106781
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 999039687752558
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "player_xp",
+							"sid": 110027794078870,
+							"parameters": {
+								"width": "(player_xp.current_value / player_xp.max_value) * 1024"
+							}
+						}
+					],
+					"sid": 974850432807780
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 771037639454069
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "level",
+							"sid": 169670423238433,
+							"parameters": {
+								"text": "level.level"
+							}
+						}
+					],
+					"sid": 528028833794486
 				}
 			],
 			"sid": 768666699947596
@@ -665,7 +708,8 @@
 											"objectClass": "System",
 											"sid": 904719635016236,
 											"parameters": {
-												"seconds": "0.2"
+												"seconds": "0.2",
+												"use-timescale": true
 											}
 										}
 									],
@@ -752,7 +796,8 @@
 							"objectClass": "System",
 							"sid": 806868542900239,
 							"parameters": {
-								"seconds": "2"
+								"seconds": "2",
+								"use-timescale": true
 							}
 						},
 						{
@@ -868,7 +913,8 @@
 							"objectClass": "System",
 							"sid": 659515505345804,
 							"parameters": {
-								"seconds": "2"
+								"seconds": "2",
+								"use-timescale": true
 							}
 						},
 						{

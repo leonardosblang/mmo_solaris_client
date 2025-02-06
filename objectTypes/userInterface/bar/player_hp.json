@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 630489117285252,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "current_value",
@@ -28,7 +29,7 @@
 					{
 						"width": 917,
 						"height": 46,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.43478260869565216,
 						"originalSource": "",
 						"exportFormat": "lossless",

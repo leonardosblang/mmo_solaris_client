@@ -3,6 +3,7 @@
 	"plugin-id": "Shape3D",
 	"sid": 680860067800805,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "tag",

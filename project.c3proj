@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 41602,
+	"savedWithRelease": 42400,
 	"name": "MMO TEST",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -218,6 +218,14 @@
 		},
 		{
 			"type": "effect",
+			"id": "outline",
+			"name": "Outline",
+			"author": "Richard Lems",
+			"bundled": false,
+			"version": "1.0.0.0"
+		},
+		{
+			"type": "effect",
 			"id": "skymen_BetterOutline",
 			"name": "BetterOutline",
 			"author": "skymen",
@@ -314,7 +322,10 @@
 							"ability",
 							"player_hp",
 							"player_mana",
-							"cooldown"
+							"cooldown",
+							"player_xp",
+							"level",
+							"gold"
 						],
 						"subfolders": [],
 						"name": "bar"
@@ -1207,6 +1218,7 @@
 	"properties": {
 		"description": "3D MMO TEST",
 		"version": "0.1",
+		"autoIncrementVersion": false,
 		"author": "Leolang",
 		"authorEmail": "",
 		"authorWebsite": "",

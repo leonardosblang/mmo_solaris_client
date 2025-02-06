@@ -2423,7 +2423,8 @@
 													"sid": 298743629455547,
 													"disabled": true,
 													"parameters": {
-														"seconds": "0"
+														"seconds": "0",
+														"use-timescale": true
 													}
 												},
 												{
@@ -2460,7 +2461,8 @@
 													"sid": 987963160533655,
 													"disabled": true,
 													"parameters": {
-														"seconds": "0"
+														"seconds": "0",
+														"use-timescale": true
 													}
 												},
 												{
@@ -2497,7 +2499,8 @@
 													"sid": 137740323037996,
 													"disabled": true,
 													"parameters": {
-														"seconds": "0"
+														"seconds": "0",
+														"use-timescale": true
 													}
 												},
 												{
@@ -2534,7 +2537,8 @@
 													"sid": 803444661263961,
 													"disabled": true,
 													"parameters": {
-														"seconds": "0"
+														"seconds": "0",
+														"use-timescale": true
 													}
 												},
 												{

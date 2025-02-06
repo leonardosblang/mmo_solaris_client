@@ -3,6 +3,7 @@
 	"plugin-id": "Text",
 	"sid": 996668871080245,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": []

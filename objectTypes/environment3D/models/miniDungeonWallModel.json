@@ -3,6 +3,7 @@
 	"plugin-id": "Mikal_3DObject",
 	"sid": 127733471791557,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
